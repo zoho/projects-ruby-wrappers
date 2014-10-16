@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=IBM437" http-equiv="Content-Type">
+
+<title>class Projects::Model::Portal - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../../index.html">Home</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>projects/model/Portal.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-getCode">#getCode</a>
+    
+    <li><a href="#method-i-getCompanyName">#getCompanyName</a>
+    
+    <li><a href="#method-i-getCountry">#getCountry</a>
+    
+    <li><a href="#method-i-getDateFormat">#getDateFormat</a>
+    
+    <li><a href="#method-i-getGmtTimeZone">#getGmtTimeZone</a>
+    
+    <li><a href="#method-i-getId">#getId</a>
+    
+    <li><a href="#method-i-getLanguage">#getLanguage</a>
+    
+    <li><a href="#method-i-getName">#getName</a>
+    
+    <li><a href="#method-i-getProjectURL">#getProjectURL</a>
+    
+    <li><a href="#method-i-getRole">#getRole</a>
+    
+    <li><a href="#method-i-getTimeZone">#getTimeZone</a>
+    
+    <li><a href="#method-i-getWebsiteURL">#getWebsiteURL</a>
+    
+    <li><a href="#method-i-isDefault">#isDefault</a>
+    
+    <li><a href="#method-i-setCode">#setCode</a>
+    
+    <li><a href="#method-i-setCompanyName">#setCompanyName</a>
+    
+    <li><a href="#method-i-setCountry">#setCountry</a>
+    
+    <li><a href="#method-i-setDateFormat">#setDateFormat</a>
+    
+    <li><a href="#method-i-setDefault">#setDefault</a>
+    
+    <li><a href="#method-i-setGmtTimeZone">#setGmtTimeZone</a>
+    
+    <li><a href="#method-i-setId">#setId</a>
+    
+    <li><a href="#method-i-setLanguage">#setLanguage</a>
+    
+    <li><a href="#method-i-setName">#setName</a>
+    
+    <li><a href="#method-i-setProjectURL">#setProjectURL</a>
+    
+    <li><a href="#method-i-setRole">#setRole</a>
+    
+    <li><a href="#method-i-setTimeZone">#setTimeZone</a>
+    
+    <li><a href="#method-i-setWebsiteURL">#setWebsiteURL</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../Projects.html">Projects</a>
+  
+    <li><a href="../../Projects/Api.html">Projects::Api</a>
+  
+    <li><a href="../../Projects/Api/API.html">Projects::Api::API</a>
+  
+    <li><a href="../../Projects/Api/BugsAPI.html">Projects::Api::BugsAPI</a>
+  
+    <li><a href="../../Projects/Api/DocumentsAPI.html">Projects::Api::DocumentsAPI</a>
+  
+    <li><a href="../../Projects/Api/EventsAPI.html">Projects::Api::EventsAPI</a>
+  
+    <li><a href="../../Projects/Api/FoldersAPI.html">Projects::Api::FoldersAPI</a>
+  
+    <li><a href="../../Projects/Api/ForumsAPI.html">Projects::Api::ForumsAPI</a>
+  
+    <li><a href="../../Projects/Api/MilestonesAPI.html">Projects::Api::MilestonesAPI</a>
+  
+    <li><a href="../../Projects/Api/PortalAPI.html">Projects::Api::PortalAPI</a>
+  
+    <li><a href="../../Projects/Api/ProjectsAPI.html">Projects::Api::ProjectsAPI</a>
+  
+    <li><a href="../../Projects/Api/TasklistsAPI.html">Projects::Api::TasklistsAPI</a>
+  
+    <li><a href="../../Projects/Api/TasksAPI.html">Projects::Api::TasksAPI</a>
+  
+    <li><a href="../../Projects/Api/TimesheetsAPI.html">Projects::Api::TimesheetsAPI</a>
+  
+    <li><a href="../../Projects/Api/UsersAPI.html">Projects::Api::UsersAPI</a>
+  
+    <li><a href="../../Projects/Model.html">Projects::Model</a>
+  
+    <li><a href="../../Projects/Model/Activity.html">Projects::Model::Activity</a>
+  
+    <li><a href="../../Projects/Model/Bug.html">Projects::Model::Bug</a>
+  
+    <li><a href="../../Projects/Model/Buglog.html">Projects::Model::Buglog</a>
+  
+    <li><a href="../../Projects/Model/Category.html">Projects::Model::Category</a>
+  
+    <li><a href="../../Projects/Model/Comment.html">Projects::Model::Comment</a>
+  
+    <li><a href="../../Projects/Model/Document.html">Projects::Model::Document</a>
+  
+    <li><a href="../../Projects/Model/Event.html">Projects::Model::Event</a>
+  
+    <li><a href="../../Projects/Model/Folder.html">Projects::Model::Folder</a>
+  
+    <li><a href="../../Projects/Model/Forum.html">Projects::Model::Forum</a>
+  
+    <li><a href="../../Projects/Model/Generallog.html">Projects::Model::Generallog</a>
+  
+    <li><a href="../../Projects/Model/Log.html">Projects::Model::Log</a>
+  
+    <li><a href="../../Projects/Model/Milestone.html">Projects::Model::Milestone</a>
+  
+    <li><a href="../../Projects/Model/Owner.html">Projects::Model::Owner</a>
+  
+    <li><a href="../../Projects/Model/Participant.html">Projects::Model::Participant</a>
+  
+    <li><a href="../../Projects/Model/Portal.html">Projects::Model::Portal</a>
+  
+    <li><a href="../../Projects/Model/Project.html">Projects::Model::Project</a>
+  
+    <li><a href="../../Projects/Model/Status.html">Projects::Model::Status</a>
+  
+    <li><a href="../../Projects/Model/Task.html">Projects::Model::Task</a>
+  
+    <li><a href="../../Projects/Model/Tasklist.html">Projects::Model::Tasklist</a>
+  
+    <li><a href="../../Projects/Model/Tasklog.html">Projects::Model::Tasklog</a>
+  
+    <li><a href="../../Projects/Model/Timelog.html">Projects::Model::Timelog</a>
+  
+    <li><a href="../../Projects/Model/TimelogList.html">Projects::Model::TimelogList</a>
+  
+    <li><a href="../../Projects/Model/User.html">Projects::Model::User</a>
+  
+    <li><a href="../../Projects/Model/Version.html">Projects::Model::Version</a>
+  
+    <li><a href="../../Projects/Parser.html">Projects::Parser</a>
+  
+    <li><a href="../../Projects/Parser/BugParser.html">Projects::Parser::BugParser</a>
+  
+    <li><a href="../../Projects/Parser/DocumentParser.html">Projects::Parser::DocumentParser</a>
+  
+    <li><a href="../../Projects/Parser/EventParser.html">Projects::Parser::EventParser</a>
+  
+    <li><a href="../../Projects/Parser/FolderParser.html">Projects::Parser::FolderParser</a>
+  
+    <li><a href="../../Projects/Parser/ForumParser.html">Projects::Parser::ForumParser</a>
+  
+    <li><a href="../../Projects/Parser/MilestonesParser.html">Projects::Parser::MilestonesParser</a>
+  
+    <li><a href="../../Projects/Parser/PortalParser.html">Projects::Parser::PortalParser</a>
+  
+    <li><a href="../../Projects/Parser/ProjectParser.html">Projects::Parser::ProjectParser</a>
+  
+    <li><a href="../../Projects/Parser/TaskParser.html">Projects::Parser::TaskParser</a>
+  
+    <li><a href="../../Projects/Parser/TasklistParser.html">Projects::Parser::TasklistParser</a>
+  
+    <li><a href="../../Projects/Parser/TimesheetParser.html">Projects::Parser::TimesheetParser</a>
+  
+    <li><a href="../../Projects/Parser/UserParser.html">Projects::Parser::UserParser</a>
+  
+    <li><a href="../../Projects/Pexception.html">Projects::Pexception</a>
+  
+    <li><a href="../../Projects/Pexception/ProjectsException.html">Projects::Pexception::ProjectsException</a>
+  
+    <li><a href="../../Projects/Service.html">Projects::Service</a>
+  
+    <li><a href="../../Projects/Service/ZohoProjects.html">Projects::Service::ZohoProjects</a>
+  
+    <li><a href="../../Projects/Util.html">Projects::Util</a>
+  
+    <li><a href="../../Projects/Util/ZohoHTTPClient.html">Projects::Util::ZohoHTTPClient</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Projects::Model::Portal</h1>
+
+  <div id="description" class="description">
+    <ul><li>
+<p>This class is used to make an object for <a href="Portal.html">Portal</a>.</p>
+</li></ul>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-getCode" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getCode</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the language code.</p>
+</li></ul>
+
+<h4 id="method-i-getCode-label-Returns">Returns</h4>
+<ul><li>
+<p>Language code.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getCode-source">
+            <pre><span class="ruby-comment"># File projects/model/Portal.rb, line 207</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getCode</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@code</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getCode-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getCode-method -->
+
+    
+      <div id="method-i-getCompanyName" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getCompanyName</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the company name.</p>
+</li></ul>
+
+<h4 id="method-i-getCompanyName-label-Returns">Returns</h4>
+<ul><li>
+<p>Company name.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getCompanyName-source">
+            <pre><span class="ruby-comment"># File projects/model/Portal.rb, line 127</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getCompanyName</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@companyName</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getCompanyName-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getCompanyName-method -->
+
+    
+      <div id="method-i-getCountry" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getCountry</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the country.</p>
+</li></ul>
+
+<h4 id="method-i-getCountry-label-Returns">Returns</h4>
+<ul><li>
+<p>Country name.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getCountry-source">
+            <pre><span class="ruby-comment"># File projects/model/Portal.rb, line 247</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getCountry</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@country</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getCountry-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getCountry-method -->
+
+    
+      <div id="method-i-getDateFormat" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getDateFormat</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the date format.</p>
+</li></ul>
+
+<h4 id="method-i-getDateFormat-label-Returns">Returns</h4>
+<ul><li>
+<p>Date format of the portal.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getDateFormat-source">
+            <pre><span class="ruby-comment"># File projects/model/Portal.rb, line 187</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getDateFormat</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@dateFormat</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getDateFormat-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getDateFormat-method -->
+
+    
+      <div id="method-i-getGmtTimeZone" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getGmtTimeZone</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the gmt time zone.</p>
+</li></ul>
+
+<h4 id="method-i-getGmtTimeZone-label-Returns">Returns</h4>
+<ul><li>
+<p>gmt time zone.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getGmtTimeZone-source">
+            <pre><span class="ruby-comment"># File projects/model/Portal.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getGmtTimeZone</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@gmtTimeZone</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getGmtTimeZone-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getGmtTimeZone-method -->
+
+    
+      <div id="method-i-getId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getId</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the portal id.</p>
+</li></ul>
+
+<h4 id="method-i-getId-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Portal.html">Portal</a> id.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getId-source">
+            <pre><span class="ruby-comment"># File projects/model/Portal.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getId</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getId-method -->
+
+    
+      <div id="method-i-getLanguage" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getLanguage</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the language.</p>
+</li></ul>
+
+<h4 id="method-i-getLanguage-label-Returns">Returns</h4>
+<ul><li>
+<p>Language of the portal.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getLanguage-source">
+            <pre><span class="ruby-comment"># File projects/model/Portal.rb, line 227</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getLanguage</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@language</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getLanguage-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getLanguage-method -->
+
+    
+      <div id="method-i-getName" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getName</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the portal name.</p>
+</li></ul>
+
+<h4 id="method-i-getName-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Portal.html">Portal</a> name.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getName-source">
+            <pre><span class="ruby-comment"># File projects/model/Portal.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getName</span> 
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@name</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getName-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getName-method -->
+
+    
+      <div id="method-i-getProjectURL" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getProjectURL</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the project URL.</p>
+</li></ul>
+
+<h4 id="method-i-getProjectURL-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Project.html">Project</a> URL.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getProjectURL-source">
+            <pre><span class="ruby-comment"># File projects/model/Portal.rb, line 267</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getProjectURL</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@projectUrl</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getProjectURL-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getProjectURL-method -->
+
+    
+      <div id="method-i-getRole" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getRole</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the role.</p>
+</li></ul>
+
+<h4 id="method-i-getRole-label-Returns">Returns</h4>
+<ul><li>
+<p>Role of the person.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getRole-source">
+            <pre><span class="ruby-comment"># File projects/model/Portal.rb, line 107</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getRole</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@role</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getRole-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getRole-method -->
+
+    
+      <div id="method-i-getTimeZone" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getTimeZone</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the time zone.</p>
+</li></ul>
+
+<h4 id="method-i-getTimeZone-label-Returns">Returns</h4>
+<ul><li>
+<p>Time zone for the portal.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getTimeZone-source">
+            <pre><span class="ruby-comment"># File projects/model/Portal.rb, line 167</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getTimeZone</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@timeZone</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getTimeZone-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getTimeZone-method -->
+
+    
+      <div id="method-i-getWebsiteURL" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getWebsiteURL</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the Website URL.</p>
+</li></ul>
+
+<h4 id="method-i-getWebsiteURL-label-Returns">Returns</h4>
+<ul><li>
+<p>Website URL.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getWebsiteURL-source">
+            <pre><span class="ruby-comment"># File projects/model/Portal.rb, line 147</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getWebsiteURL</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@websiteUrl</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getWebsiteURL-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getWebsiteURL-method -->
+
+    
+      <div id="method-i-isDefault" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">isDefault</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get whether portal is default portal or not.</p>
+</li></ul>
+
+<h4 id="method-i-isDefault-label-Returns">Returns</h4>
+<ul><li>
+<p>true, if the portal is a default portal else false.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="isDefault-source">
+            <pre><span class="ruby-comment"># File projects/model/Portal.rb, line 67</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">isDefault</span> 
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@isDefault</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- isDefault-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- isDefault-method -->
+
+    
+      <div id="method-i-setCode" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setCode</span><span
+            class="method-args">(code)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the language code.</p>
+</li></ul>
+
+<h4 id="method-i-setCode-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>code
+<dd><ul><li>
+<p>Code of the language.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setCode-source">
+            <pre><span class="ruby-comment"># File projects/model/Portal.rb, line 197</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setCode</span>(<span class="ruby-identifier">code</span>)
+        <span class="ruby-ivar">@code</span> =<span class="ruby-identifier">code</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setCode-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setCode-method -->
+
+    
+      <div id="method-i-setCompanyName" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setCompanyName</span><span
+            class="method-args">(companyName)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the company name.</p>
+</li></ul>
+
+<h4 id="method-i-setCompanyName-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>companyName
+<dd><ul><li>
+<p>Name of the company.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setCompanyName-source">
+            <pre><span class="ruby-comment"># File projects/model/Portal.rb, line 117</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setCompanyName</span>(<span class="ruby-identifier">companyName</span>)
+        <span class="ruby-ivar">@companyName</span> = <span class="ruby-identifier">companyName</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setCompanyName-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setCompanyName-method -->
+
+    
+      <div id="method-i-setCountry" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setCountry</span><span
+            class="method-args">(country)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the country.</p>
+</li></ul>
+
+<h4 id="method-i-setCountry-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>country
+<dd><ul><li>
+<p>Country for portal.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setCountry-source">
+            <pre><span class="ruby-comment"># File projects/model/Portal.rb, line 237</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setCountry</span>(<span class="ruby-identifier">country</span>)
+        <span class="ruby-ivar">@country</span> = <span class="ruby-identifier">country</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setCountry-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setCountry-method -->
+
+    
+      <div id="method-i-setDateFormat" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setDateFormat</span><span
+            class="method-args">(dateFormat)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the date format.</p>
+</li></ul>
+
+<h4 id="method-i-setDateFormat-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>dateFormat
+<dd><ul><li>
+<p>Date format for the portal.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setDateFormat-source">
+            <pre><span class="ruby-comment"># File projects/model/Portal.rb, line 177</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setDateFormat</span>(<span class="ruby-identifier">dateFormat</span>)
+        <span class="ruby-ivar">@dateFormat</span> = <span class="ruby-identifier">dateFormat</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setDateFormat-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setDateFormat-method -->
+
+    
+      <div id="method-i-setDefault" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setDefault</span><span
+            class="method-args">(isDefault)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set whether portal is default portal or not.</p>
+</li></ul>
+
+<h4 id="method-i-setDefault-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>isDefault
+<dd><ul><li>
+<p>Is this postal default portal or not.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setDefault-source">
+            <pre><span class="ruby-comment"># File projects/model/Portal.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setDefault</span>(<span class="ruby-identifier">isDefault</span>)
+        <span class="ruby-ivar">@isDefault</span> = <span class="ruby-identifier">isDefault</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setDefault-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setDefault-method -->
+
+    
+      <div id="method-i-setGmtTimeZone" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setGmtTimeZone</span><span
+            class="method-args">(gmtTimeZone)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the gmt time zone.</p>
+</li></ul>
+
+<h4 id="method-i-setGmtTimeZone-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>gmtTimeZone
+<dd><ul><li>
+<p>Gmt time zone for the portal.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setGmtTimeZone-source">
+            <pre><span class="ruby-comment"># File projects/model/Portal.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setGmtTimeZone</span>(<span class="ruby-identifier">gmtTimeZone</span>)
+        <span class="ruby-ivar">@gmtTimeZone</span> = <span class="ruby-identifier">gmtTimeZone</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setGmtTimeZone-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setGmtTimeZone-method -->
+
+    
+      <div id="method-i-setId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setId</span><span
+            class="method-args">(id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the portal id.</p>
+</li></ul>
+
+<h4 id="method-i-setId-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>id
+<dd><ul><li>
+<p>ID of the portal.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setId-source">
+            <pre><span class="ruby-comment"># File projects/model/Portal.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setId</span>(<span class="ruby-identifier">id</span>)
+        <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setId-method -->
+
+    
+      <div id="method-i-setLanguage" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setLanguage</span><span
+            class="method-args">(language)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the language.</p>
+</li></ul>
+
+<h4 id="method-i-setLanguage-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>language
+<dd><ul><li>
+<p>Language for the portal.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setLanguage-source">
+            <pre><span class="ruby-comment"># File projects/model/Portal.rb, line 217</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setLanguage</span>(<span class="ruby-identifier">language</span>)
+        <span class="ruby-ivar">@language</span> = <span class="ruby-identifier">language</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setLanguage-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setLanguage-method -->
+
+    
+      <div id="method-i-setName" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setName</span><span
+            class="method-args">(name)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the portal name.</p>
+</li></ul>
+
+<h4 id="method-i-setName-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>name
+<dd><ul><li>
+<p>Name of the portal.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setName-source">
+            <pre><span class="ruby-comment"># File projects/model/Portal.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setName</span>(<span class="ruby-identifier">name</span>)
+        <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">name</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setName-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setName-method -->
+
+    
+      <div id="method-i-setProjectURL" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setProjectURL</span><span
+            class="method-args">(projectUrl)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the project URL.</p>
+</li></ul>
+
+<h4 id="method-i-setProjectURL-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>projectUrl
+<dd><ul><li>
+<p>URL for the project.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setProjectURL-source">
+            <pre><span class="ruby-comment"># File projects/model/Portal.rb, line 257</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setProjectURL</span>(<span class="ruby-identifier">projectUrl</span>)
+        <span class="ruby-ivar">@projectUrl</span> = <span class="ruby-identifier">projectUrl</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setProjectURL-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setProjectURL-method -->
+
+    
+      <div id="method-i-setRole" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setRole</span><span
+            class="method-args">(role)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the role.</p>
+</li></ul>
+
+<h4 id="method-i-setRole-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>role
+<dd><ul><li>
+<p>Role of the person.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setRole-source">
+            <pre><span class="ruby-comment"># File projects/model/Portal.rb, line 97</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setRole</span>(<span class="ruby-identifier">role</span>) 
+        <span class="ruby-ivar">@role</span> = <span class="ruby-identifier">role</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setRole-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setRole-method -->
+
+    
+      <div id="method-i-setTimeZone" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setTimeZone</span><span
+            class="method-args">(timeZone)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the time zone.</p>
+</li></ul>
+
+<h4 id="method-i-setTimeZone-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>timeZone
+<dd><ul><li>
+<p>Time zone for the portal.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setTimeZone-source">
+            <pre><span class="ruby-comment"># File projects/model/Portal.rb, line 157</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setTimeZone</span>(<span class="ruby-identifier">timeZone</span>)
+        <span class="ruby-ivar">@timeZone</span> = <span class="ruby-identifier">timeZone</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setTimeZone-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setTimeZone-method -->
+
+    
+      <div id="method-i-setWebsiteURL" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setWebsiteURL</span><span
+            class="method-args">(websiteUrl)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the WEBsite URL.</p>
+</li></ul>
+
+<h4 id="method-i-setWebsiteURL-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>websiteUrl
+<dd><ul><li>
+<p>URL for the Website.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setWebsiteURL-source">
+            <pre><span class="ruby-comment"># File projects/model/Portal.rb, line 137</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setWebsiteURL</span>(<span class="ruby-identifier">websiteUrl</span>)
+        <span class="ruby-ivar">@websiteUrl</span> = <span class="ruby-identifier">websiteUrl</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setWebsiteURL-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setWebsiteURL-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

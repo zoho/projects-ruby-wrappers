@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=IBM437" http-equiv="Content-Type">
+
+<title>class Projects::Parser::DocumentParser - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../../index.html">Home</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>projects/parser/DocumentParser.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    <!-- Included Modules -->
+<nav id="includes-section" class="section">
+  <h3 class="section-header">Included Modules</h3>
+
+  <ul class="link-list">
+  
+  
+    <li><a class="include" href="../Model.html">Projects::Model</a>
+  
+  
+  </ul>
+</nav>
+
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-getDocument">#getDocument</a>
+    
+    <li><a href="#method-i-getDocuments">#getDocuments</a>
+    
+    <li><a href="#method-i-getResult">#getResult</a>
+    
+    <li><a href="#method-i-jsonToDocument">#jsonToDocument</a>
+    
+    <li><a href="#method-i-jsonToFolder">#jsonToFolder</a>
+    
+    <li><a href="#method-i-jsonToVersion">#jsonToVersion</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../Projects.html">Projects</a>
+  
+    <li><a href="../../Projects/Api.html">Projects::Api</a>
+  
+    <li><a href="../../Projects/Api/API.html">Projects::Api::API</a>
+  
+    <li><a href="../../Projects/Api/BugsAPI.html">Projects::Api::BugsAPI</a>
+  
+    <li><a href="../../Projects/Api/DocumentsAPI.html">Projects::Api::DocumentsAPI</a>
+  
+    <li><a href="../../Projects/Api/EventsAPI.html">Projects::Api::EventsAPI</a>
+  
+    <li><a href="../../Projects/Api/FoldersAPI.html">Projects::Api::FoldersAPI</a>
+  
+    <li><a href="../../Projects/Api/ForumsAPI.html">Projects::Api::ForumsAPI</a>
+  
+    <li><a href="../../Projects/Api/MilestonesAPI.html">Projects::Api::MilestonesAPI</a>
+  
+    <li><a href="../../Projects/Api/PortalAPI.html">Projects::Api::PortalAPI</a>
+  
+    <li><a href="../../Projects/Api/ProjectsAPI.html">Projects::Api::ProjectsAPI</a>
+  
+    <li><a href="../../Projects/Api/TasklistsAPI.html">Projects::Api::TasklistsAPI</a>
+  
+    <li><a href="../../Projects/Api/TasksAPI.html">Projects::Api::TasksAPI</a>
+  
+    <li><a href="../../Projects/Api/TimesheetsAPI.html">Projects::Api::TimesheetsAPI</a>
+  
+    <li><a href="../../Projects/Api/UsersAPI.html">Projects::Api::UsersAPI</a>
+  
+    <li><a href="../../Projects/Model.html">Projects::Model</a>
+  
+    <li><a href="../../Projects/Model/Activity.html">Projects::Model::Activity</a>
+  
+    <li><a href="../../Projects/Model/Bug.html">Projects::Model::Bug</a>
+  
+    <li><a href="../../Projects/Model/Buglog.html">Projects::Model::Buglog</a>
+  
+    <li><a href="../../Projects/Model/Category.html">Projects::Model::Category</a>
+  
+    <li><a href="../../Projects/Model/Comment.html">Projects::Model::Comment</a>
+  
+    <li><a href="../../Projects/Model/Document.html">Projects::Model::Document</a>
+  
+    <li><a href="../../Projects/Model/Event.html">Projects::Model::Event</a>
+  
+    <li><a href="../../Projects/Model/Folder.html">Projects::Model::Folder</a>
+  
+    <li><a href="../../Projects/Model/Forum.html">Projects::Model::Forum</a>
+  
+    <li><a href="../../Projects/Model/Generallog.html">Projects::Model::Generallog</a>
+  
+    <li><a href="../../Projects/Model/Log.html">Projects::Model::Log</a>
+  
+    <li><a href="../../Projects/Model/Milestone.html">Projects::Model::Milestone</a>
+  
+    <li><a href="../../Projects/Model/Owner.html">Projects::Model::Owner</a>
+  
+    <li><a href="../../Projects/Model/Participant.html">Projects::Model::Participant</a>
+  
+    <li><a href="../../Projects/Model/Portal.html">Projects::Model::Portal</a>
+  
+    <li><a href="../../Projects/Model/Project.html">Projects::Model::Project</a>
+  
+    <li><a href="../../Projects/Model/Status.html">Projects::Model::Status</a>
+  
+    <li><a href="../../Projects/Model/Task.html">Projects::Model::Task</a>
+  
+    <li><a href="../../Projects/Model/Tasklist.html">Projects::Model::Tasklist</a>
+  
+    <li><a href="../../Projects/Model/Tasklog.html">Projects::Model::Tasklog</a>
+  
+    <li><a href="../../Projects/Model/Timelog.html">Projects::Model::Timelog</a>
+  
+    <li><a href="../../Projects/Model/TimelogList.html">Projects::Model::TimelogList</a>
+  
+    <li><a href="../../Projects/Model/User.html">Projects::Model::User</a>
+  
+    <li><a href="../../Projects/Model/Version.html">Projects::Model::Version</a>
+  
+    <li><a href="../../Projects/Parser.html">Projects::Parser</a>
+  
+    <li><a href="../../Projects/Parser/BugParser.html">Projects::Parser::BugParser</a>
+  
+    <li><a href="../../Projects/Parser/DocumentParser.html">Projects::Parser::DocumentParser</a>
+  
+    <li><a href="../../Projects/Parser/EventParser.html">Projects::Parser::EventParser</a>
+  
+    <li><a href="../../Projects/Parser/FolderParser.html">Projects::Parser::FolderParser</a>
+  
+    <li><a href="../../Projects/Parser/ForumParser.html">Projects::Parser::ForumParser</a>
+  
+    <li><a href="../../Projects/Parser/MilestonesParser.html">Projects::Parser::MilestonesParser</a>
+  
+    <li><a href="../../Projects/Parser/PortalParser.html">Projects::Parser::PortalParser</a>
+  
+    <li><a href="../../Projects/Parser/ProjectParser.html">Projects::Parser::ProjectParser</a>
+  
+    <li><a href="../../Projects/Parser/TaskParser.html">Projects::Parser::TaskParser</a>
+  
+    <li><a href="../../Projects/Parser/TasklistParser.html">Projects::Parser::TasklistParser</a>
+  
+    <li><a href="../../Projects/Parser/TimesheetParser.html">Projects::Parser::TimesheetParser</a>
+  
+    <li><a href="../../Projects/Parser/UserParser.html">Projects::Parser::UserParser</a>
+  
+    <li><a href="../../Projects/Pexception.html">Projects::Pexception</a>
+  
+    <li><a href="../../Projects/Pexception/ProjectsException.html">Projects::Pexception::ProjectsException</a>
+  
+    <li><a href="../../Projects/Service.html">Projects::Service</a>
+  
+    <li><a href="../../Projects/Service/ZohoProjects.html">Projects::Service::ZohoProjects</a>
+  
+    <li><a href="../../Projects/Util.html">Projects::Util</a>
+  
+    <li><a href="../../Projects/Util/ZohoHTTPClient.html">Projects::Util::ZohoHTTPClient</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Projects::Parser::DocumentParser</h1>
+
+  <div id="description" class="description">
+    <ul><li>
+<p>Parse the JSON response into respective objects.</p>
+</li></ul>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-getDocument" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getDocument</span><span
+            class="method-args">(response)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Parse the JSON response and make it into Document object.</p>
+</li></ul>
+
+<h4 id="method-i-getDocument-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>response
+<dd><ul><li>
+<p>This JSON response contains the details of a document.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+
+<h4 id="method-i-getDocument-label-Returns">Returns</h4>
+<ul><li>
+<p>Document object.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getDocument-source">
+            <pre><span class="ruby-comment"># File projects/parser/DocumentParser.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getDocument</span>(<span class="ruby-identifier">response</span>)
+        <span class="ruby-identifier">document_json</span> = <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span> <span class="ruby-identifier">response</span>
+        <span class="ruby-identifier">document_array</span> = <span class="ruby-identifier">document_json</span>[<span class="ruby-string">&quot;documents&quot;</span>]
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">jsonToDocument</span>(<span class="ruby-identifier">document_array</span>[<span class="ruby-value">0</span>])
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getDocument-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getDocument-method -->
+
+    
+      <div id="method-i-getDocuments" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getDocuments</span><span
+            class="method-args">(response)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Parse the JSON response and make it into List of Document object.</p>
+</li></ul>
+
+<h4 id="method-i-getDocuments-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>response
+<dd><ul><li>
+<p>This JSON response contains the details of a documents.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+
+<h4 id="method-i-getDocuments-label-Returns">Returns</h4>
+<ul><li>
+<p>List of Document object.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getDocuments-source">
+            <pre><span class="ruby-comment"># File projects/parser/DocumentParser.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getDocuments</span>(<span class="ruby-identifier">response</span>)
+        <span class="ruby-identifier">documents_all_json</span> = <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span> <span class="ruby-identifier">response</span>
+        <span class="ruby-identifier">documents_all_array</span> = <span class="ruby-identifier">documents_all_json</span>[<span class="ruby-string">&quot;documents&quot;</span>]
+        <span class="ruby-identifier">documents_class_array</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">documents_all_array</span>.<span class="ruby-identifier">length</span>
+                <span class="ruby-identifier">documents_class_array</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">jsonToDocument</span>(<span class="ruby-identifier">documents_all_array</span>[<span class="ruby-identifier">i</span>]))
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">documents_class_array</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getDocuments-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getDocuments-method -->
+
+    
+      <div id="method-i-getResult" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getResult</span><span
+            class="method-args">(response)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Parse the JSON response and get the success message.</p>
+</li></ul>
+
+<h4 id="method-i-getResult-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>response
+<dd><ul><li>
+<p>This JSON response contains the success message.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+
+<h4 id="method-i-getResult-label-Returns">Returns</h4>
+<ul><li>
+<p>String object.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getResult-source">
+            <pre><span class="ruby-comment"># File projects/parser/DocumentParser.rb, line 189</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getResult</span>(<span class="ruby-identifier">response</span>)
+        <span class="ruby-identifier">jsonObject</span> = <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span> <span class="ruby-identifier">response</span>
+        <span class="ruby-identifier">result</span> = <span class="ruby-identifier">jsonObject</span>[<span class="ruby-string">&quot;response&quot;</span>]
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getResult-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getResult-method -->
+
+    
+      <div id="method-i-jsonToDocument" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">jsonToDocument</span><span
+            class="method-args">(jsonObject)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Parse the JSONObject into Document object.</p>
+</li></ul>
+
+<h4 id="method-i-jsonToDocument-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>jsonObject
+<dd><ul><li>
+<p>JSONObject contains the details of the document.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+
+<h4 id="method-i-jsonToDocument-label-Returns">Returns</h4>
+<ul><li>
+<p>Document object.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="jsonToDocument-source">
+            <pre><span class="ruby-comment"># File projects/parser/DocumentParser.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">jsonToDocument</span>(<span class="ruby-identifier">jsonObject</span>)
+        <span class="ruby-identifier">document</span> = <span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span>
+        
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">jsonObject</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&quot;id&quot;</span>)
+                <span class="ruby-identifier">document</span>.<span class="ruby-identifier">setId</span>(<span class="ruby-identifier">jsonObject</span>[<span class="ruby-string">&quot;id&quot;</span>])
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">jsonObject</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&quot;file_name&quot;</span>)
+                <span class="ruby-identifier">document</span>.<span class="ruby-identifier">setFilename</span>(<span class="ruby-identifier">jsonObject</span>[<span class="ruby-string">&quot;file_name&quot;</span>])
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">jsonObject</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&quot;content_type&quot;</span>)
+                <span class="ruby-identifier">document</span>.<span class="ruby-identifier">setContenttype</span>(<span class="ruby-identifier">jsonObject</span>[<span class="ruby-string">&quot;content_type&quot;</span>])
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">jsonObject</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&quot;versions&quot;</span>)
+                <span class="ruby-identifier">versions</span> = <span class="ruby-identifier">jsonObject</span>[<span class="ruby-string">&quot;versions&quot;</span>]
+                
+                <span class="ruby-identifier">versionList</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+              
+                <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">versions</span>.<span class="ruby-identifier">length</span>
+                        <span class="ruby-identifier">version</span> = <span class="ruby-identifier">versions</span>[<span class="ruby-identifier">i</span>]
+                        <span class="ruby-identifier">versionList</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">jsonToVersion</span>(<span class="ruby-identifier">version</span>))
+                <span class="ruby-keyword">end</span>
+                
+                <span class="ruby-identifier">document</span>.<span class="ruby-identifier">setVersions</span>(<span class="ruby-identifier">versionList</span>)
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">jsonObject</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&quot;folder&quot;</span>)
+                <span class="ruby-identifier">folder</span> = <span class="ruby-identifier">jsonObject</span>[<span class="ruby-string">&quot;folder&quot;</span>]              
+                <span class="ruby-identifier">document</span>.<span class="ruby-identifier">setFolder</span>(<span class="ruby-identifier">jsonToFolder</span>(<span class="ruby-identifier">folder</span>))
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">jsonObject</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&quot;link&quot;</span>)
+                <span class="ruby-identifier">link</span> = <span class="ruby-identifier">jsonObject</span>[<span class="ruby-string">&quot;link&quot;</span>]
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">link</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&quot;self&quot;</span>)
+                        <span class="ruby-identifier">document</span>.<span class="ruby-identifier">setURL</span>(<span class="ruby-identifier">link</span>[<span class="ruby-string">&quot;self&quot;</span>][<span class="ruby-string">&quot;url&quot;</span>])
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">document</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- jsonToDocument-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- jsonToDocument-method -->
+
+    
+      <div id="method-i-jsonToFolder" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">jsonToFolder</span><span
+            class="method-args">(jsonObject)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Parse the JSONObject into Folder object.</p>
+</li></ul>
+
+<h4 id="method-i-jsonToFolder-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>jsonObject
+<dd><ul><li>
+<p>JSONObject contains the details of a folder.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+
+<h4 id="method-i-jsonToFolder-label-Returns">Returns</h4>
+<ul><li>
+<p>Folder object.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="jsonToFolder-source">
+            <pre><span class="ruby-comment"># File projects/parser/DocumentParser.rb, line 155</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">jsonToFolder</span>(<span class="ruby-identifier">jsonObject</span>)
+        <span class="ruby-identifier">folder</span> = <span class="ruby-constant">Folder</span>.<span class="ruby-identifier">new</span>
+        
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">jsonObject</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&quot;id&quot;</span>)
+                <span class="ruby-identifier">folder</span>.<span class="ruby-identifier">setId</span>(<span class="ruby-identifier">jsonObject</span>[<span class="ruby-string">&quot;id&quot;</span>])
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">jsonObject</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&quot;name&quot;</span>)
+                <span class="ruby-identifier">folder</span>.<span class="ruby-identifier">setName</span>(<span class="ruby-identifier">jsonObject</span>[<span class="ruby-string">&quot;name&quot;</span>])
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">jsonObject</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&quot;is_discussion&quot;</span>)
+                <span class="ruby-identifier">folder</span>.<span class="ruby-identifier">setIsDicussion</span>(<span class="ruby-identifier">jsonObject</span>[<span class="ruby-string">&quot;is_discussion&quot;</span>])
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">jsonObject</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&quot;link&quot;</span>)
+                <span class="ruby-identifier">link</span> = <span class="ruby-identifier">jsonObject</span>[<span class="ruby-string">&quot;link&quot;</span>]
+                
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">link</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&quot;self&quot;</span>)
+                        <span class="ruby-identifier">folder</span>.<span class="ruby-identifier">setURL</span>(<span class="ruby-identifier">link</span>[<span class="ruby-string">&quot;self&quot;</span>][<span class="ruby-string">&quot;url&quot;</span>])
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">folder</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- jsonToFolder-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- jsonToFolder-method -->
+
+    
+      <div id="method-i-jsonToVersion" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">jsonToVersion</span><span
+            class="method-args">(jsonObject)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Parse the JSONObject into Version object.</p>
+</li></ul>
+
+<h4 id="method-i-jsonToVersion-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>jsonObject
+<dd><ul><li>
+<p>JSONObject contains the details of a version.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+
+<h4 id="method-i-jsonToVersion-label-Returns">Returns</h4>
+<ul><li>
+<p>Version object.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="jsonToVersion-source">
+            <pre><span class="ruby-comment"># File projects/parser/DocumentParser.rb, line 111</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">jsonToVersion</span>(<span class="ruby-identifier">jsonObject</span>)
+        <span class="ruby-identifier">version</span> = <span class="ruby-constant">Version</span>.<span class="ruby-identifier">new</span>
+        
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">jsonObject</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&quot;id&quot;</span>)
+                <span class="ruby-identifier">version</span>.<span class="ruby-identifier">setId</span>(<span class="ruby-identifier">jsonObject</span>[<span class="ruby-string">&quot;id&quot;</span>])
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">jsonObject</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&quot;uploaded_by&quot;</span>)
+                <span class="ruby-identifier">version</span>.<span class="ruby-identifier">setUploadedBy</span>(<span class="ruby-identifier">jsonObject</span>[<span class="ruby-string">&quot;uploaded_by&quot;</span>])
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">jsonObject</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&quot;description&quot;</span>)
+                <span class="ruby-identifier">version</span>.<span class="ruby-identifier">setDescription</span>(<span class="ruby-identifier">jsonObject</span>[<span class="ruby-string">&quot;description&quot;</span>])
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">jsonObject</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&quot;version&quot;</span>)
+                <span class="ruby-identifier">version</span>.<span class="ruby-identifier">setVersion</span>(<span class="ruby-identifier">jsonObject</span>[<span class="ruby-string">&quot;version&quot;</span>])
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">jsonObject</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&quot;uploaded_on&quot;</span>)
+                <span class="ruby-identifier">version</span>.<span class="ruby-identifier">setUploadedOn</span>(<span class="ruby-identifier">jsonObject</span>[<span class="ruby-string">&quot;uploaded_on&quot;</span>])
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">jsonObject</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&quot;file_size&quot;</span>)
+                <span class="ruby-identifier">version</span>.<span class="ruby-identifier">setFileSize</span>(<span class="ruby-identifier">jsonObject</span>[<span class="ruby-string">&quot;file_size&quot;</span>])
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">jsonObject</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&quot;uploaded_date&quot;</span>)
+                <span class="ruby-identifier">version</span>.<span class="ruby-identifier">setUploadedDate</span>(<span class="ruby-identifier">jsonObject</span>[<span class="ruby-string">&quot;uploaded_date&quot;</span>])
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">jsonObject</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&quot;uploaded_date_format&quot;</span>)
+                <span class="ruby-identifier">version</span>.<span class="ruby-identifier">setUploadedDateFormat</span>(<span class="ruby-identifier">jsonObject</span>[<span class="ruby-string">&quot;uploaded_date_format&quot;</span>])
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">jsonObject</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&quot;uploaded_date_long&quot;</span>)
+                <span class="ruby-identifier">version</span>.<span class="ruby-identifier">setUploadedDateLong</span>(<span class="ruby-identifier">jsonObject</span>[<span class="ruby-string">&quot;uploaded_date_long&quot;</span>])
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">version</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- jsonToVersion-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- jsonToVersion-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

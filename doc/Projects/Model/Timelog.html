@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=IBM437" http-equiv="Content-Type">
+
+<title>class Projects::Model::Timelog - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../../index.html">Home</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>projects/model/Timelog.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-getBuglogs">#getBuglogs</a>
+    
+    <li><a href="#method-i-getDateLong">#getDateLong</a>
+    
+    <li><a href="#method-i-getDisplayFormat">#getDisplayFormat</a>
+    
+    <li><a href="#method-i-getGenerallogs">#getGenerallogs</a>
+    
+    <li><a href="#method-i-getTasklogs">#getTasklogs</a>
+    
+    <li><a href="#method-i-getTotalHours">#getTotalHours</a>
+    
+    <li><a href="#method-i-setBuglogs">#setBuglogs</a>
+    
+    <li><a href="#method-i-setDateLong">#setDateLong</a>
+    
+    <li><a href="#method-i-setDisplayFormat">#setDisplayFormat</a>
+    
+    <li><a href="#method-i-setGenerallogs">#setGenerallogs</a>
+    
+    <li><a href="#method-i-setTasklogs">#setTasklogs</a>
+    
+    <li><a href="#method-i-setTotalHours">#setTotalHours</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../Projects.html">Projects</a>
+  
+    <li><a href="../../Projects/Api.html">Projects::Api</a>
+  
+    <li><a href="../../Projects/Api/API.html">Projects::Api::API</a>
+  
+    <li><a href="../../Projects/Api/BugsAPI.html">Projects::Api::BugsAPI</a>
+  
+    <li><a href="../../Projects/Api/DocumentsAPI.html">Projects::Api::DocumentsAPI</a>
+  
+    <li><a href="../../Projects/Api/EventsAPI.html">Projects::Api::EventsAPI</a>
+  
+    <li><a href="../../Projects/Api/FoldersAPI.html">Projects::Api::FoldersAPI</a>
+  
+    <li><a href="../../Projects/Api/ForumsAPI.html">Projects::Api::ForumsAPI</a>
+  
+    <li><a href="../../Projects/Api/MilestonesAPI.html">Projects::Api::MilestonesAPI</a>
+  
+    <li><a href="../../Projects/Api/PortalAPI.html">Projects::Api::PortalAPI</a>
+  
+    <li><a href="../../Projects/Api/ProjectsAPI.html">Projects::Api::ProjectsAPI</a>
+  
+    <li><a href="../../Projects/Api/TasklistsAPI.html">Projects::Api::TasklistsAPI</a>
+  
+    <li><a href="../../Projects/Api/TasksAPI.html">Projects::Api::TasksAPI</a>
+  
+    <li><a href="../../Projects/Api/TimesheetsAPI.html">Projects::Api::TimesheetsAPI</a>
+  
+    <li><a href="../../Projects/Api/UsersAPI.html">Projects::Api::UsersAPI</a>
+  
+    <li><a href="../../Projects/Model.html">Projects::Model</a>
+  
+    <li><a href="../../Projects/Model/Activity.html">Projects::Model::Activity</a>
+  
+    <li><a href="../../Projects/Model/Bug.html">Projects::Model::Bug</a>
+  
+    <li><a href="../../Projects/Model/Buglog.html">Projects::Model::Buglog</a>
+  
+    <li><a href="../../Projects/Model/Category.html">Projects::Model::Category</a>
+  
+    <li><a href="../../Projects/Model/Comment.html">Projects::Model::Comment</a>
+  
+    <li><a href="../../Projects/Model/Document.html">Projects::Model::Document</a>
+  
+    <li><a href="../../Projects/Model/Event.html">Projects::Model::Event</a>
+  
+    <li><a href="../../Projects/Model/Folder.html">Projects::Model::Folder</a>
+  
+    <li><a href="../../Projects/Model/Forum.html">Projects::Model::Forum</a>
+  
+    <li><a href="../../Projects/Model/Generallog.html">Projects::Model::Generallog</a>
+  
+    <li><a href="../../Projects/Model/Log.html">Projects::Model::Log</a>
+  
+    <li><a href="../../Projects/Model/Milestone.html">Projects::Model::Milestone</a>
+  
+    <li><a href="../../Projects/Model/Owner.html">Projects::Model::Owner</a>
+  
+    <li><a href="../../Projects/Model/Participant.html">Projects::Model::Participant</a>
+  
+    <li><a href="../../Projects/Model/Portal.html">Projects::Model::Portal</a>
+  
+    <li><a href="../../Projects/Model/Project.html">Projects::Model::Project</a>
+  
+    <li><a href="../../Projects/Model/Status.html">Projects::Model::Status</a>
+  
+    <li><a href="../../Projects/Model/Task.html">Projects::Model::Task</a>
+  
+    <li><a href="../../Projects/Model/Tasklist.html">Projects::Model::Tasklist</a>
+  
+    <li><a href="../../Projects/Model/Tasklog.html">Projects::Model::Tasklog</a>
+  
+    <li><a href="../../Projects/Model/Timelog.html">Projects::Model::Timelog</a>
+  
+    <li><a href="../../Projects/Model/TimelogList.html">Projects::Model::TimelogList</a>
+  
+    <li><a href="../../Projects/Model/User.html">Projects::Model::User</a>
+  
+    <li><a href="../../Projects/Model/Version.html">Projects::Model::Version</a>
+  
+    <li><a href="../../Projects/Parser.html">Projects::Parser</a>
+  
+    <li><a href="../../Projects/Parser/BugParser.html">Projects::Parser::BugParser</a>
+  
+    <li><a href="../../Projects/Parser/DocumentParser.html">Projects::Parser::DocumentParser</a>
+  
+    <li><a href="../../Projects/Parser/EventParser.html">Projects::Parser::EventParser</a>
+  
+    <li><a href="../../Projects/Parser/FolderParser.html">Projects::Parser::FolderParser</a>
+  
+    <li><a href="../../Projects/Parser/ForumParser.html">Projects::Parser::ForumParser</a>
+  
+    <li><a href="../../Projects/Parser/MilestonesParser.html">Projects::Parser::MilestonesParser</a>
+  
+    <li><a href="../../Projects/Parser/PortalParser.html">Projects::Parser::PortalParser</a>
+  
+    <li><a href="../../Projects/Parser/ProjectParser.html">Projects::Parser::ProjectParser</a>
+  
+    <li><a href="../../Projects/Parser/TaskParser.html">Projects::Parser::TaskParser</a>
+  
+    <li><a href="../../Projects/Parser/TasklistParser.html">Projects::Parser::TasklistParser</a>
+  
+    <li><a href="../../Projects/Parser/TimesheetParser.html">Projects::Parser::TimesheetParser</a>
+  
+    <li><a href="../../Projects/Parser/UserParser.html">Projects::Parser::UserParser</a>
+  
+    <li><a href="../../Projects/Pexception.html">Projects::Pexception</a>
+  
+    <li><a href="../../Projects/Pexception/ProjectsException.html">Projects::Pexception::ProjectsException</a>
+  
+    <li><a href="../../Projects/Service.html">Projects::Service</a>
+  
+    <li><a href="../../Projects/Service/ZohoProjects.html">Projects::Service::ZohoProjects</a>
+  
+    <li><a href="../../Projects/Util.html">Projects::Util</a>
+  
+    <li><a href="../../Projects/Util/ZohoHTTPClient.html">Projects::Util::ZohoHTTPClient</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Projects::Model::Timelog</h1>
+
+  <div id="description" class="description">
+    <ul><li>
+<p>This class is used to make an object for <a
+href="Timelog.html">Timelog</a>.</p>
+</li></ul>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-getBuglogs" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getBuglogs</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the bug logs.</p>
+</li></ul>
+
+<h4 id="method-i-getBuglogs-label-Returns">Returns</h4>
+<ul><li>
+<p>List of <a href="Buglog.html">Buglog</a> object.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getBuglogs-source">
+            <pre><span class="ruby-comment"># File projects/model/Timelog.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getBuglogs</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@buglogs</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getBuglogs-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getBuglogs-method -->
+
+    
+      <div id="method-i-getDateLong" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getDateLong</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the date long of the time log.</p>
+</li></ul>
+
+<h4 id="method-i-getDateLong-label-Returns">Returns</h4>
+<ul><li>
+<p>date of the time log.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getDateLong-source">
+            <pre><span class="ruby-comment"># File projects/model/Timelog.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getDateLong</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@dateLong</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getDateLong-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getDateLong-method -->
+
+    
+      <div id="method-i-getDisplayFormat" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getDisplayFormat</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the display format of the date.</p>
+</li></ul>
+
+<h4 id="method-i-getDisplayFormat-label-Returns">Returns</h4>
+<ul><li>
+<p>display format of the date.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getDisplayFormat-source">
+            <pre><span class="ruby-comment"># File projects/model/Timelog.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getDisplayFormat</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@displayFormat</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getDisplayFormat-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getDisplayFormat-method -->
+
+    
+      <div id="method-i-getGenerallogs" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getGenerallogs</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the general logs.</p>
+</li></ul>
+
+<h4 id="method-i-getGenerallogs-label-Returns">Returns</h4>
+<ul><li>
+<p>List of <a href="Generallog.html">Generallog</a> object.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getGenerallogs-source">
+            <pre><span class="ruby-comment"># File projects/model/Timelog.rb, line 128</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getGenerallogs</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@generallogs</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getGenerallogs-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getGenerallogs-method -->
+
+    
+      <div id="method-i-getTasklogs" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getTasklogs</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the task logs.</p>
+</li></ul>
+
+<h4 id="method-i-getTasklogs-label-Returns">Returns</h4>
+<ul><li>
+<p>List of <a href="Tasklog.html">Tasklog</a> object.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getTasklogs-source">
+            <pre><span class="ruby-comment"># File projects/model/Timelog.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getTasklogs</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@tasklogs</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getTasklogs-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getTasklogs-method -->
+
+    
+      <div id="method-i-getTotalHours" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getTotalHours</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the total hours of the time log.</p>
+</li></ul>
+
+<h4 id="method-i-getTotalHours-label-Returns">Returns</h4>
+<ul><li>
+<p>total hours of the time log.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getTotalHours-source">
+            <pre><span class="ruby-comment"># File projects/model/Timelog.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getTotalHours</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@totalHours</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getTotalHours-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getTotalHours-method -->
+
+    
+      <div id="method-i-setBuglogs" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setBuglogs</span><span
+            class="method-args">(buglogs)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the bug logs.</p>
+</li></ul>
+
+<h4 id="method-i-setBuglogs-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>buglogs
+<dd><ul><li>
+<p>List of <a href="Buglog.html">Buglog</a> object.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setBuglogs-source">
+            <pre><span class="ruby-comment"># File projects/model/Timelog.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setBuglogs</span>(<span class="ruby-identifier">buglogs</span>)
+        <span class="ruby-ivar">@buglogs</span> = <span class="ruby-identifier">buglogs</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setBuglogs-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setBuglogs-method -->
+
+    
+      <div id="method-i-setDateLong" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setDateLong</span><span
+            class="method-args">(dateLong)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the date for the time log.</p>
+</li></ul>
+
+<h4 id="method-i-setDateLong-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>dateLong
+<dd><ul><li>
+<p>Date for the time log.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setDateLong-source">
+            <pre><span class="ruby-comment"># File projects/model/Timelog.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setDateLong</span>(<span class="ruby-identifier">dateLong</span>)
+        <span class="ruby-ivar">@dateLong</span> = <span class="ruby-identifier">dateLong</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setDateLong-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setDateLong-method -->
+
+    
+      <div id="method-i-setDisplayFormat" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setDisplayFormat</span><span
+            class="method-args">(displayFormat)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the display format for the date.</p>
+</li></ul>
+
+<h4 id="method-i-setDisplayFormat-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>displayFormat
+<dd><ul><li>
+<p>Display format for the date.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setDisplayFormat-source">
+            <pre><span class="ruby-comment"># File projects/model/Timelog.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setDisplayFormat</span>(<span class="ruby-identifier">displayFormat</span>)
+        <span class="ruby-ivar">@displayFormat</span> = <span class="ruby-identifier">displayFormat</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setDisplayFormat-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setDisplayFormat-method -->
+
+    
+      <div id="method-i-setGenerallogs" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setGenerallogs</span><span
+            class="method-args">(generallogs)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the general logs.</p>
+</li></ul>
+
+<h4 id="method-i-setGenerallogs-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>generallogs
+<dd><ul><li>
+<p>List of <a href="Generallog.html">Generallog</a> object.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setGenerallogs-source">
+            <pre><span class="ruby-comment"># File projects/model/Timelog.rb, line 118</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setGenerallogs</span>(<span class="ruby-identifier">generallogs</span>)
+        <span class="ruby-ivar">@generallogs</span> = <span class="ruby-identifier">generallogs</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setGenerallogs-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setGenerallogs-method -->
+
+    
+      <div id="method-i-setTasklogs" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setTasklogs</span><span
+            class="method-args">(tasklogs)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the task logs.</p>
+</li></ul>
+
+<h4 id="method-i-setTasklogs-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>tasklogs
+<dd><ul><li>
+<p>List of <a href="Tasklog.html">Tasklog</a> object.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setTasklogs-source">
+            <pre><span class="ruby-comment"># File projects/model/Timelog.rb, line 98</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setTasklogs</span>(<span class="ruby-identifier">tasklogs</span>)
+        <span class="ruby-ivar">@tasklogs</span> = <span class="ruby-identifier">tasklogs</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setTasklogs-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setTasklogs-method -->
+
+    
+      <div id="method-i-setTotalHours" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setTotalHours</span><span
+            class="method-args">(totalHours)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the total hours for the time log.</p>
+</li></ul>
+
+<h4 id="method-i-setTotalHours-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>totalHours
+<dd><ul><li>
+<p>Total hours for the time log.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setTotalHours-source">
+            <pre><span class="ruby-comment"># File projects/model/Timelog.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setTotalHours</span>(<span class="ruby-identifier">totalHours</span>)
+        <span class="ruby-ivar">@totalHours</span> = <span class="ruby-identifier">totalHours</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setTotalHours-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setTotalHours-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

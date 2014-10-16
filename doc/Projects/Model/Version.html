@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=IBM437" http-equiv="Content-Type">
+
+<title>class Projects::Model::Version - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../../index.html">Home</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>projects/model/Version.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-getDescription">#getDescription</a>
+    
+    <li><a href="#method-i-getFileSize">#getFileSize</a>
+    
+    <li><a href="#method-i-getId">#getId</a>
+    
+    <li><a href="#method-i-getUploadedBy">#getUploadedBy</a>
+    
+    <li><a href="#method-i-getUploadedDate">#getUploadedDate</a>
+    
+    <li><a href="#method-i-getUploadedDateFormat">#getUploadedDateFormat</a>
+    
+    <li><a href="#method-i-getUploadedDateLong">#getUploadedDateLong</a>
+    
+    <li><a href="#method-i-getUploadedOn">#getUploadedOn</a>
+    
+    <li><a href="#method-i-getVersion">#getVersion</a>
+    
+    <li><a href="#method-i-setDescription">#setDescription</a>
+    
+    <li><a href="#method-i-setFileSize">#setFileSize</a>
+    
+    <li><a href="#method-i-setId">#setId</a>
+    
+    <li><a href="#method-i-setUploadedBy">#setUploadedBy</a>
+    
+    <li><a href="#method-i-setUploadedDate">#setUploadedDate</a>
+    
+    <li><a href="#method-i-setUploadedDateFormat">#setUploadedDateFormat</a>
+    
+    <li><a href="#method-i-setUploadedDateLong">#setUploadedDateLong</a>
+    
+    <li><a href="#method-i-setUploadedOn">#setUploadedOn</a>
+    
+    <li><a href="#method-i-setVersion">#setVersion</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../Projects.html">Projects</a>
+  
+    <li><a href="../../Projects/Api.html">Projects::Api</a>
+  
+    <li><a href="../../Projects/Api/API.html">Projects::Api::API</a>
+  
+    <li><a href="../../Projects/Api/BugsAPI.html">Projects::Api::BugsAPI</a>
+  
+    <li><a href="../../Projects/Api/DocumentsAPI.html">Projects::Api::DocumentsAPI</a>
+  
+    <li><a href="../../Projects/Api/EventsAPI.html">Projects::Api::EventsAPI</a>
+  
+    <li><a href="../../Projects/Api/FoldersAPI.html">Projects::Api::FoldersAPI</a>
+  
+    <li><a href="../../Projects/Api/ForumsAPI.html">Projects::Api::ForumsAPI</a>
+  
+    <li><a href="../../Projects/Api/MilestonesAPI.html">Projects::Api::MilestonesAPI</a>
+  
+    <li><a href="../../Projects/Api/PortalAPI.html">Projects::Api::PortalAPI</a>
+  
+    <li><a href="../../Projects/Api/ProjectsAPI.html">Projects::Api::ProjectsAPI</a>
+  
+    <li><a href="../../Projects/Api/TasklistsAPI.html">Projects::Api::TasklistsAPI</a>
+  
+    <li><a href="../../Projects/Api/TasksAPI.html">Projects::Api::TasksAPI</a>
+  
+    <li><a href="../../Projects/Api/TimesheetsAPI.html">Projects::Api::TimesheetsAPI</a>
+  
+    <li><a href="../../Projects/Api/UsersAPI.html">Projects::Api::UsersAPI</a>
+  
+    <li><a href="../../Projects/Model.html">Projects::Model</a>
+  
+    <li><a href="../../Projects/Model/Activity.html">Projects::Model::Activity</a>
+  
+    <li><a href="../../Projects/Model/Bug.html">Projects::Model::Bug</a>
+  
+    <li><a href="../../Projects/Model/Buglog.html">Projects::Model::Buglog</a>
+  
+    <li><a href="../../Projects/Model/Category.html">Projects::Model::Category</a>
+  
+    <li><a href="../../Projects/Model/Comment.html">Projects::Model::Comment</a>
+  
+    <li><a href="../../Projects/Model/Document.html">Projects::Model::Document</a>
+  
+    <li><a href="../../Projects/Model/Event.html">Projects::Model::Event</a>
+  
+    <li><a href="../../Projects/Model/Folder.html">Projects::Model::Folder</a>
+  
+    <li><a href="../../Projects/Model/Forum.html">Projects::Model::Forum</a>
+  
+    <li><a href="../../Projects/Model/Generallog.html">Projects::Model::Generallog</a>
+  
+    <li><a href="../../Projects/Model/Log.html">Projects::Model::Log</a>
+  
+    <li><a href="../../Projects/Model/Milestone.html">Projects::Model::Milestone</a>
+  
+    <li><a href="../../Projects/Model/Owner.html">Projects::Model::Owner</a>
+  
+    <li><a href="../../Projects/Model/Participant.html">Projects::Model::Participant</a>
+  
+    <li><a href="../../Projects/Model/Portal.html">Projects::Model::Portal</a>
+  
+    <li><a href="../../Projects/Model/Project.html">Projects::Model::Project</a>
+  
+    <li><a href="../../Projects/Model/Status.html">Projects::Model::Status</a>
+  
+    <li><a href="../../Projects/Model/Task.html">Projects::Model::Task</a>
+  
+    <li><a href="../../Projects/Model/Tasklist.html">Projects::Model::Tasklist</a>
+  
+    <li><a href="../../Projects/Model/Tasklog.html">Projects::Model::Tasklog</a>
+  
+    <li><a href="../../Projects/Model/Timelog.html">Projects::Model::Timelog</a>
+  
+    <li><a href="../../Projects/Model/TimelogList.html">Projects::Model::TimelogList</a>
+  
+    <li><a href="../../Projects/Model/User.html">Projects::Model::User</a>
+  
+    <li><a href="../../Projects/Model/Version.html">Projects::Model::Version</a>
+  
+    <li><a href="../../Projects/Parser.html">Projects::Parser</a>
+  
+    <li><a href="../../Projects/Parser/BugParser.html">Projects::Parser::BugParser</a>
+  
+    <li><a href="../../Projects/Parser/DocumentParser.html">Projects::Parser::DocumentParser</a>
+  
+    <li><a href="../../Projects/Parser/EventParser.html">Projects::Parser::EventParser</a>
+  
+    <li><a href="../../Projects/Parser/FolderParser.html">Projects::Parser::FolderParser</a>
+  
+    <li><a href="../../Projects/Parser/ForumParser.html">Projects::Parser::ForumParser</a>
+  
+    <li><a href="../../Projects/Parser/MilestonesParser.html">Projects::Parser::MilestonesParser</a>
+  
+    <li><a href="../../Projects/Parser/PortalParser.html">Projects::Parser::PortalParser</a>
+  
+    <li><a href="../../Projects/Parser/ProjectParser.html">Projects::Parser::ProjectParser</a>
+  
+    <li><a href="../../Projects/Parser/TaskParser.html">Projects::Parser::TaskParser</a>
+  
+    <li><a href="../../Projects/Parser/TasklistParser.html">Projects::Parser::TasklistParser</a>
+  
+    <li><a href="../../Projects/Parser/TimesheetParser.html">Projects::Parser::TimesheetParser</a>
+  
+    <li><a href="../../Projects/Parser/UserParser.html">Projects::Parser::UserParser</a>
+  
+    <li><a href="../../Projects/Pexception.html">Projects::Pexception</a>
+  
+    <li><a href="../../Projects/Pexception/ProjectsException.html">Projects::Pexception::ProjectsException</a>
+  
+    <li><a href="../../Projects/Service.html">Projects::Service</a>
+  
+    <li><a href="../../Projects/Service/ZohoProjects.html">Projects::Service::ZohoProjects</a>
+  
+    <li><a href="../../Projects/Util.html">Projects::Util</a>
+  
+    <li><a href="../../Projects/Util/ZohoHTTPClient.html">Projects::Util::ZohoHTTPClient</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Projects::Model::Version</h1>
+
+  <div id="description" class="description">
+    <ul><li>
+<p>This class is used to make an object for <a
+href="Version.html">Version</a>.</p>
+</li></ul>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-getDescription" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getDescription</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the version description.</p>
+</li></ul>
+
+<h4 id="method-i-getDescription-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Version.html">Version</a> description.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getDescription-source">
+            <pre><span class="ruby-comment"># File projects/model/Version.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getDescription</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@description</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getDescription-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getDescription-method -->
+
+    
+      <div id="method-i-getFileSize" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getFileSize</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the file size.</p>
+</li></ul>
+
+<h4 id="method-i-getFileSize-label-Returns">Returns</h4>
+<ul><li>
+<p>File size.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getFileSize-source">
+            <pre><span class="ruby-comment"># File projects/model/Version.rb, line 128</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getFileSize</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@fileSize</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getFileSize-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getFileSize-method -->
+
+    
+      <div id="method-i-getId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getId</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the version id.</p>
+</li></ul>
+
+<h4 id="method-i-getId-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Version.html">Version</a> id.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getId-source">
+            <pre><span class="ruby-comment"># File projects/model/Version.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getId</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getId-method -->
+
+    
+      <div id="method-i-getUploadedBy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getUploadedBy</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the id of the person who has uploaded.</p>
+</li></ul>
+
+<h4 id="method-i-getUploadedBy-label-Returns">Returns</h4>
+<ul><li>
+<p>Id of the user who has uploaded.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getUploadedBy-source">
+            <pre><span class="ruby-comment"># File projects/model/Version.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getUploadedBy</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@uploadedBy</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getUploadedBy-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getUploadedBy-method -->
+
+    
+      <div id="method-i-getUploadedDate" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getUploadedDate</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the uploaded date.</p>
+</li></ul>
+
+<h4 id="method-i-getUploadedDate-label-Returns">Returns</h4>
+<ul><li>
+<p>Uploaded date.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getUploadedDate-source">
+            <pre><span class="ruby-comment"># File projects/model/Version.rb, line 148</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getUploadedDate</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@uploadedDate</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getUploadedDate-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getUploadedDate-method -->
+
+    
+      <div id="method-i-getUploadedDateFormat" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getUploadedDateFormat</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the uploaded date format.</p>
+</li></ul>
+
+<h4 id="method-i-getUploadedDateFormat-label-Returns">Returns</h4>
+<ul><li>
+<p>Uploaded date format.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getUploadedDateFormat-source">
+            <pre><span class="ruby-comment"># File projects/model/Version.rb, line 168</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getUploadedDateFormat</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@uploadedDateFormat</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getUploadedDateFormat-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getUploadedDateFormat-method -->
+
+    
+      <div id="method-i-getUploadedDateLong" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getUploadedDateLong</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the document uploaded date long.</p>
+</li></ul>
+
+<h4 id="method-i-getUploadedDateLong-label-Returns">Returns</h4>
+<ul><li>
+<p>document uploaded date long.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getUploadedDateLong-source">
+            <pre><span class="ruby-comment"># File projects/model/Version.rb, line 188</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getUploadedDateLong</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@uploadedDateLong</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getUploadedDateLong-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getUploadedDateLong-method -->
+
+    
+      <div id="method-i-getUploadedOn" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getUploadedOn</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get when the document was uploaded on.</p>
+</li></ul>
+
+<h4 id="method-i-getUploadedOn-label-Returns">Returns</h4>
+<ul><li>
+<p>Time of uploading the document.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getUploadedOn-source">
+            <pre><span class="ruby-comment"># File projects/model/Version.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getUploadedOn</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@uploadedOn</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getUploadedOn-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getUploadedOn-method -->
+
+    
+      <div id="method-i-getVersion" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getVersion</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the version.</p>
+</li></ul>
+
+<h4 id="method-i-getVersion-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Document.html">Document</a> version.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getVersion-source">
+            <pre><span class="ruby-comment"># File projects/model/Version.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getVersion</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@version</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getVersion-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getVersion-method -->
+
+    
+      <div id="method-i-setDescription" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setDescription</span><span
+            class="method-args">(description)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the version description.</p>
+</li></ul>
+
+<h4 id="method-i-setDescription-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>description
+<dd><ul><li>
+<p>Description for the version.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setDescription-source">
+            <pre><span class="ruby-comment"># File projects/model/Version.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setDescription</span>(<span class="ruby-identifier">description</span>)
+        <span class="ruby-ivar">@description</span> = <span class="ruby-identifier">description</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setDescription-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setDescription-method -->
+
+    
+      <div id="method-i-setFileSize" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setFileSize</span><span
+            class="method-args">(fileSize)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the file size.</p>
+</li></ul>
+
+<h4 id="method-i-setFileSize-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>fileSize
+<dd><ul><li>
+<p>Size of the file.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setFileSize-source">
+            <pre><span class="ruby-comment"># File projects/model/Version.rb, line 118</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setFileSize</span>(<span class="ruby-identifier">fileSize</span>)
+        <span class="ruby-ivar">@fileSize</span> = <span class="ruby-identifier">fileSize</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setFileSize-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setFileSize-method -->
+
+    
+      <div id="method-i-setId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setId</span><span
+            class="method-args">(id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the version id.</p>
+</li></ul>
+
+<h4 id="method-i-setId-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>id
+<dd><ul><li>
+<p>ID of the version.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setId-source">
+            <pre><span class="ruby-comment"># File projects/model/Version.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setId</span>(<span class="ruby-identifier">id</span>)
+        <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setId-method -->
+
+    
+      <div id="method-i-setUploadedBy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setUploadedBy</span><span
+            class="method-args">(uploadedBy)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the id of the person who has uploaded.</p>
+</li></ul>
+
+<h4 id="method-i-setUploadedBy-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>uploadedBy
+<dd><ul><li>
+<p>Id of the person who has uploaded.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setUploadedBy-source">
+            <pre><span class="ruby-comment"># File projects/model/Version.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setUploadedBy</span>(<span class="ruby-identifier">uploadedBy</span>)
+        <span class="ruby-ivar">@uploadedBy</span> = <span class="ruby-identifier">uploadedBy</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setUploadedBy-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setUploadedBy-method -->
+
+    
+      <div id="method-i-setUploadedDate" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setUploadedDate</span><span
+            class="method-args">(uploadedDate)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the uploaded date.</p>
+</li></ul>
+
+<h4 id="method-i-setUploadedDate-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>uploadedDate
+<dd><ul><li>
+<p><a href="Document.html">Document</a> uploaded date.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setUploadedDate-source">
+            <pre><span class="ruby-comment"># File projects/model/Version.rb, line 138</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setUploadedDate</span>(<span class="ruby-identifier">uploadedDate</span>)
+        <span class="ruby-ivar">@uploadedDate</span> = <span class="ruby-identifier">uploadedDate</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setUploadedDate-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setUploadedDate-method -->
+
+    
+      <div id="method-i-setUploadedDateFormat" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setUploadedDateFormat</span><span
+            class="method-args">(uploadedDateFormat)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the uploaded date format.</p>
+</li></ul>
+
+<h4 id="method-i-setUploadedDateFormat-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>uploadedDate
+<dd><ul><li>
+<p><a href="Document.html">Document</a> uploaded date format.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setUploadedDateFormat-source">
+            <pre><span class="ruby-comment"># File projects/model/Version.rb, line 158</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setUploadedDateFormat</span>(<span class="ruby-identifier">uploadedDateFormat</span>)
+        <span class="ruby-ivar">@uploadedDateFormat</span> = <span class="ruby-identifier">uploadedDateFormat</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setUploadedDateFormat-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setUploadedDateFormat-method -->
+
+    
+      <div id="method-i-setUploadedDateLong" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setUploadedDateLong</span><span
+            class="method-args">(uploadedDateLong)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the uploaded date long.</p>
+</li></ul>
+
+<h4 id="method-i-setUploadedDateLong-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>uploadedDateLong
+<dd><ul><li>
+<p><a href="Document.html">Document</a> uploaded date long.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setUploadedDateLong-source">
+            <pre><span class="ruby-comment"># File projects/model/Version.rb, line 178</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setUploadedDateLong</span>(<span class="ruby-identifier">uploadedDateLong</span>)
+        <span class="ruby-ivar">@uploadedDateLong</span> = <span class="ruby-identifier">uploadedDateLong</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setUploadedDateLong-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setUploadedDateLong-method -->
+
+    
+      <div id="method-i-setUploadedOn" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setUploadedOn</span><span
+            class="method-args">(uploadedOn)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set when was the document uploaded on.</p>
+</li></ul>
+
+<h4 id="method-i-setUploadedOn-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>uploadedOn
+<dd><ul><li>
+<p>When was the document uploaded on.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setUploadedOn-source">
+            <pre><span class="ruby-comment"># File projects/model/Version.rb, line 98</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setUploadedOn</span>(<span class="ruby-identifier">uploadedOn</span>)
+        <span class="ruby-ivar">@uploadedOn</span> = <span class="ruby-identifier">uploadedOn</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setUploadedOn-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setUploadedOn-method -->
+
+    
+      <div id="method-i-setVersion" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setVersion</span><span
+            class="method-args">(version)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the version.</p>
+</li></ul>
+
+<h4 id="method-i-setVersion-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>version
+<dd><ul><li>
+<p><a href="Version.html">Version</a> of the document.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setVersion-source">
+            <pre><span class="ruby-comment"># File projects/model/Version.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setVersion</span>(<span class="ruby-identifier">version</span>)
+        <span class="ruby-ivar">@version</span> = <span class="ruby-identifier">version</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setVersion-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setVersion-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

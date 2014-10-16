@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=IBM437" http-equiv="Content-Type">
+
+<title>class Projects::Model::Comment - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../../index.html">Home</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>projects/model/Comment.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-getAddedBy">#getAddedBy</a>
+    
+    <li><a href="#method-i-getAddedPerson">#getAddedPerson</a>
+    
+    <li><a href="#method-i-getContent">#getContent</a>
+    
+    <li><a href="#method-i-getCreatedTime">#getCreatedTime</a>
+    
+    <li><a href="#method-i-getCreatedTimeFormat">#getCreatedTimeFormat</a>
+    
+    <li><a href="#method-i-getCreatedTimeLong">#getCreatedTimeLong</a>
+    
+    <li><a href="#method-i-getId">#getId</a>
+    
+    <li><a href="#method-i-getPostDate">#getPostDate</a>
+    
+    <li><a href="#method-i-getPostDateFormat">#getPostDateFormat</a>
+    
+    <li><a href="#method-i-getPostDateLong">#getPostDateLong</a>
+    
+    <li><a href="#method-i-getPostedBy">#getPostedBy</a>
+    
+    <li><a href="#method-i-getPostedPerson">#getPostedPerson</a>
+    
+    <li><a href="#method-i-getUpdatedBy">#getUpdatedBy</a>
+    
+    <li><a href="#method-i-setAddedBy">#setAddedBy</a>
+    
+    <li><a href="#method-i-setAddedPerson">#setAddedPerson</a>
+    
+    <li><a href="#method-i-setContent">#setContent</a>
+    
+    <li><a href="#method-i-setCreatedTime">#setCreatedTime</a>
+    
+    <li><a href="#method-i-setCreatedTimeFormat">#setCreatedTimeFormat</a>
+    
+    <li><a href="#method-i-setCreatedTimeLong">#setCreatedTimeLong</a>
+    
+    <li><a href="#method-i-setId">#setId</a>
+    
+    <li><a href="#method-i-setPostDate">#setPostDate</a>
+    
+    <li><a href="#method-i-setPostDateFormat">#setPostDateFormat</a>
+    
+    <li><a href="#method-i-setPostDateLong">#setPostDateLong</a>
+    
+    <li><a href="#method-i-setPostedBy">#setPostedBy</a>
+    
+    <li><a href="#method-i-setPostedPerson">#setPostedPerson</a>
+    
+    <li><a href="#method-i-setUpdatedBy">#setUpdatedBy</a>
+    
+    <li><a href="#method-i-toParamMAP">#toParamMAP</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../Projects.html">Projects</a>
+  
+    <li><a href="../../Projects/Api.html">Projects::Api</a>
+  
+    <li><a href="../../Projects/Api/API.html">Projects::Api::API</a>
+  
+    <li><a href="../../Projects/Api/BugsAPI.html">Projects::Api::BugsAPI</a>
+  
+    <li><a href="../../Projects/Api/DocumentsAPI.html">Projects::Api::DocumentsAPI</a>
+  
+    <li><a href="../../Projects/Api/EventsAPI.html">Projects::Api::EventsAPI</a>
+  
+    <li><a href="../../Projects/Api/FoldersAPI.html">Projects::Api::FoldersAPI</a>
+  
+    <li><a href="../../Projects/Api/ForumsAPI.html">Projects::Api::ForumsAPI</a>
+  
+    <li><a href="../../Projects/Api/MilestonesAPI.html">Projects::Api::MilestonesAPI</a>
+  
+    <li><a href="../../Projects/Api/PortalAPI.html">Projects::Api::PortalAPI</a>
+  
+    <li><a href="../../Projects/Api/ProjectsAPI.html">Projects::Api::ProjectsAPI</a>
+  
+    <li><a href="../../Projects/Api/TasklistsAPI.html">Projects::Api::TasklistsAPI</a>
+  
+    <li><a href="../../Projects/Api/TasksAPI.html">Projects::Api::TasksAPI</a>
+  
+    <li><a href="../../Projects/Api/TimesheetsAPI.html">Projects::Api::TimesheetsAPI</a>
+  
+    <li><a href="../../Projects/Api/UsersAPI.html">Projects::Api::UsersAPI</a>
+  
+    <li><a href="../../Projects/Model.html">Projects::Model</a>
+  
+    <li><a href="../../Projects/Model/Activity.html">Projects::Model::Activity</a>
+  
+    <li><a href="../../Projects/Model/Bug.html">Projects::Model::Bug</a>
+  
+    <li><a href="../../Projects/Model/Buglog.html">Projects::Model::Buglog</a>
+  
+    <li><a href="../../Projects/Model/Category.html">Projects::Model::Category</a>
+  
+    <li><a href="../../Projects/Model/Comment.html">Projects::Model::Comment</a>
+  
+    <li><a href="../../Projects/Model/Document.html">Projects::Model::Document</a>
+  
+    <li><a href="../../Projects/Model/Event.html">Projects::Model::Event</a>
+  
+    <li><a href="../../Projects/Model/Folder.html">Projects::Model::Folder</a>
+  
+    <li><a href="../../Projects/Model/Forum.html">Projects::Model::Forum</a>
+  
+    <li><a href="../../Projects/Model/Generallog.html">Projects::Model::Generallog</a>
+  
+    <li><a href="../../Projects/Model/Log.html">Projects::Model::Log</a>
+  
+    <li><a href="../../Projects/Model/Milestone.html">Projects::Model::Milestone</a>
+  
+    <li><a href="../../Projects/Model/Owner.html">Projects::Model::Owner</a>
+  
+    <li><a href="../../Projects/Model/Participant.html">Projects::Model::Participant</a>
+  
+    <li><a href="../../Projects/Model/Portal.html">Projects::Model::Portal</a>
+  
+    <li><a href="../../Projects/Model/Project.html">Projects::Model::Project</a>
+  
+    <li><a href="../../Projects/Model/Status.html">Projects::Model::Status</a>
+  
+    <li><a href="../../Projects/Model/Task.html">Projects::Model::Task</a>
+  
+    <li><a href="../../Projects/Model/Tasklist.html">Projects::Model::Tasklist</a>
+  
+    <li><a href="../../Projects/Model/Tasklog.html">Projects::Model::Tasklog</a>
+  
+    <li><a href="../../Projects/Model/Timelog.html">Projects::Model::Timelog</a>
+  
+    <li><a href="../../Projects/Model/TimelogList.html">Projects::Model::TimelogList</a>
+  
+    <li><a href="../../Projects/Model/User.html">Projects::Model::User</a>
+  
+    <li><a href="../../Projects/Model/Version.html">Projects::Model::Version</a>
+  
+    <li><a href="../../Projects/Parser.html">Projects::Parser</a>
+  
+    <li><a href="../../Projects/Parser/BugParser.html">Projects::Parser::BugParser</a>
+  
+    <li><a href="../../Projects/Parser/DocumentParser.html">Projects::Parser::DocumentParser</a>
+  
+    <li><a href="../../Projects/Parser/EventParser.html">Projects::Parser::EventParser</a>
+  
+    <li><a href="../../Projects/Parser/FolderParser.html">Projects::Parser::FolderParser</a>
+  
+    <li><a href="../../Projects/Parser/ForumParser.html">Projects::Parser::ForumParser</a>
+  
+    <li><a href="../../Projects/Parser/MilestonesParser.html">Projects::Parser::MilestonesParser</a>
+  
+    <li><a href="../../Projects/Parser/PortalParser.html">Projects::Parser::PortalParser</a>
+  
+    <li><a href="../../Projects/Parser/ProjectParser.html">Projects::Parser::ProjectParser</a>
+  
+    <li><a href="../../Projects/Parser/TaskParser.html">Projects::Parser::TaskParser</a>
+  
+    <li><a href="../../Projects/Parser/TasklistParser.html">Projects::Parser::TasklistParser</a>
+  
+    <li><a href="../../Projects/Parser/TimesheetParser.html">Projects::Parser::TimesheetParser</a>
+  
+    <li><a href="../../Projects/Parser/UserParser.html">Projects::Parser::UserParser</a>
+  
+    <li><a href="../../Projects/Pexception.html">Projects::Pexception</a>
+  
+    <li><a href="../../Projects/Pexception/ProjectsException.html">Projects::Pexception::ProjectsException</a>
+  
+    <li><a href="../../Projects/Service.html">Projects::Service</a>
+  
+    <li><a href="../../Projects/Service/ZohoProjects.html">Projects::Service::ZohoProjects</a>
+  
+    <li><a href="../../Projects/Util.html">Projects::Util</a>
+  
+    <li><a href="../../Projects/Util/ZohoHTTPClient.html">Projects::Util::ZohoHTTPClient</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Projects::Model::Comment</h1>
+
+  <div id="description" class="description">
+    <ul><li>
+<p>This class is used to make an object for <a
+href="Comment.html">Comment</a>.</p>
+</li></ul>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-getAddedBy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getAddedBy</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the comment added person id.</p>
+</li></ul>
+
+<h4 id="method-i-getAddedBy-label-Returns">Returns</h4>
+<ul><li>
+<p>Id of the person who added the comment.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getAddedBy-source">
+            <pre><span class="ruby-comment"># File projects/model/Comment.rb, line 128</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getAddedBy</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@addedBy</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getAddedBy-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getAddedBy-method -->
+
+    
+      <div id="method-i-getAddedPerson" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getAddedPerson</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the comment added person.</p>
+</li></ul>
+
+<h4 id="method-i-getAddedPerson-label-Returns">Returns</h4>
+<ul><li>
+<p>Person who added comment.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getAddedPerson-source">
+            <pre><span class="ruby-comment"># File projects/model/Comment.rb, line 148</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getAddedPerson</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@addedPerson</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getAddedPerson-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getAddedPerson-method -->
+
+    
+      <div id="method-i-getContent" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getContent</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the comment content.</p>
+</li></ul>
+
+<h4 id="method-i-getContent-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Comment.html">Comment</a> content.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getContent-source">
+            <pre><span class="ruby-comment"># File projects/model/Comment.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getContent</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@content</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getContent-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getContent-method -->
+
+    
+      <div id="method-i-getCreatedTime" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getCreatedTime</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the created time.</p>
+</li></ul>
+
+<h4 id="method-i-getCreatedTime-label-Returns">Returns</h4>
+<ul><li>
+<p>Created time.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getCreatedTime-source">
+            <pre><span class="ruby-comment"># File projects/model/Comment.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getCreatedTime</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@createdTime</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getCreatedTime-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getCreatedTime-method -->
+
+    
+      <div id="method-i-getCreatedTimeFormat" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getCreatedTimeFormat</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the created time format.</p>
+</li></ul>
+
+<h4 id="method-i-getCreatedTimeFormat-label-Returns">Returns</h4>
+<ul><li>
+<p>Created time format.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getCreatedTimeFormat-source">
+            <pre><span class="ruby-comment"># File projects/model/Comment.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getCreatedTimeFormat</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@createdTimeFormat</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getCreatedTimeFormat-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getCreatedTimeFormat-method -->
+
+    
+      <div id="method-i-getCreatedTimeLong" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getCreatedTimeLong</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the created time long.</p>
+</li></ul>
+
+<h4 id="method-i-getCreatedTimeLong-label-Returns">Returns</h4>
+<ul><li>
+<p>Created time.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getCreatedTimeLong-source">
+            <pre><span class="ruby-comment"># File projects/model/Comment.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getCreatedTimeLong</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@createdTimeLong</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getCreatedTimeLong-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getCreatedTimeLong-method -->
+
+    
+      <div id="method-i-getId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getId</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the comment id.</p>
+</li></ul>
+
+<h4 id="method-i-getId-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Comment.html">Comment</a> id.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getId-source">
+            <pre><span class="ruby-comment"># File projects/model/Comment.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getId</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getId-method -->
+
+    
+      <div id="method-i-getPostDate" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getPostDate</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the comment posted date.</p>
+</li></ul>
+
+<h4 id="method-i-getPostDate-label-Returns">Returns</h4>
+<ul><li>
+<p>Date at which comment is posted.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getPostDate-source">
+            <pre><span class="ruby-comment"># File projects/model/Comment.rb, line 229</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getPostDate</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@postDate</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getPostDate-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getPostDate-method -->
+
+    
+      <div id="method-i-getPostDateFormat" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getPostDateFormat</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the comment posted date format.</p>
+</li></ul>
+
+<h4 id="method-i-getPostDateFormat-label-Returns">Returns</h4>
+<ul><li>
+<p>Date format of the posted comment.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getPostDateFormat-source">
+            <pre><span class="ruby-comment"># File projects/model/Comment.rb, line 249</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getPostDateFormat</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@postDateFormat</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getPostDateFormat-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getPostDateFormat-method -->
+
+    
+      <div id="method-i-getPostDateLong" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getPostDateLong</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the comment posted date long.</p>
+</li></ul>
+
+<h4 id="method-i-getPostDateLong-label-Returns">Returns</h4>
+<ul><li>
+<p>The date on which the comment is posted.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getPostDateLong-source">
+            <pre><span class="ruby-comment"># File projects/model/Comment.rb, line 269</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getPostDateLong</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@postDateLong</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getPostDateLong-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getPostDateLong-method -->
+
+    
+      <div id="method-i-getPostedBy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getPostedBy</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the comment posted person id.</p>
+</li></ul>
+
+<h4 id="method-i-getPostedBy-label-Returns">Returns</h4>
+<ul><li>
+<p>Id of the person who posted the comment.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getPostedBy-source">
+            <pre><span class="ruby-comment"># File projects/model/Comment.rb, line 189</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getPostedBy</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@postedBy</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getPostedBy-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getPostedBy-method -->
+
+    
+      <div id="method-i-getPostedPerson" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getPostedPerson</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the comment posted person.</p>
+</li></ul>
+
+<h4 id="method-i-getPostedPerson-label-Returns">Returns</h4>
+<ul><li>
+<p>Person who posted the comment.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getPostedPerson-source">
+            <pre><span class="ruby-comment"># File projects/model/Comment.rb, line 209</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getPostedPerson</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@postedPerson</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getPostedPerson-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getPostedPerson-method -->
+
+    
+      <div id="method-i-getUpdatedBy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getUpdatedBy</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the comment updated person id.</p>
+</li></ul>
+
+<h4 id="method-i-getUpdatedBy-label-Returns">Returns</h4>
+<ul><li>
+<p>Id of the person who updated the comment.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getUpdatedBy-source">
+            <pre><span class="ruby-comment"># File projects/model/Comment.rb, line 169</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getUpdatedBy</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@updatedBy</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getUpdatedBy-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getUpdatedBy-method -->
+
+    
+      <div id="method-i-setAddedBy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setAddedBy</span><span
+            class="method-args">(addedBy)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the id for the comment added person.</p>
+</li></ul>
+
+<h4 id="method-i-setAddedBy-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>addedBy
+<dd><ul><li>
+<p>ID of the person who added the comment.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setAddedBy-source">
+            <pre><span class="ruby-comment"># File projects/model/Comment.rb, line 118</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setAddedBy</span>(<span class="ruby-identifier">addedBy</span>)
+        <span class="ruby-ivar">@addedBy</span> = <span class="ruby-identifier">addedBy</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setAddedBy-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setAddedBy-method -->
+
+    
+      <div id="method-i-setAddedPerson" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setAddedPerson</span><span
+            class="method-args">(addedPerson)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the comment added person.</p>
+</li></ul>
+
+<h4 id="method-i-setAddedPerson-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>addedPerson
+<dd><ul><li>
+<p>Person who added comment.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setAddedPerson-source">
+            <pre><span class="ruby-comment"># File projects/model/Comment.rb, line 138</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setAddedPerson</span>(<span class="ruby-identifier">addedPerson</span>)
+        <span class="ruby-ivar">@addedPerson</span> = <span class="ruby-identifier">addedPerson</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setAddedPerson-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setAddedPerson-method -->
+
+    
+      <div id="method-i-setContent" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setContent</span><span
+            class="method-args">(content)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the comment content.</p>
+</li></ul>
+
+<h4 id="method-i-setContent-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>content
+<dd><ul><li>
+<p>Content for the comment.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setContent-source">
+            <pre><span class="ruby-comment"># File projects/model/Comment.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setContent</span>(<span class="ruby-identifier">content</span>)
+        <span class="ruby-ivar">@content</span> = <span class="ruby-identifier">content</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setContent-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setContent-method -->
+
+    
+      <div id="method-i-setCreatedTime" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setCreatedTime</span><span
+            class="method-args">(createdTime)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the created time.</p>
+</li></ul>
+
+<h4 id="method-i-setCreatedTime-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>createdTime
+<dd><ul><li>
+<p>Created time for the comment.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setCreatedTime-source">
+            <pre><span class="ruby-comment"># File projects/model/Comment.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setCreatedTime</span>(<span class="ruby-identifier">createdTime</span>)
+        <span class="ruby-ivar">@createdTime</span> = <span class="ruby-identifier">createdTime</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setCreatedTime-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setCreatedTime-method -->
+
+    
+      <div id="method-i-setCreatedTimeFormat" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setCreatedTimeFormat</span><span
+            class="method-args">(createdTimeFormat)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the created time format.</p>
+</li></ul>
+
+<h4 id="method-i-setCreatedTimeFormat-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>createdTime
+<dd><ul><li>
+<p>Created time format for the comment.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setCreatedTimeFormat-source">
+            <pre><span class="ruby-comment"># File projects/model/Comment.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setCreatedTimeFormat</span>(<span class="ruby-identifier">createdTimeFormat</span>)
+        <span class="ruby-ivar">@createdTimeFormat</span> = <span class="ruby-identifier">createdTimeFormat</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setCreatedTimeFormat-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setCreatedTimeFormat-method -->
+
+    
+      <div id="method-i-setCreatedTimeLong" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setCreatedTimeLong</span><span
+            class="method-args">(createdTimeLong)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the created time long.</p>
+</li></ul>
+
+<h4 id="method-i-setCreatedTimeLong-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>createdTimeLong
+<dd><ul><li>
+<p>Created time for the comment.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setCreatedTimeLong-source">
+            <pre><span class="ruby-comment"># File projects/model/Comment.rb, line 98</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setCreatedTimeLong</span>(<span class="ruby-identifier">createdTimeLong</span>)
+        <span class="ruby-ivar">@createdTimeLong</span> = <span class="ruby-identifier">createdTimeLong</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setCreatedTimeLong-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setCreatedTimeLong-method -->
+
+    
+      <div id="method-i-setId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setId</span><span
+            class="method-args">(id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the comment id.</p>
+</li></ul>
+
+<h4 id="method-i-setId-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>id
+<dd><ul><li>
+<p>ID of the comment.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setId-source">
+            <pre><span class="ruby-comment"># File projects/model/Comment.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setId</span>(<span class="ruby-identifier">id</span>)
+        <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setId-method -->
+
+    
+      <div id="method-i-setPostDate" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setPostDate</span><span
+            class="method-args">(postDate)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the comment posted date.</p>
+</li></ul>
+
+<h4 id="method-i-setPostDate-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>postDate
+<dd><ul><li>
+<p>Date at which comment is posted.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setPostDate-source">
+            <pre><span class="ruby-comment"># File projects/model/Comment.rb, line 219</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setPostDate</span>(<span class="ruby-identifier">postDate</span>)
+        <span class="ruby-ivar">@postDate</span> = <span class="ruby-identifier">postDate</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setPostDate-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setPostDate-method -->
+
+    
+      <div id="method-i-setPostDateFormat" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setPostDateFormat</span><span
+            class="method-args">(postDateFormat)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the comment posted date format.</p>
+</li></ul>
+
+<h4 id="method-i-setPostDateFormat-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>postDate
+<dd><ul><li>
+<p>Date format of the posted comment.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setPostDateFormat-source">
+            <pre><span class="ruby-comment"># File projects/model/Comment.rb, line 239</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setPostDateFormat</span>(<span class="ruby-identifier">postDateFormat</span>)
+        <span class="ruby-ivar">@postDateFormat</span> = <span class="ruby-identifier">postDateFormat</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setPostDateFormat-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setPostDateFormat-method -->
+
+    
+      <div id="method-i-setPostDateLong" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setPostDateLong</span><span
+            class="method-args">(postDateLong)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the comment posted date long.</p>
+</li></ul>
+
+<h4 id="method-i-setPostDateLong-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>postDateLong
+<dd><ul><li>
+<p>Was was the comment posted(date).</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setPostDateLong-source">
+            <pre><span class="ruby-comment"># File projects/model/Comment.rb, line 259</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setPostDateLong</span>(<span class="ruby-identifier">postDateLong</span>)
+        <span class="ruby-ivar">@postDateLong</span> = <span class="ruby-identifier">postDateLong</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setPostDateLong-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setPostDateLong-method -->
+
+    
+      <div id="method-i-setPostedBy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setPostedBy</span><span
+            class="method-args">(postedBy)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the comment posted person id.</p>
+</li></ul>
+
+<h4 id="method-i-setPostedBy-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>postedBy
+<dd><ul><li>
+<p>Id of the person who posted the comment.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setPostedBy-source">
+            <pre><span class="ruby-comment"># File projects/model/Comment.rb, line 179</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setPostedBy</span>(<span class="ruby-identifier">postedBy</span>)
+        <span class="ruby-ivar">@postedBy</span> = <span class="ruby-identifier">postedBy</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setPostedBy-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setPostedBy-method -->
+
+    
+      <div id="method-i-setPostedPerson" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setPostedPerson</span><span
+            class="method-args">(postedPerson)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the comment posted person.</p>
+</li></ul>
+
+<h4 id="method-i-setPostedPerson-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>postedPerson
+<dd><ul><li>
+<p>Person who posted the comment.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setPostedPerson-source">
+            <pre><span class="ruby-comment"># File projects/model/Comment.rb, line 199</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setPostedPerson</span>(<span class="ruby-identifier">postedPerson</span>)
+        <span class="ruby-ivar">@postedPerson</span> = <span class="ruby-identifier">postedPerson</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setPostedPerson-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setPostedPerson-method -->
+
+    
+      <div id="method-i-setUpdatedBy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setUpdatedBy</span><span
+            class="method-args">(updatedBy)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the comment updated person id.</p>
+</li></ul>
+
+<h4 id="method-i-setUpdatedBy-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>updatedBy
+<dd><ul><li>
+<p>ID of the person who updated the comment.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setUpdatedBy-source">
+            <pre><span class="ruby-comment"># File projects/model/Comment.rb, line 159</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setUpdatedBy</span>(<span class="ruby-identifier">updatedBy</span>)
+        <span class="ruby-ivar">@updatedBy</span> = <span class="ruby-identifier">updatedBy</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setUpdatedBy-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setUpdatedBy-method -->
+
+    
+      <div id="method-i-toParamMAP" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">toParamMAP</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Convert the <a href="Comment.html">Comment</a> object into HashMap.</p>
+</li></ul>
+
+<h4 id="method-i-toParamMAP-label-Returns">Returns</h4>
+<ul><li>
+<p>HashMap object.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="toParamMAP-source">
+            <pre><span class="ruby-comment"># File projects/model/Comment.rb, line 279</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">toParamMAP</span>
+        <span class="ruby-identifier">requestBody</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">content</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;content&quot;</span>] = <span class="ruby-identifier">content</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">requestBody</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- toParamMAP-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- toParamMAP-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

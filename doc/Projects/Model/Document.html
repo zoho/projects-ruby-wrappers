@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=IBM437" http-equiv="Content-Type">
+
+<title>class Projects::Model::Document - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../../index.html">Home</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>projects/model/Document.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-getContenttype">#getContenttype</a>
+    
+    <li><a href="#method-i-getDescription">#getDescription</a>
+    
+    <li><a href="#method-i-getFilename">#getFilename</a>
+    
+    <li><a href="#method-i-getFolder">#getFolder</a>
+    
+    <li><a href="#method-i-getFolderId">#getFolderId</a>
+    
+    <li><a href="#method-i-getId">#getId</a>
+    
+    <li><a href="#method-i-getNotify">#getNotify</a>
+    
+    <li><a href="#method-i-getTags">#getTags</a>
+    
+    <li><a href="#method-i-getURL">#getURL</a>
+    
+    <li><a href="#method-i-getUploaddoc">#getUploaddoc</a>
+    
+    <li><a href="#method-i-getVersions">#getVersions</a>
+    
+    <li><a href="#method-i-setContenttype">#setContenttype</a>
+    
+    <li><a href="#method-i-setDescription">#setDescription</a>
+    
+    <li><a href="#method-i-setFilename">#setFilename</a>
+    
+    <li><a href="#method-i-setFolder">#setFolder</a>
+    
+    <li><a href="#method-i-setFolderId">#setFolderId</a>
+    
+    <li><a href="#method-i-setId">#setId</a>
+    
+    <li><a href="#method-i-setNotify">#setNotify</a>
+    
+    <li><a href="#method-i-setTags">#setTags</a>
+    
+    <li><a href="#method-i-setURL">#setURL</a>
+    
+    <li><a href="#method-i-setUploaddoc">#setUploaddoc</a>
+    
+    <li><a href="#method-i-setVersions">#setVersions</a>
+    
+    <li><a href="#method-i-toParamMAP">#toParamMAP</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../Projects.html">Projects</a>
+  
+    <li><a href="../../Projects/Api.html">Projects::Api</a>
+  
+    <li><a href="../../Projects/Api/API.html">Projects::Api::API</a>
+  
+    <li><a href="../../Projects/Api/BugsAPI.html">Projects::Api::BugsAPI</a>
+  
+    <li><a href="../../Projects/Api/DocumentsAPI.html">Projects::Api::DocumentsAPI</a>
+  
+    <li><a href="../../Projects/Api/EventsAPI.html">Projects::Api::EventsAPI</a>
+  
+    <li><a href="../../Projects/Api/FoldersAPI.html">Projects::Api::FoldersAPI</a>
+  
+    <li><a href="../../Projects/Api/ForumsAPI.html">Projects::Api::ForumsAPI</a>
+  
+    <li><a href="../../Projects/Api/MilestonesAPI.html">Projects::Api::MilestonesAPI</a>
+  
+    <li><a href="../../Projects/Api/PortalAPI.html">Projects::Api::PortalAPI</a>
+  
+    <li><a href="../../Projects/Api/ProjectsAPI.html">Projects::Api::ProjectsAPI</a>
+  
+    <li><a href="../../Projects/Api/TasklistsAPI.html">Projects::Api::TasklistsAPI</a>
+  
+    <li><a href="../../Projects/Api/TasksAPI.html">Projects::Api::TasksAPI</a>
+  
+    <li><a href="../../Projects/Api/TimesheetsAPI.html">Projects::Api::TimesheetsAPI</a>
+  
+    <li><a href="../../Projects/Api/UsersAPI.html">Projects::Api::UsersAPI</a>
+  
+    <li><a href="../../Projects/Model.html">Projects::Model</a>
+  
+    <li><a href="../../Projects/Model/Activity.html">Projects::Model::Activity</a>
+  
+    <li><a href="../../Projects/Model/Bug.html">Projects::Model::Bug</a>
+  
+    <li><a href="../../Projects/Model/Buglog.html">Projects::Model::Buglog</a>
+  
+    <li><a href="../../Projects/Model/Category.html">Projects::Model::Category</a>
+  
+    <li><a href="../../Projects/Model/Comment.html">Projects::Model::Comment</a>
+  
+    <li><a href="../../Projects/Model/Document.html">Projects::Model::Document</a>
+  
+    <li><a href="../../Projects/Model/Event.html">Projects::Model::Event</a>
+  
+    <li><a href="../../Projects/Model/Folder.html">Projects::Model::Folder</a>
+  
+    <li><a href="../../Projects/Model/Forum.html">Projects::Model::Forum</a>
+  
+    <li><a href="../../Projects/Model/Generallog.html">Projects::Model::Generallog</a>
+  
+    <li><a href="../../Projects/Model/Log.html">Projects::Model::Log</a>
+  
+    <li><a href="../../Projects/Model/Milestone.html">Projects::Model::Milestone</a>
+  
+    <li><a href="../../Projects/Model/Owner.html">Projects::Model::Owner</a>
+  
+    <li><a href="../../Projects/Model/Participant.html">Projects::Model::Participant</a>
+  
+    <li><a href="../../Projects/Model/Portal.html">Projects::Model::Portal</a>
+  
+    <li><a href="../../Projects/Model/Project.html">Projects::Model::Project</a>
+  
+    <li><a href="../../Projects/Model/Status.html">Projects::Model::Status</a>
+  
+    <li><a href="../../Projects/Model/Task.html">Projects::Model::Task</a>
+  
+    <li><a href="../../Projects/Model/Tasklist.html">Projects::Model::Tasklist</a>
+  
+    <li><a href="../../Projects/Model/Tasklog.html">Projects::Model::Tasklog</a>
+  
+    <li><a href="../../Projects/Model/Timelog.html">Projects::Model::Timelog</a>
+  
+    <li><a href="../../Projects/Model/TimelogList.html">Projects::Model::TimelogList</a>
+  
+    <li><a href="../../Projects/Model/User.html">Projects::Model::User</a>
+  
+    <li><a href="../../Projects/Model/Version.html">Projects::Model::Version</a>
+  
+    <li><a href="../../Projects/Parser.html">Projects::Parser</a>
+  
+    <li><a href="../../Projects/Parser/BugParser.html">Projects::Parser::BugParser</a>
+  
+    <li><a href="../../Projects/Parser/DocumentParser.html">Projects::Parser::DocumentParser</a>
+  
+    <li><a href="../../Projects/Parser/EventParser.html">Projects::Parser::EventParser</a>
+  
+    <li><a href="../../Projects/Parser/FolderParser.html">Projects::Parser::FolderParser</a>
+  
+    <li><a href="../../Projects/Parser/ForumParser.html">Projects::Parser::ForumParser</a>
+  
+    <li><a href="../../Projects/Parser/MilestonesParser.html">Projects::Parser::MilestonesParser</a>
+  
+    <li><a href="../../Projects/Parser/PortalParser.html">Projects::Parser::PortalParser</a>
+  
+    <li><a href="../../Projects/Parser/ProjectParser.html">Projects::Parser::ProjectParser</a>
+  
+    <li><a href="../../Projects/Parser/TaskParser.html">Projects::Parser::TaskParser</a>
+  
+    <li><a href="../../Projects/Parser/TasklistParser.html">Projects::Parser::TasklistParser</a>
+  
+    <li><a href="../../Projects/Parser/TimesheetParser.html">Projects::Parser::TimesheetParser</a>
+  
+    <li><a href="../../Projects/Parser/UserParser.html">Projects::Parser::UserParser</a>
+  
+    <li><a href="../../Projects/Pexception.html">Projects::Pexception</a>
+  
+    <li><a href="../../Projects/Pexception/ProjectsException.html">Projects::Pexception::ProjectsException</a>
+  
+    <li><a href="../../Projects/Service.html">Projects::Service</a>
+  
+    <li><a href="../../Projects/Service/ZohoProjects.html">Projects::Service::ZohoProjects</a>
+  
+    <li><a href="../../Projects/Util.html">Projects::Util</a>
+  
+    <li><a href="../../Projects/Util/ZohoHTTPClient.html">Projects::Util::ZohoHTTPClient</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Projects::Model::Document</h1>
+
+  <div id="description" class="description">
+    <ul><li>
+<p>This class is used to make an object for <a
+href="Document.html">Document</a>.</p>
+</li></ul>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-getContenttype" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getContenttype</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the content type.</p>
+</li></ul>
+
+<h4 id="method-i-getContenttype-label-Returns">Returns</h4>
+<ul><li>
+<p>Content type of the file.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getContenttype-source">
+            <pre><span class="ruby-comment"># File projects/model/Document.rb, line 69</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getContenttype</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@contenttype</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getContenttype-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getContenttype-method -->
+
+    
+      <div id="method-i-getDescription" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getDescription</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the description of the document.</p>
+</li></ul>
+
+<h4 id="method-i-getDescription-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Document.html">Document</a> description.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getDescription-source">
+            <pre><span class="ruby-comment"># File projects/model/Document.rb, line 169</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getDescription</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@description</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getDescription-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getDescription-method -->
+
+    
+      <div id="method-i-getFilename" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getFilename</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the file name.</p>
+</li></ul>
+
+<h4 id="method-i-getFilename-label-Returns">Returns</h4>
+<ul><li>
+<p>File name.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getFilename-source">
+            <pre><span class="ruby-comment"># File projects/model/Document.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getFilename</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@filename</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getFilename-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getFilename-method -->
+
+    
+      <div id="method-i-getFolder" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getFolder</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the folder object.</p>
+</li></ul>
+
+<h4 id="method-i-getFolder-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Folder.html">Folder</a> object.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getFolder-source">
+            <pre><span class="ruby-comment"># File projects/model/Document.rb, line 229</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getFolder</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@folder</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getFolder-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getFolder-method -->
+
+    
+      <div id="method-i-getFolderId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getFolderId</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the folder id.</p>
+</li></ul>
+
+<h4 id="method-i-getFolderId-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Folder.html">Folder</a> id.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getFolderId-source">
+            <pre><span class="ruby-comment"># File projects/model/Document.rb, line 149</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getFolderId</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@folderId</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getFolderId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getFolderId-method -->
+
+    
+      <div id="method-i-getId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getId</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the document id.</p>
+</li></ul>
+
+<h4 id="method-i-getId-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Document.html">Document</a> id.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getId-source">
+            <pre><span class="ruby-comment"># File projects/model/Document.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getId</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getId-method -->
+
+    
+      <div id="method-i-getNotify" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getNotify</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the notify for the document.</p>
+</li></ul>
+
+<h4 id="method-i-getNotify-label-Returns">Returns</h4>
+<ul><li>
+<p>Notify for the document.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getNotify-source">
+            <pre><span class="ruby-comment"># File projects/model/Document.rb, line 209</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getNotify</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@notify</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getNotify-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getNotify-method -->
+
+    
+      <div id="method-i-getTags" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getTags</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the tags for the document.</p>
+</li></ul>
+
+<h4 id="method-i-getTags-label-Returns">Returns</h4>
+<ul><li>
+<p>Tags for the document.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getTags-source">
+            <pre><span class="ruby-comment"># File projects/model/Document.rb, line 189</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getTags</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@tags</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getTags-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getTags-method -->
+
+    
+      <div id="method-i-getURL" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getURL</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the document URL.</p>
+</li></ul>
+
+<h4 id="method-i-getURL-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Document.html">Document</a> URL.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getURL-source">
+            <pre><span class="ruby-comment"># File projects/model/Document.rb, line 89</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getURL</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@url</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getURL-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getURL-method -->
+
+    
+      <div id="method-i-getUploaddoc" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getUploaddoc</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the upload document file.</p>
+</li></ul>
+
+<h4 id="method-i-getUploaddoc-label-Returns">Returns</h4>
+<ul><li>
+<p>ArrayList of upload document file.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getUploaddoc-source">
+            <pre><span class="ruby-comment"># File projects/model/Document.rb, line 129</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getUploaddoc</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@uploaddoc</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getUploaddoc-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getUploaddoc-method -->
+
+    
+      <div id="method-i-getVersions" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getVersions</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the document version.</p>
+</li></ul>
+
+<h4 id="method-i-getVersions-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Document.html">Document</a> version.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getVersions-source">
+            <pre><span class="ruby-comment"># File projects/model/Document.rb, line 109</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getVersions</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@versions</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getVersions-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getVersions-method -->
+
+    
+      <div id="method-i-setContenttype" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setContenttype</span><span
+            class="method-args">(contenttype)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the content type.</p>
+</li></ul>
+
+<h4 id="method-i-setContenttype-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>contenttype
+<dd><ul><li>
+<p>Content type of the file.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setContenttype-source">
+            <pre><span class="ruby-comment"># File projects/model/Document.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setContenttype</span>(<span class="ruby-identifier">contenttype</span>)
+        <span class="ruby-ivar">@contenttype</span> = <span class="ruby-identifier">contenttype</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setContenttype-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setContenttype-method -->
+
+    
+      <div id="method-i-setDescription" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setDescription</span><span
+            class="method-args">(description)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the description of the document.</p>
+</li></ul>
+
+<h4 id="method-i-setDescription-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>description
+<dd><ul><li>
+<p>Description of the document.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setDescription-source">
+            <pre><span class="ruby-comment"># File projects/model/Document.rb, line 159</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setDescription</span>(<span class="ruby-identifier">description</span>)
+        <span class="ruby-ivar">@description</span> = <span class="ruby-identifier">description</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setDescription-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setDescription-method -->
+
+    
+      <div id="method-i-setFilename" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setFilename</span><span
+            class="method-args">(filename)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the file name.</p>
+</li></ul>
+
+<h4 id="method-i-setFilename-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>filename
+<dd><ul><li>
+<p>Name of the file.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setFilename-source">
+            <pre><span class="ruby-comment"># File projects/model/Document.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setFilename</span>(<span class="ruby-identifier">filename</span>)
+        <span class="ruby-ivar">@filename</span> = <span class="ruby-identifier">filename</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setFilename-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setFilename-method -->
+
+    
+      <div id="method-i-setFolder" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setFolder</span><span
+            class="method-args">(folder)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the folder.</p>
+</li></ul>
+
+<h4 id="method-i-setFolder-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>folder
+<dd><ul><li>
+<p><a href="Folder.html">Folder</a> object.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setFolder-source">
+            <pre><span class="ruby-comment"># File projects/model/Document.rb, line 219</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setFolder</span>(<span class="ruby-identifier">folder</span>)
+        <span class="ruby-ivar">@folder</span> = <span class="ruby-identifier">folder</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setFolder-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setFolder-method -->
+
+    
+      <div id="method-i-setFolderId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setFolderId</span><span
+            class="method-args">(folderId)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the folder id.</p>
+</li></ul>
+
+<h4 id="method-i-setFolderId-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>folderId
+<dd><ul><li>
+<p>ID of the folder.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setFolderId-source">
+            <pre><span class="ruby-comment"># File projects/model/Document.rb, line 139</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setFolderId</span>(<span class="ruby-identifier">folderId</span>)
+        <span class="ruby-ivar">@folderId</span> = <span class="ruby-identifier">folderId</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setFolderId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setFolderId-method -->
+
+    
+      <div id="method-i-setId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setId</span><span
+            class="method-args">(id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the document id.</p>
+</li></ul>
+
+<h4 id="method-i-setId-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>id
+<dd><ul><li>
+<p>ID of the document.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setId-source">
+            <pre><span class="ruby-comment"># File projects/model/Document.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setId</span>(<span class="ruby-identifier">id</span>)
+        <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setId-method -->
+
+    
+      <div id="method-i-setNotify" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setNotify</span><span
+            class="method-args">(notify)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the notify for the document.</p>
+</li></ul>
+
+<h4 id="method-i-setNotify-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>notify
+<dd><ul><li>
+<p>Notify for the document.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setNotify-source">
+            <pre><span class="ruby-comment"># File projects/model/Document.rb, line 199</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setNotify</span>(<span class="ruby-identifier">notify</span>)
+        <span class="ruby-ivar">@notify</span> = <span class="ruby-identifier">notify</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setNotify-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setNotify-method -->
+
+    
+      <div id="method-i-setTags" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setTags</span><span
+            class="method-args">(tags)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the tags for the document.</p>
+</li></ul>
+
+<h4 id="method-i-setTags-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>tags
+<dd><ul><li>
+<p>Tags for the document.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setTags-source">
+            <pre><span class="ruby-comment"># File projects/model/Document.rb, line 179</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setTags</span>(<span class="ruby-identifier">tags</span>)
+        <span class="ruby-ivar">@tags</span> = <span class="ruby-identifier">tags</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setTags-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setTags-method -->
+
+    
+      <div id="method-i-setURL" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setURL</span><span
+            class="method-args">(url)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the document URL.</p>
+</li></ul>
+
+<h4 id="method-i-setURL-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>url
+<dd><ul><li>
+<p>URL for the document.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setURL-source">
+            <pre><span class="ruby-comment"># File projects/model/Document.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setURL</span>(<span class="ruby-identifier">url</span>)
+        <span class="ruby-ivar">@url</span> = <span class="ruby-identifier">url</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setURL-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setURL-method -->
+
+    
+      <div id="method-i-setUploaddoc" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setUploaddoc</span><span
+            class="method-args">(uploaddoc)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the upload document file.</p>
+</li></ul>
+
+<h4 id="method-i-setUploaddoc-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>uploaddoc
+<dd><ul><li>
+<p>ArrayList of the documents being uploaded.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setUploaddoc-source">
+            <pre><span class="ruby-comment"># File projects/model/Document.rb, line 119</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setUploaddoc</span>(<span class="ruby-identifier">uploaddoc</span>)
+        <span class="ruby-ivar">@uploaddoc</span> = <span class="ruby-identifier">uploaddoc</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setUploaddoc-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setUploaddoc-method -->
+
+    
+      <div id="method-i-setVersions" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setVersions</span><span
+            class="method-args">(versions)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the document version.</p>
+</li></ul>
+
+<h4 id="method-i-setVersions-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>versions
+<dd><ul><li>
+<p><a href="Version.html">Version</a> for the document.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setVersions-source">
+            <pre><span class="ruby-comment"># File projects/model/Document.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setVersions</span>(<span class="ruby-identifier">versions</span>)
+        <span class="ruby-ivar">@versions</span> = <span class="ruby-identifier">versions</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setVersions-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setVersions-method -->
+
+    
+      <div id="method-i-toParamMAP" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">toParamMAP</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Convert the <a href="Document.html">Document</a> object into HashMap.</p>
+</li></ul>
+
+<h4 id="method-i-toParamMAP-label-Returns">Returns</h4>
+<ul><li>
+<p>HashMap object.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="toParamMAP-source">
+            <pre><span class="ruby-comment"># File projects/model/Document.rb, line 239</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">toParamMAP</span>
+        <span class="ruby-identifier">requestBody</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+        
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">folderId</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">folderId</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;folder_id&quot;</span>] = <span class="ruby-identifier">folderId</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">description</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;description&quot;</span>] = <span class="ruby-identifier">description</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">tags</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;tags&quot;</span>] = <span class="ruby-identifier">tags</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">notify</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">notify</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;notify&quot;</span>] = <span class="ruby-identifier">notify</span>
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">requestBody</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- toParamMAP-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- toParamMAP-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

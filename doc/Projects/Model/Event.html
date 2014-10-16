@@ -1,0 +1,1592 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=IBM437" http-equiv="Content-Type">
+
+<title>class Projects::Model::Event - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../../index.html">Home</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>projects/model/Event.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-getAMPM">#getAMPM</a>
+    
+    <li><a href="#method-i-getDurationHours">#getDurationHours</a>
+    
+    <li><a href="#method-i-getDurationMinutes">#getDurationMinutes</a>
+    
+    <li><a href="#method-i-getHour">#getHour</a>
+    
+    <li><a href="#method-i-getId">#getId</a>
+    
+    <li><a href="#method-i-getLocation">#getLocation</a>
+    
+    <li><a href="#method-i-getMinutes">#getMinutes</a>
+    
+    <li><a href="#method-i-getOccurred">#getOccurred</a>
+    
+    <li><a href="#method-i-getOccurrences">#getOccurrences</a>
+    
+    <li><a href="#method-i-getParticipants">#getParticipants</a>
+    
+    <li><a href="#method-i-getReminder">#getReminder</a>
+    
+    <li><a href="#method-i-getRepeat">#getRepeat</a>
+    
+    <li><a href="#method-i-getScheduledOn">#getScheduledOn</a>
+    
+    <li><a href="#method-i-getScheduledOnLong">#getScheduledOnLong</a>
+    
+    <li><a href="#method-i-getTilte">#getTilte</a>
+    
+    <li><a href="#method-i-setAMPM">#setAMPM</a>
+    
+    <li><a href="#method-i-setDurationHours">#setDurationHours</a>
+    
+    <li><a href="#method-i-setDurationMinutes">#setDurationMinutes</a>
+    
+    <li><a href="#method-i-setHour">#setHour</a>
+    
+    <li><a href="#method-i-setId">#setId</a>
+    
+    <li><a href="#method-i-setIsOpen">#setIsOpen</a>
+    
+    <li><a href="#method-i-setLocation">#setLocation</a>
+    
+    <li><a href="#method-i-setMinutes">#setMinutes</a>
+    
+    <li><a href="#method-i-setOccurred">#setOccurred</a>
+    
+    <li><a href="#method-i-setOccurrences">#setOccurrences</a>
+    
+    <li><a href="#method-i-setParticipants">#setParticipants</a>
+    
+    <li><a href="#method-i-setReminder">#setReminder</a>
+    
+    <li><a href="#method-i-setRepeat">#setRepeat</a>
+    
+    <li><a href="#method-i-setScheduledOn">#setScheduledOn</a>
+    
+    <li><a href="#method-i-setScheduledOnLong">#setScheduledOnLong</a>
+    
+    <li><a href="#method-i-setTitle">#setTitle</a>
+    
+    <li><a href="#method-i-toParamMAP">#toParamMAP</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../Projects.html">Projects</a>
+  
+    <li><a href="../../Projects/Api.html">Projects::Api</a>
+  
+    <li><a href="../../Projects/Api/API.html">Projects::Api::API</a>
+  
+    <li><a href="../../Projects/Api/BugsAPI.html">Projects::Api::BugsAPI</a>
+  
+    <li><a href="../../Projects/Api/DocumentsAPI.html">Projects::Api::DocumentsAPI</a>
+  
+    <li><a href="../../Projects/Api/EventsAPI.html">Projects::Api::EventsAPI</a>
+  
+    <li><a href="../../Projects/Api/FoldersAPI.html">Projects::Api::FoldersAPI</a>
+  
+    <li><a href="../../Projects/Api/ForumsAPI.html">Projects::Api::ForumsAPI</a>
+  
+    <li><a href="../../Projects/Api/MilestonesAPI.html">Projects::Api::MilestonesAPI</a>
+  
+    <li><a href="../../Projects/Api/PortalAPI.html">Projects::Api::PortalAPI</a>
+  
+    <li><a href="../../Projects/Api/ProjectsAPI.html">Projects::Api::ProjectsAPI</a>
+  
+    <li><a href="../../Projects/Api/TasklistsAPI.html">Projects::Api::TasklistsAPI</a>
+  
+    <li><a href="../../Projects/Api/TasksAPI.html">Projects::Api::TasksAPI</a>
+  
+    <li><a href="../../Projects/Api/TimesheetsAPI.html">Projects::Api::TimesheetsAPI</a>
+  
+    <li><a href="../../Projects/Api/UsersAPI.html">Projects::Api::UsersAPI</a>
+  
+    <li><a href="../../Projects/Model.html">Projects::Model</a>
+  
+    <li><a href="../../Projects/Model/Activity.html">Projects::Model::Activity</a>
+  
+    <li><a href="../../Projects/Model/Bug.html">Projects::Model::Bug</a>
+  
+    <li><a href="../../Projects/Model/Buglog.html">Projects::Model::Buglog</a>
+  
+    <li><a href="../../Projects/Model/Category.html">Projects::Model::Category</a>
+  
+    <li><a href="../../Projects/Model/Comment.html">Projects::Model::Comment</a>
+  
+    <li><a href="../../Projects/Model/Document.html">Projects::Model::Document</a>
+  
+    <li><a href="../../Projects/Model/Event.html">Projects::Model::Event</a>
+  
+    <li><a href="../../Projects/Model/Folder.html">Projects::Model::Folder</a>
+  
+    <li><a href="../../Projects/Model/Forum.html">Projects::Model::Forum</a>
+  
+    <li><a href="../../Projects/Model/Generallog.html">Projects::Model::Generallog</a>
+  
+    <li><a href="../../Projects/Model/Log.html">Projects::Model::Log</a>
+  
+    <li><a href="../../Projects/Model/Milestone.html">Projects::Model::Milestone</a>
+  
+    <li><a href="../../Projects/Model/Owner.html">Projects::Model::Owner</a>
+  
+    <li><a href="../../Projects/Model/Participant.html">Projects::Model::Participant</a>
+  
+    <li><a href="../../Projects/Model/Portal.html">Projects::Model::Portal</a>
+  
+    <li><a href="../../Projects/Model/Project.html">Projects::Model::Project</a>
+  
+    <li><a href="../../Projects/Model/Status.html">Projects::Model::Status</a>
+  
+    <li><a href="../../Projects/Model/Task.html">Projects::Model::Task</a>
+  
+    <li><a href="../../Projects/Model/Tasklist.html">Projects::Model::Tasklist</a>
+  
+    <li><a href="../../Projects/Model/Tasklog.html">Projects::Model::Tasklog</a>
+  
+    <li><a href="../../Projects/Model/Timelog.html">Projects::Model::Timelog</a>
+  
+    <li><a href="../../Projects/Model/TimelogList.html">Projects::Model::TimelogList</a>
+  
+    <li><a href="../../Projects/Model/User.html">Projects::Model::User</a>
+  
+    <li><a href="../../Projects/Model/Version.html">Projects::Model::Version</a>
+  
+    <li><a href="../../Projects/Parser.html">Projects::Parser</a>
+  
+    <li><a href="../../Projects/Parser/BugParser.html">Projects::Parser::BugParser</a>
+  
+    <li><a href="../../Projects/Parser/DocumentParser.html">Projects::Parser::DocumentParser</a>
+  
+    <li><a href="../../Projects/Parser/EventParser.html">Projects::Parser::EventParser</a>
+  
+    <li><a href="../../Projects/Parser/FolderParser.html">Projects::Parser::FolderParser</a>
+  
+    <li><a href="../../Projects/Parser/ForumParser.html">Projects::Parser::ForumParser</a>
+  
+    <li><a href="../../Projects/Parser/MilestonesParser.html">Projects::Parser::MilestonesParser</a>
+  
+    <li><a href="../../Projects/Parser/PortalParser.html">Projects::Parser::PortalParser</a>
+  
+    <li><a href="../../Projects/Parser/ProjectParser.html">Projects::Parser::ProjectParser</a>
+  
+    <li><a href="../../Projects/Parser/TaskParser.html">Projects::Parser::TaskParser</a>
+  
+    <li><a href="../../Projects/Parser/TasklistParser.html">Projects::Parser::TasklistParser</a>
+  
+    <li><a href="../../Projects/Parser/TimesheetParser.html">Projects::Parser::TimesheetParser</a>
+  
+    <li><a href="../../Projects/Parser/UserParser.html">Projects::Parser::UserParser</a>
+  
+    <li><a href="../../Projects/Pexception.html">Projects::Pexception</a>
+  
+    <li><a href="../../Projects/Pexception/ProjectsException.html">Projects::Pexception::ProjectsException</a>
+  
+    <li><a href="../../Projects/Service.html">Projects::Service</a>
+  
+    <li><a href="../../Projects/Service/ZohoProjects.html">Projects::Service::ZohoProjects</a>
+  
+    <li><a href="../../Projects/Util.html">Projects::Util</a>
+  
+    <li><a href="../../Projects/Util/ZohoHTTPClient.html">Projects::Util::ZohoHTTPClient</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Projects::Model::Event</h1>
+
+  <div id="description" class="description">
+    <ul><li>
+<p>This class is used to make an object for <a href="Event.html">Event</a>.</p>
+</li></ul>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-getAMPM" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getAMPM</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get AM or PM for the event.</p>
+</li></ul>
+
+<h4 id="method-i-getAMPM-label-Returns">Returns</h4>
+<ul><li>
+<p>Time format of the event in AM or PM.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getAMPM-source">
+            <pre><span class="ruby-comment"># File projects/model/Event.rb, line 328</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getAMPM</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@ampm</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getAMPM-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getAMPM-method -->
+
+    
+      <div id="method-i-getDurationHours" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getDurationHours</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the duration hour for the event.</p>
+</li></ul>
+
+<h4 id="method-i-getDurationHours-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Event.html">Event</a> duration in hours.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getDurationHours-source">
+            <pre><span class="ruby-comment"># File projects/model/Event.rb, line 208</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getDurationHours</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@durationHour</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getDurationHours-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getDurationHours-method -->
+
+    
+      <div id="method-i-getDurationMinutes" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getDurationMinutes</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the duration minutes for the event.</p>
+</li></ul>
+
+<h4 id="method-i-getDurationMinutes-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Event.html">Event</a> duration in minutes.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getDurationMinutes-source">
+            <pre><span class="ruby-comment"># File projects/model/Event.rb, line 228</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getDurationMinutes</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@durationMinutes</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getDurationMinutes-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getDurationMinutes-method -->
+
+    
+      <div id="method-i-getHour" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getHour</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the hour for the event.</p>
+</li></ul>
+
+<h4 id="method-i-getHour-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Event.html">Event</a> hour.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getHour-source">
+            <pre><span class="ruby-comment"># File projects/model/Event.rb, line 288</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getHour</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@hour</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getHour-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getHour-method -->
+
+    
+      <div id="method-i-getId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getId</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the event id.</p>
+</li></ul>
+
+<h4 id="method-i-getId-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Event.html">Event</a> id.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getId-source">
+            <pre><span class="ruby-comment"># File projects/model/Event.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getId</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getId-method -->
+
+    
+      <div id="method-i-getLocation" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getLocation</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the event location.</p>
+</li></ul>
+
+<h4 id="method-i-getLocation-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Event.html">Event</a> location.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getLocation-source">
+            <pre><span class="ruby-comment"># File projects/model/Event.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getLocation</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@location</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getLocation-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getLocation-method -->
+
+    
+      <div id="method-i-getMinutes" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getMinutes</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the minutes for the event.</p>
+</li></ul>
+
+<h4 id="method-i-getMinutes-label-Returns">Returns</h4>
+<ul><li>
+<p>Minutes for the event.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getMinutes-source">
+            <pre><span class="ruby-comment"># File projects/model/Event.rb, line 308</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getMinutes</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@minutes</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getMinutes-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getMinutes-method -->
+
+    
+      <div id="method-i-getOccurred" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getOccurred</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get no of times occurred for the reminder.</p>
+</li></ul>
+
+<h4 id="method-i-getOccurred-label-Returns">Returns</h4>
+<ul><li>
+<p>No of times the reminder has occurred.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getOccurred-source">
+            <pre><span class="ruby-comment"># File projects/model/Event.rb, line 188</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getOccurred</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@occurred</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getOccurred-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getOccurred-method -->
+
+    
+      <div id="method-i-getOccurrences" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getOccurrences</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the occurrences for the reminder.</p>
+</li></ul>
+
+<h4 id="method-i-getOccurrences-label-Returns">Returns</h4>
+<ul><li>
+<p>Number of occurences of the reminder.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getOccurrences-source">
+            <pre><span class="ruby-comment"># File projects/model/Event.rb, line 168</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getOccurrences</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@occurrences</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getOccurrences-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getOccurrences-method -->
+
+    
+      <div id="method-i-getParticipants" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getParticipants</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the participants.</p>
+</li></ul>
+
+<h4 id="method-i-getParticipants-label-Returns">Returns</h4>
+<ul><li>
+<p>List of <a href="Participant.html">Participant</a> object.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getParticipants-source">
+            <pre><span class="ruby-comment"># File projects/model/Event.rb, line 268</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getParticipants</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@participants</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getParticipants-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getParticipants-method -->
+
+    
+      <div id="method-i-getReminder" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getReminder</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the reminder for the event.</p>
+</li></ul>
+
+<h4 id="method-i-getReminder-label-Returns">Returns</h4>
+<ul><li>
+<p>event reminder.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getReminder-source">
+            <pre><span class="ruby-comment"># File projects/model/Event.rb, line 128</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getReminder</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@reminder</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getReminder-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getReminder-method -->
+
+    
+      <div id="method-i-getRepeat" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getRepeat</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the reminder repeat for the event.</p>
+</li></ul>
+
+<h4 id="method-i-getRepeat-label-Returns">Returns</h4>
+<ul><li>
+<p>event reminder repeat.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getRepeat-source">
+            <pre><span class="ruby-comment"># File projects/model/Event.rb, line 148</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getRepeat</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@repeat</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getRepeat-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getRepeat-method -->
+
+    
+      <div id="method-i-getScheduledOn" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getScheduledOn</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the event scheduled on.</p>
+</li></ul>
+
+<h4 id="method-i-getScheduledOn-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Event.html">Event</a> scheduled time.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getScheduledOn-source">
+            <pre><span class="ruby-comment"># File projects/model/Event.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getScheduledOn</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@scheduledOn</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getScheduledOn-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getScheduledOn-method -->
+
+    
+      <div id="method-i-getScheduledOnLong" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getScheduledOnLong</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the event scheduled on long.</p>
+</li></ul>
+
+<h4 id="method-i-getScheduledOnLong-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Event.html">Event</a> scheduled on long.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getScheduledOnLong-source">
+            <pre><span class="ruby-comment"># File projects/model/Event.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getScheduledOnLong</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@scheduledOnLong</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getScheduledOnLong-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getScheduledOnLong-method -->
+
+    
+      <div id="method-i-getTilte" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getTilte</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the event title.</p>
+</li></ul>
+
+<h4 id="method-i-getTilte-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Event.html">Event</a> title.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getTilte-source">
+            <pre><span class="ruby-comment"># File projects/model/Event.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getTilte</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@title</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getTilte-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getTilte-method -->
+
+    
+      <div id="method-i-setAMPM" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setAMPM</span><span
+            class="method-args">(ampm)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set AM or PM for the event.</p>
+</li></ul>
+
+<h4 id="method-i-setAMPM-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>ampm
+<dd><ul><li>
+<p><a href="Event.html">Event</a> scheduled on AM or PM.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setAMPM-source">
+            <pre><span class="ruby-comment"># File projects/model/Event.rb, line 318</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setAMPM</span>(<span class="ruby-identifier">ampm</span>)
+        <span class="ruby-ivar">@ampm</span> = <span class="ruby-identifier">ampm</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setAMPM-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setAMPM-method -->
+
+    
+      <div id="method-i-setDurationHours" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setDurationHours</span><span
+            class="method-args">(durationHour)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the duration hour.</p>
+</li></ul>
+
+<h4 id="method-i-setDurationHours-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>durationHour
+<dd><ul><li>
+<p>Duration of the event in hours.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setDurationHours-source">
+            <pre><span class="ruby-comment"># File projects/model/Event.rb, line 198</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setDurationHours</span>(<span class="ruby-identifier">durationHour</span>)
+        <span class="ruby-ivar">@durationHour</span> = <span class="ruby-identifier">durationHour</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setDurationHours-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setDurationHours-method -->
+
+    
+      <div id="method-i-setDurationMinutes" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setDurationMinutes</span><span
+            class="method-args">(durationMinutes)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the duration minutes for the event.</p>
+</li></ul>
+
+<h4 id="method-i-setDurationMinutes-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>durationMinutes
+<dd><ul><li>
+<p>Duration of the event in minutes.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setDurationMinutes-source">
+            <pre><span class="ruby-comment"># File projects/model/Event.rb, line 218</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setDurationMinutes</span>(<span class="ruby-identifier">durationMinutes</span>) 
+        <span class="ruby-ivar">@durationMinutes</span> = <span class="ruby-identifier">durationMinutes</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setDurationMinutes-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setDurationMinutes-method -->
+
+    
+      <div id="method-i-setHour" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setHour</span><span
+            class="method-args">(hour)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the hour for the event.</p>
+</li></ul>
+
+<h4 id="method-i-setHour-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>hour
+<dd><ul><li>
+<p>Hour for the event.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setHour-source">
+            <pre><span class="ruby-comment"># File projects/model/Event.rb, line 278</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setHour</span>(<span class="ruby-identifier">hour</span>)
+        <span class="ruby-ivar">@hour</span> = <span class="ruby-identifier">hour</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setHour-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setHour-method -->
+
+    
+      <div id="method-i-setId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setId</span><span
+            class="method-args">(id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the event id.</p>
+</li></ul>
+
+<h4 id="method-i-setId-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>id
+<dd><ul><li>
+<p>ID of the event.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setId-source">
+            <pre><span class="ruby-comment"># File projects/model/Event.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setId</span>(<span class="ruby-identifier">id</span>)
+        <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setId-method -->
+
+    
+      <div id="method-i-setIsOpen" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setIsOpen</span><span
+            class="method-args">(isOpen)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the event is open or not.</p>
+</li></ul>
+
+<h4 id="method-i-setIsOpen-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>isOpen
+<dd><ul><li>
+<p>The event is open or not.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setIsOpen-source">
+            <pre><span class="ruby-comment"># File projects/model/Event.rb, line 238</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setIsOpen</span>(<span class="ruby-identifier">isOpen</span>)
+        <span class="ruby-ivar">@isOpen</span> = <span class="ruby-identifier">isOpen</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setIsOpen-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setIsOpen-method -->
+
+    
+      <div id="method-i-setLocation" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setLocation</span><span
+            class="method-args">(location)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the event location.</p>
+</li></ul>
+
+<h4 id="method-i-setLocation-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>location
+<dd><ul><li>
+<p>Location of the event.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setLocation-source">
+            <pre><span class="ruby-comment"># File projects/model/Event.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setLocation</span>(<span class="ruby-identifier">location</span>)
+        <span class="ruby-ivar">@location</span> = <span class="ruby-identifier">location</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setLocation-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setLocation-method -->
+
+    
+      <div id="method-i-setMinutes" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setMinutes</span><span
+            class="method-args">(minutes)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the minutes for the event.</p>
+</li></ul>
+
+<h4 id="method-i-setMinutes-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>minutes
+<dd><ul><li>
+<p>Minutes for the event.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setMinutes-source">
+            <pre><span class="ruby-comment"># File projects/model/Event.rb, line 298</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setMinutes</span>(<span class="ruby-identifier">minutes</span>)
+        <span class="ruby-ivar">@minutes</span> = <span class="ruby-identifier">minutes</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setMinutes-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setMinutes-method -->
+
+    
+      <div id="method-i-setOccurred" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setOccurred</span><span
+            class="method-args">(occurred)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set no of times occurred for the reminder.</p>
+</li></ul>
+
+<h4 id="method-i-setOccurred-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>occurred
+<dd><ul><li>
+<p>Number of times reminder has occurred.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setOccurred-source">
+            <pre><span class="ruby-comment"># File projects/model/Event.rb, line 178</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setOccurred</span>(<span class="ruby-identifier">occurred</span>)
+        <span class="ruby-ivar">@occurred</span> = <span class="ruby-identifier">occurred</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setOccurred-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setOccurred-method -->
+
+    
+      <div id="method-i-setOccurrences" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setOccurrences</span><span
+            class="method-args">(occurrences)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the occurrences for the reminder.</p>
+</li></ul>
+
+<h4 id="method-i-setOccurrences-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>occurrences
+<dd><ul><li>
+<p>Numnber of occurrences for the reminder.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setOccurrences-source">
+            <pre><span class="ruby-comment"># File projects/model/Event.rb, line 158</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setOccurrences</span>(<span class="ruby-identifier">occurrences</span>)
+        <span class="ruby-ivar">@occurrences</span> = <span class="ruby-identifier">occurrences</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setOccurrences-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setOccurrences-method -->
+
+    
+      <div id="method-i-setParticipants" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setParticipants</span><span
+            class="method-args">(participants)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the participants.</p>
+</li></ul>
+
+<h4 id="method-i-setParticipants-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>participants
+<dd><ul><li>
+<p>List of <a href="Participant.html">Participant</a> object.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setParticipants-source">
+            <pre><span class="ruby-comment"># File projects/model/Event.rb, line 258</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setParticipants</span>(<span class="ruby-identifier">participants</span>)
+        <span class="ruby-ivar">@participants</span> = <span class="ruby-identifier">participants</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setParticipants-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setParticipants-method -->
+
+    
+      <div id="method-i-setReminder" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setReminder</span><span
+            class="method-args">(reminder)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the reminder for the event.</p>
+</li></ul>
+
+<h4 id="method-i-setReminder-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>reminder
+<dd><ul><li>
+<p>Reminder for the event.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setReminder-source">
+            <pre><span class="ruby-comment"># File projects/model/Event.rb, line 118</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setReminder</span>(<span class="ruby-identifier">reminder</span>)
+        <span class="ruby-ivar">@reminder</span> = <span class="ruby-identifier">reminder</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setReminder-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setReminder-method -->
+
+    
+      <div id="method-i-setRepeat" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setRepeat</span><span
+            class="method-args">(repeat)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the reminder repeat for the event.</p>
+</li></ul>
+
+<h4 id="method-i-setRepeat-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>repeat
+<dd><ul><li>
+<p>Repeat reminder for the event.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setRepeat-source">
+            <pre><span class="ruby-comment"># File projects/model/Event.rb, line 138</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setRepeat</span>(<span class="ruby-identifier">repeat</span>)
+        <span class="ruby-ivar">@repeat</span> = <span class="ruby-identifier">repeat</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setRepeat-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setRepeat-method -->
+
+    
+      <div id="method-i-setScheduledOn" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setScheduledOn</span><span
+            class="method-args">(scheduledOn)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the event scheduled on.</p>
+</li></ul>
+
+<h4 id="method-i-setScheduledOn-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>scheduledOn
+<dd><ul><li>
+<p>Scheduled time of the event.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setScheduledOn-source">
+            <pre><span class="ruby-comment"># File projects/model/Event.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setScheduledOn</span>(<span class="ruby-identifier">scheduledOn</span>)
+        <span class="ruby-ivar">@scheduledOn</span> = <span class="ruby-identifier">scheduledOn</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setScheduledOn-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setScheduledOn-method -->
+
+    
+      <div id="method-i-setScheduledOnLong" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setScheduledOnLong</span><span
+            class="method-args">(scheduledOnLong)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the event scheduled on long.</p>
+</li></ul>
+
+<h4 id="method-i-setScheduledOnLong-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>scheduledOnLong
+<dd><ul><li>
+<p><a href="Event.html">Event</a> scheduled on long.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setScheduledOnLong-source">
+            <pre><span class="ruby-comment"># File projects/model/Event.rb, line 98</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setScheduledOnLong</span>(<span class="ruby-identifier">scheduledOnLong</span>)
+        <span class="ruby-ivar">@scheduledOnLong</span> = <span class="ruby-identifier">scheduledOnLong</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setScheduledOnLong-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setScheduledOnLong-method -->
+
+    
+      <div id="method-i-setTitle" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setTitle</span><span
+            class="method-args">(title)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the event title.</p>
+</li></ul>
+
+<h4 id="method-i-setTitle-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>title
+<dd><ul><li>
+<p>Title of the event.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setTitle-source">
+            <pre><span class="ruby-comment"># File projects/model/Event.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setTitle</span>(<span class="ruby-identifier">title</span>)
+        <span class="ruby-ivar">@title</span> = <span class="ruby-identifier">title</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setTitle-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setTitle-method -->
+
+    
+      <div id="method-i-toParamMAP" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">toParamMAP</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Convert the <a href="Event.html">Event</a> object into HashMap.</p>
+</li></ul>
+
+<h4 id="method-i-toParamMAP-label-Returns">Returns</h4>
+<ul><li>
+<p>HashMap object.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="toParamMAP-source">
+            <pre><span class="ruby-comment"># File projects/model/Event.rb, line 338</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">toParamMAP</span>
+        <span class="ruby-identifier">requestBody</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+        
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">title</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;title&quot;</span>] = <span class="ruby-identifier">title</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">scheduledOn</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;date&quot;</span>] = <span class="ruby-identifier">scheduledOn</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">hour</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;hour&quot;</span>] = <span class="ruby-identifier">hour</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">minutes</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;minutes&quot;</span>] = <span class="ruby-identifier">minutes</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">ampm</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;ampm&quot;</span>] = <span class="ruby-identifier">ampm</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">durationHour</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;duration_hour&quot;</span>] = <span class="ruby-identifier">durationHour</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">durationMinutes</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;duration_mins&quot;</span>] = <span class="ruby-identifier">durationMinutes</span>
+        <span class="ruby-keyword">end</span>
+
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">participants</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">participantIds</span> = <span class="ruby-string">&quot;&quot;</span>
+
+                <span class="ruby-identifier">participants</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span><span class="ruby-operator">|</span><span class="ruby-identifier">participant</span><span class="ruby-operator">|</span>
+                        <span class="ruby-identifier">participantIds</span> <span class="ruby-operator">+=</span> <span class="ruby-constant">String</span>(<span class="ruby-identifier">participant</span>.<span class="ruby-identifier">getParticipantId</span>)<span class="ruby-operator">+</span><span class="ruby-string">&quot;,&quot;</span>;
+                <span class="ruby-keyword">end</span>                               
+                
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;participants&quot;</span>] = <span class="ruby-identifier">participantIds</span>
+        <span class="ruby-keyword">end</span>
+
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">reminder</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;remind_before&quot;</span>] = <span class="ruby-identifier">reminder</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">repeat</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;repeat&quot;</span>] = <span class="ruby-identifier">repeat</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">occurrences</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">occurrences</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;nooftimes_repeat&quot;</span>] = <span class="ruby-identifier">occurrences</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">location</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;location&quot;</span>] = <span class="ruby-identifier">location</span>
+        <span class="ruby-keyword">end</span>                        
+        
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">requestBody</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- toParamMAP-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- toParamMAP-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

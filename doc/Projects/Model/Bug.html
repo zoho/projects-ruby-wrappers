@@ -1,0 +1,2752 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=IBM437" http-equiv="Content-Type">
+
+<title>class Projects::Model::Bug - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../../index.html">Home</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>projects/model/Bug.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-getAssigneeId">#getAssigneeId</a>
+    
+    <li><a href="#method-i-getAssigneeName">#getAssigneeName</a>
+    
+    <li><a href="#method-i-getClassificationId">#getClassificationId</a>
+    
+    <li><a href="#method-i-getClassificationType">#getClassificationType</a>
+    
+    <li><a href="#method-i-getCreatedTime">#getCreatedTime</a>
+    
+    <li><a href="#method-i-getCreatedTimeFormat">#getCreatedTimeFormat</a>
+    
+    <li><a href="#method-i-getCreatedTimeLong">#getCreatedTimeLong</a>
+    
+    <li><a href="#method-i-getDescription">#getDescription</a>
+    
+    <li><a href="#method-i-getDueDate">#getDueDate</a>
+    
+    <li><a href="#method-i-getDueDateFormat">#getDueDateFormat</a>
+    
+    <li><a href="#method-i-getDueDateLong">#getDueDateLong</a>
+    
+    <li><a href="#method-i-getFlag">#getFlag</a>
+    
+    <li><a href="#method-i-getId">#getId</a>
+    
+    <li><a href="#method-i-getKey">#getKey</a>
+    
+    <li><a href="#method-i-getMilestoneId">#getMilestoneId</a>
+    
+    <li><a href="#method-i-getModuleId">#getModuleId</a>
+    
+    <li><a href="#method-i-getModuleName">#getModuleName</a>
+    
+    <li><a href="#method-i-getProjectId">#getProjectId</a>
+    
+    <li><a href="#method-i-getReportedPerson">#getReportedPerson</a>
+    
+    <li><a href="#method-i-getReporterId">#getReporterId</a>
+    
+    <li><a href="#method-i-getReproducibleId">#getReproducibleId</a>
+    
+    <li><a href="#method-i-getReproducibleType">#getReproducibleType</a>
+    
+    <li><a href="#method-i-getSeverityId">#getSeverityId</a>
+    
+    <li><a href="#method-i-getSeverityType">#getSeverityType</a>
+    
+    <li><a href="#method-i-getStatusId">#getStatusId</a>
+    
+    <li><a href="#method-i-getStatusType">#getStatusType</a>
+    
+    <li><a href="#method-i-getTimesheetURL">#getTimesheetURL</a>
+    
+    <li><a href="#method-i-getTitle">#getTitle</a>
+    
+    <li><a href="#method-i-getURL">#getURL</a>
+    
+    <li><a href="#method-i-isClosed">#isClosed</a>
+    
+    <li><a href="#method-i-setAssigneeId">#setAssigneeId</a>
+    
+    <li><a href="#method-i-setAssigneeName">#setAssigneeName</a>
+    
+    <li><a href="#method-i-setClassificationId">#setClassificationId</a>
+    
+    <li><a href="#method-i-setClassificationType">#setClassificationType</a>
+    
+    <li><a href="#method-i-setClosed">#setClosed</a>
+    
+    <li><a href="#method-i-setCreatedTime">#setCreatedTime</a>
+    
+    <li><a href="#method-i-setCreatedTimeFormat">#setCreatedTimeFormat</a>
+    
+    <li><a href="#method-i-setCreatedTimeLong">#setCreatedTimeLong</a>
+    
+    <li><a href="#method-i-setDescription">#setDescription</a>
+    
+    <li><a href="#method-i-setDueDate">#setDueDate</a>
+    
+    <li><a href="#method-i-setDueDateFormat">#setDueDateFormat</a>
+    
+    <li><a href="#method-i-setDueDateLong">#setDueDateLong</a>
+    
+    <li><a href="#method-i-setFlag">#setFlag</a>
+    
+    <li><a href="#method-i-setId">#setId</a>
+    
+    <li><a href="#method-i-setKey">#setKey</a>
+    
+    <li><a href="#method-i-setMilestoneId">#setMilestoneId</a>
+    
+    <li><a href="#method-i-setModuleId">#setModuleId</a>
+    
+    <li><a href="#method-i-setModuleName">#setModuleName</a>
+    
+    <li><a href="#method-i-setProjectId">#setProjectId</a>
+    
+    <li><a href="#method-i-setReportedPerson">#setReportedPerson</a>
+    
+    <li><a href="#method-i-setReporterId">#setReporterId</a>
+    
+    <li><a href="#method-i-setReproducibleId">#setReproducibleId</a>
+    
+    <li><a href="#method-i-setReproducibleType">#setReproducibleType</a>
+    
+    <li><a href="#method-i-setSeverityId">#setSeverityId</a>
+    
+    <li><a href="#method-i-setSeverityType">#setSeverityType</a>
+    
+    <li><a href="#method-i-setStatusId">#setStatusId</a>
+    
+    <li><a href="#method-i-setStatusType">#setStatusType</a>
+    
+    <li><a href="#method-i-setTimesheetURL">#setTimesheetURL</a>
+    
+    <li><a href="#method-i-setTitle">#setTitle</a>
+    
+    <li><a href="#method-i-setURL">#setURL</a>
+    
+    <li><a href="#method-i-toParamMAP">#toParamMAP</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../Projects.html">Projects</a>
+  
+    <li><a href="../../Projects/Api.html">Projects::Api</a>
+  
+    <li><a href="../../Projects/Api/API.html">Projects::Api::API</a>
+  
+    <li><a href="../../Projects/Api/BugsAPI.html">Projects::Api::BugsAPI</a>
+  
+    <li><a href="../../Projects/Api/DocumentsAPI.html">Projects::Api::DocumentsAPI</a>
+  
+    <li><a href="../../Projects/Api/EventsAPI.html">Projects::Api::EventsAPI</a>
+  
+    <li><a href="../../Projects/Api/FoldersAPI.html">Projects::Api::FoldersAPI</a>
+  
+    <li><a href="../../Projects/Api/ForumsAPI.html">Projects::Api::ForumsAPI</a>
+  
+    <li><a href="../../Projects/Api/MilestonesAPI.html">Projects::Api::MilestonesAPI</a>
+  
+    <li><a href="../../Projects/Api/PortalAPI.html">Projects::Api::PortalAPI</a>
+  
+    <li><a href="../../Projects/Api/ProjectsAPI.html">Projects::Api::ProjectsAPI</a>
+  
+    <li><a href="../../Projects/Api/TasklistsAPI.html">Projects::Api::TasklistsAPI</a>
+  
+    <li><a href="../../Projects/Api/TasksAPI.html">Projects::Api::TasksAPI</a>
+  
+    <li><a href="../../Projects/Api/TimesheetsAPI.html">Projects::Api::TimesheetsAPI</a>
+  
+    <li><a href="../../Projects/Api/UsersAPI.html">Projects::Api::UsersAPI</a>
+  
+    <li><a href="../../Projects/Model.html">Projects::Model</a>
+  
+    <li><a href="../../Projects/Model/Activity.html">Projects::Model::Activity</a>
+  
+    <li><a href="../../Projects/Model/Bug.html">Projects::Model::Bug</a>
+  
+    <li><a href="../../Projects/Model/Buglog.html">Projects::Model::Buglog</a>
+  
+    <li><a href="../../Projects/Model/Category.html">Projects::Model::Category</a>
+  
+    <li><a href="../../Projects/Model/Comment.html">Projects::Model::Comment</a>
+  
+    <li><a href="../../Projects/Model/Document.html">Projects::Model::Document</a>
+  
+    <li><a href="../../Projects/Model/Event.html">Projects::Model::Event</a>
+  
+    <li><a href="../../Projects/Model/Folder.html">Projects::Model::Folder</a>
+  
+    <li><a href="../../Projects/Model/Forum.html">Projects::Model::Forum</a>
+  
+    <li><a href="../../Projects/Model/Generallog.html">Projects::Model::Generallog</a>
+  
+    <li><a href="../../Projects/Model/Log.html">Projects::Model::Log</a>
+  
+    <li><a href="../../Projects/Model/Milestone.html">Projects::Model::Milestone</a>
+  
+    <li><a href="../../Projects/Model/Owner.html">Projects::Model::Owner</a>
+  
+    <li><a href="../../Projects/Model/Participant.html">Projects::Model::Participant</a>
+  
+    <li><a href="../../Projects/Model/Portal.html">Projects::Model::Portal</a>
+  
+    <li><a href="../../Projects/Model/Project.html">Projects::Model::Project</a>
+  
+    <li><a href="../../Projects/Model/Status.html">Projects::Model::Status</a>
+  
+    <li><a href="../../Projects/Model/Task.html">Projects::Model::Task</a>
+  
+    <li><a href="../../Projects/Model/Tasklist.html">Projects::Model::Tasklist</a>
+  
+    <li><a href="../../Projects/Model/Tasklog.html">Projects::Model::Tasklog</a>
+  
+    <li><a href="../../Projects/Model/Timelog.html">Projects::Model::Timelog</a>
+  
+    <li><a href="../../Projects/Model/TimelogList.html">Projects::Model::TimelogList</a>
+  
+    <li><a href="../../Projects/Model/User.html">Projects::Model::User</a>
+  
+    <li><a href="../../Projects/Model/Version.html">Projects::Model::Version</a>
+  
+    <li><a href="../../Projects/Parser.html">Projects::Parser</a>
+  
+    <li><a href="../../Projects/Parser/BugParser.html">Projects::Parser::BugParser</a>
+  
+    <li><a href="../../Projects/Parser/DocumentParser.html">Projects::Parser::DocumentParser</a>
+  
+    <li><a href="../../Projects/Parser/EventParser.html">Projects::Parser::EventParser</a>
+  
+    <li><a href="../../Projects/Parser/FolderParser.html">Projects::Parser::FolderParser</a>
+  
+    <li><a href="../../Projects/Parser/ForumParser.html">Projects::Parser::ForumParser</a>
+  
+    <li><a href="../../Projects/Parser/MilestonesParser.html">Projects::Parser::MilestonesParser</a>
+  
+    <li><a href="../../Projects/Parser/PortalParser.html">Projects::Parser::PortalParser</a>
+  
+    <li><a href="../../Projects/Parser/ProjectParser.html">Projects::Parser::ProjectParser</a>
+  
+    <li><a href="../../Projects/Parser/TaskParser.html">Projects::Parser::TaskParser</a>
+  
+    <li><a href="../../Projects/Parser/TasklistParser.html">Projects::Parser::TasklistParser</a>
+  
+    <li><a href="../../Projects/Parser/TimesheetParser.html">Projects::Parser::TimesheetParser</a>
+  
+    <li><a href="../../Projects/Parser/UserParser.html">Projects::Parser::UserParser</a>
+  
+    <li><a href="../../Projects/Pexception.html">Projects::Pexception</a>
+  
+    <li><a href="../../Projects/Pexception/ProjectsException.html">Projects::Pexception::ProjectsException</a>
+  
+    <li><a href="../../Projects/Service.html">Projects::Service</a>
+  
+    <li><a href="../../Projects/Service/ZohoProjects.html">Projects::Service::ZohoProjects</a>
+  
+    <li><a href="../../Projects/Util.html">Projects::Util</a>
+  
+    <li><a href="../../Projects/Util/ZohoHTTPClient.html">Projects::Util::ZohoHTTPClient</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Projects::Model::Bug</h1>
+
+  <div id="description" class="description">
+    <ul><li>
+<p>This class is used to make an object for <a href="Bug.html">Bug</a>.</p>
+</li></ul>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-getAssigneeId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getAssigneeId</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the assignee id.</p>
+</li></ul>
+
+<h4 id="method-i-getAssigneeId-label-Returns">Returns</h4>
+<ul><li>
+<p>Assignee id.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getAssigneeId-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 269</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getAssigneeId</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@assigneeId</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getAssigneeId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getAssigneeId-method -->
+
+    
+      <div id="method-i-getAssigneeName" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getAssigneeName</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the assignee name.</p>
+</li></ul>
+
+<h4 id="method-i-getAssigneeName-label-Returns">Returns</h4>
+<ul><li>
+<p>Assignee name.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getAssigneeName-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 291</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getAssigneeName</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@assigneeName</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getAssigneeName-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getAssigneeName-method -->
+
+    
+      <div id="method-i-getClassificationId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getClassificationId</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the classification id.</p>
+</li></ul>
+
+<h4 id="method-i-getClassificationId-label-Returns">Returns</h4>
+<ul><li>
+<p>Classification id.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getClassificationId-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 377</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getClassificationId</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@classificationId</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getClassificationId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getClassificationId-method -->
+
+    
+      <div id="method-i-getClassificationType" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getClassificationType</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the classification type.</p>
+</li></ul>
+
+<h4 id="method-i-getClassificationType-label-Returns">Returns</h4>
+<ul><li>
+<p>Classification type.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getClassificationType-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 399</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getClassificationType</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@classificationType</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getClassificationType-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getClassificationType-method -->
+
+    
+      <div id="method-i-getCreatedTime" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getCreatedTime</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the created time.</p>
+</li></ul>
+
+<h4 id="method-i-getCreatedTime-label-Returns">Returns</h4>
+<ul><li>
+<p>created time for the bug.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getCreatedTime-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 204</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getCreatedTime</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@createdTime</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getCreatedTime-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getCreatedTime-method -->
+
+    
+      <div id="method-i-getCreatedTimeFormat" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getCreatedTimeFormat</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the created time format.</p>
+</li></ul>
+
+<h4 id="method-i-getCreatedTimeFormat-label-Returns">Returns</h4>
+<ul><li>
+<p>Created time format for the bug.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getCreatedTimeFormat-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 226</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getCreatedTimeFormat</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@createdTimeFormat</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getCreatedTimeFormat-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getCreatedTimeFormat-method -->
+
+    
+      <div id="method-i-getCreatedTimeLong" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getCreatedTimeLong</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the created time long.</p>
+</li></ul>
+
+<h4 id="method-i-getCreatedTimeLong-label-Returns">Returns</h4>
+<ul><li>
+<p>Created time for the bug.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getCreatedTimeLong-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 248</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getCreatedTimeLong</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@createdTimeLong</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getCreatedTimeLong-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getCreatedTimeLong-method -->
+
+    
+      <div id="method-i-getDescription" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getDescription</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the bug description.</p>
+</li></ul>
+
+<h4 id="method-i-getDescription-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Bug.html">Bug</a> description.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getDescription-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 138</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getDescription</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@description</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getDescription-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getDescription-method -->
+
+    
+      <div id="method-i-getDueDate" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getDueDate</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the due date.</p>
+</li></ul>
+
+<h4 id="method-i-getDueDate-label-Returns">Returns</h4>
+<ul><li>
+<p>Due date.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getDueDate-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 611</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getDueDate</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@dueDate</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getDueDate-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getDueDate-method -->
+
+    
+      <div id="method-i-getDueDateFormat" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getDueDateFormat</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the due date format.</p>
+</li></ul>
+
+<h4 id="method-i-getDueDateFormat-label-Returns">Returns</h4>
+<ul><li>
+<p>Due date format.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getDueDateFormat-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 631</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getDueDateFormat</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@dueDateFormat</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getDueDateFormat-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getDueDateFormat-method -->
+
+    
+      <div id="method-i-getDueDateLong" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getDueDateLong</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the due date long.</p>
+</li></ul>
+
+<h4 id="method-i-getDueDateLong-label-Returns">Returns</h4>
+<ul><li>
+<p>Due date.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getDueDateLong-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 651</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getDueDateLong</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@dueDateLong</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getDueDateLong-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getDueDateLong-method -->
+
+    
+      <div id="method-i-getFlag" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getFlag</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the flag for the bug.</p>
+</li></ul>
+
+<h4 id="method-i-getFlag-label-Returns">Returns</h4>
+<ul><li>
+<p>Flag of the bug.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getFlag-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getFlag</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@flag</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getFlag-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getFlag-method -->
+
+    
+      <div id="method-i-getId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getId</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the bug id.</p>
+</li></ul>
+
+<h4 id="method-i-getId-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Bug.html">Bug</a> id.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getId-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getId</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getId-method -->
+
+    
+      <div id="method-i-getKey" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getKey</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the key for the bug.</p>
+</li></ul>
+
+<h4 id="method-i-getKey-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Bug.html">Bug</a> key.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getKey-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getKey</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@key</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getKey-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getKey-method -->
+
+    
+      <div id="method-i-getMilestoneId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getMilestoneId</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the milestone id.</p>
+</li></ul>
+
+<h4 id="method-i-getMilestoneId-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Milestone.html">Milestone</a> id.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getMilestoneId-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 591</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getMilestoneId</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@milestoneId</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getMilestoneId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getMilestoneId-method -->
+
+    
+      <div id="method-i-getModuleId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getModuleId</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the module id.</p>
+</li></ul>
+
+<h4 id="method-i-getModuleId-label-Returns">Returns</h4>
+<ul><li>
+<p>Module id.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getModuleId-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 550</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getModuleId</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@moduleId</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getModuleId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getModuleId-method -->
+
+    
+      <div id="method-i-getModuleName" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getModuleName</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the module name.</p>
+</li></ul>
+
+<h4 id="method-i-getModuleName-label-Returns">Returns</h4>
+<ul><li>
+<p>Module name.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getModuleName-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 570</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getModuleName</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@moduleName</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getModuleName-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getModuleName-method -->
+
+    
+      <div id="method-i-getProjectId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getProjectId</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>get the project id.</p>
+</li></ul>
+
+<h4 id="method-i-getProjectId-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Project.html">Project</a> id.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getProjectId-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getProjectId</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@projectId</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getProjectId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getProjectId-method -->
+
+    
+      <div id="method-i-getReportedPerson" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getReportedPerson</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the reported person.</p>
+</li></ul>
+
+<h4 id="method-i-getReportedPerson-label-Returns">Returns</h4>
+<ul><li>
+<p>Person who reported the bug.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getReportedPerson-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 182</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getReportedPerson</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@reportedPerson</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getReportedPerson-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getReportedPerson-method -->
+
+    
+      <div id="method-i-getReporterId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getReporterId</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the reporter id.</p>
+</li></ul>
+
+<h4 id="method-i-getReporterId-label-Returns">Returns</h4>
+<ul><li>
+<p>Reporter id.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getReporterId-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 160</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getReporterId</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@reporterId</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getReporterId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getReporterId-method -->
+
+    
+      <div id="method-i-getReproducibleId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getReproducibleId</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the reproducible id.</p>
+</li></ul>
+
+<h4 id="method-i-getReproducibleId-label-Returns">Returns</h4>
+<ul><li>
+<p>Reproducible id of the bug.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getReproducibleId-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 508</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getReproducibleId</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@reproducibleId</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getReproducibleId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getReproducibleId-method -->
+
+    
+      <div id="method-i-getReproducibleType" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getReproducibleType</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the reproducible type.</p>
+</li></ul>
+
+<h4 id="method-i-getReproducibleType-label-Returns">Returns</h4>
+<ul><li>
+<p>Reproducible type of the bug.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getReproducibleType-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 530</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getReproducibleType</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@reproducibleType</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getReproducibleType-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getReproducibleType-method -->
+
+    
+      <div id="method-i-getSeverityId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getSeverityId</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the severity id.</p>
+</li></ul>
+
+<h4 id="method-i-getSeverityId-label-Returns">Returns</h4>
+<ul><li>
+<p>Severity id.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getSeverityId-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 421</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getSeverityId</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@severityId</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getSeverityId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getSeverityId-method -->
+
+    
+      <div id="method-i-getSeverityType" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getSeverityType</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the severity type.</p>
+</li></ul>
+
+<h4 id="method-i-getSeverityType-label-Returns">Returns</h4>
+<ul><li>
+<p>Severity type.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getSeverityType-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 443</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getSeverityType</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@severityType</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getSeverityType-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getSeverityType-method -->
+
+    
+      <div id="method-i-getStatusId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getStatusId</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the status id.</p>
+</li></ul>
+
+<h4 id="method-i-getStatusId-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Status.html">Status</a> id.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getStatusId-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 464</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getStatusId</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@statusId</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getStatusId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getStatusId-method -->
+
+    
+      <div id="method-i-getStatusType" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getStatusType</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the status type.</p>
+</li></ul>
+
+<h4 id="method-i-getStatusType-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Status.html">Status</a> type.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getStatusType-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 486</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getStatusType</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@statusType</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getStatusType-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getStatusType-method -->
+
+    
+      <div id="method-i-getTimesheetURL" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getTimesheetURL</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the time sheet URL.</p>
+</li></ul>
+
+<h4 id="method-i-getTimesheetURL-label-Returns">Returns</h4>
+<ul><li>
+<p>Time sheet URL.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getTimesheetURL-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 357</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getTimesheetURL</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@timesheetUrl</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getTimesheetURL-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getTimesheetURL-method -->
+
+    
+      <div id="method-i-getTitle" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getTitle</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the bug title.</p>
+</li></ul>
+
+<h4 id="method-i-getTitle-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Bug.html">Bug</a> title.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getTitle-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 116</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getTitle</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@title</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getTitle-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getTitle-method -->
+
+    
+      <div id="method-i-getURL" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getURL</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the bug URL.</p>
+</li></ul>
+
+<h4 id="method-i-getURL-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Bug.html">Bug</a> URL.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getURL-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 335</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getURL</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@url</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getURL-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getURL-method -->
+
+    
+      <div id="method-i-isClosed" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">isClosed</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the bug is closed or not.</p>
+</li></ul>
+
+<h4 id="method-i-isClosed-label-Returns">Returns</h4>
+<ul><li>
+<p>true, if the big is closed else returns false.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="isClosed-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 313</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">isClosed</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@closed</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- isClosed-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- isClosed-method -->
+
+    
+      <div id="method-i-setAssigneeId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setAssigneeId</span><span
+            class="method-args">(assigneeId)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the assignee id for the bug.</p>
+</li></ul>
+
+<h4 id="method-i-setAssigneeId-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>assigneeId
+<dd><ul><li>
+<p>ID of the assignee.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setAssigneeId-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 259</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setAssigneeId</span>(<span class="ruby-identifier">assigneeId</span>)
+        <span class="ruby-ivar">@assigneeId</span> = <span class="ruby-identifier">assigneeId</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setAssigneeId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setAssigneeId-method -->
+
+    
+      <div id="method-i-setAssigneeName" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setAssigneeName</span><span
+            class="method-args">(assigneeName)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the assignee name.</p>
+</li></ul>
+
+<h4 id="method-i-setAssigneeName-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>assigneeName
+<dd><ul><li>
+<p>Name of the assignee.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setAssigneeName-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 280</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setAssigneeName</span>(<span class="ruby-identifier">assigneeName</span>)
+        <span class="ruby-ivar">@assigneeName</span> = <span class="ruby-identifier">assigneeName</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setAssigneeName-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setAssigneeName-method -->
+
+    
+      <div id="method-i-setClassificationId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setClassificationId</span><span
+            class="method-args">(classificationId)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the classification id.</p>
+</li></ul>
+
+<h4 id="method-i-setClassificationId-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>classificationId
+<dd><ul><li>
+<p>ID of the classification.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setClassificationId-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 367</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setClassificationId</span>(<span class="ruby-identifier">classificationId</span>)
+        <span class="ruby-ivar">@classificationId</span> = <span class="ruby-identifier">classificationId</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setClassificationId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setClassificationId-method -->
+
+    
+      <div id="method-i-setClassificationType" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setClassificationType</span><span
+            class="method-args">(classificationType)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the classification type.</p>
+</li></ul>
+
+<h4 id="method-i-setClassificationType-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>classificationType
+<dd><ul><li>
+<p>Type of the classification.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setClassificationType-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 388</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setClassificationType</span>(<span class="ruby-identifier">classificationType</span>)
+        <span class="ruby-ivar">@classificationType</span> = <span class="ruby-identifier">classificationType</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setClassificationType-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setClassificationType-method -->
+
+    
+      <div id="method-i-setClosed" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setClosed</span><span
+            class="method-args">(closed)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the bug is closed or not.</p>
+</li></ul>
+
+<h4 id="method-i-setClosed-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>closed
+<dd><ul><li>
+<p><a href="Bug.html">Bug</a> is closed or not.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setClosed-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 302</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setClosed</span>(<span class="ruby-identifier">closed</span>)
+        <span class="ruby-ivar">@closed</span> = <span class="ruby-identifier">closed</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setClosed-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setClosed-method -->
+
+    
+      <div id="method-i-setCreatedTime" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setCreatedTime</span><span
+            class="method-args">(createdTime)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the created time.</p>
+</li></ul>
+
+<h4 id="method-i-setCreatedTime-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>createdTime
+<dd><ul><li>
+<p>Created time for the bug.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setCreatedTime-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 193</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setCreatedTime</span>(<span class="ruby-identifier">createdTime</span>)
+        <span class="ruby-ivar">@createdTime</span> = <span class="ruby-identifier">createdTime</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setCreatedTime-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setCreatedTime-method -->
+
+    
+      <div id="method-i-setCreatedTimeFormat" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setCreatedTimeFormat</span><span
+            class="method-args">(createdTimeFormat)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the created time format.</p>
+</li></ul>
+
+<h4 id="method-i-setCreatedTimeFormat-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>createdTime
+<dd><ul><li>
+<p>Created time format for the bug.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setCreatedTimeFormat-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 215</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setCreatedTimeFormat</span>(<span class="ruby-identifier">createdTimeFormat</span>)
+        <span class="ruby-ivar">@createdTimeFormat</span> = <span class="ruby-identifier">createdTimeFormat</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setCreatedTimeFormat-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setCreatedTimeFormat-method -->
+
+    
+      <div id="method-i-setCreatedTimeLong" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setCreatedTimeLong</span><span
+            class="method-args">(createdTimeLong)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the created time long.</p>
+</li></ul>
+
+<h4 id="method-i-setCreatedTimeLong-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>createdTimeLong
+<dd><ul><li>
+<p>Created time for the bug.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setCreatedTimeLong-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 237</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setCreatedTimeLong</span>(<span class="ruby-identifier">createdTimeLong</span>)
+        <span class="ruby-ivar">@createdTimeLong</span> = <span class="ruby-identifier">createdTimeLong</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setCreatedTimeLong-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setCreatedTimeLong-method -->
+
+    
+      <div id="method-i-setDescription" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setDescription</span><span
+            class="method-args">(description)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the bug description.</p>
+</li></ul>
+
+<h4 id="method-i-setDescription-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>description
+<dd><ul><li>
+<p>Description for the bug.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setDescription-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 127</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setDescription</span>(<span class="ruby-identifier">description</span>)
+        <span class="ruby-ivar">@description</span> = <span class="ruby-identifier">description</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setDescription-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setDescription-method -->
+
+    
+      <div id="method-i-setDueDate" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setDueDate</span><span
+            class="method-args">(dueDate)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the due date.</p>
+</li></ul>
+
+<h4 id="method-i-setDueDate-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>dueDate
+<dd><ul><li>
+<p>Due date for the bug.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setDueDate-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 601</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setDueDate</span>(<span class="ruby-identifier">dueDate</span>)
+        <span class="ruby-ivar">@dueDate</span> = <span class="ruby-identifier">dueDate</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setDueDate-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setDueDate-method -->
+
+    
+      <div id="method-i-setDueDateFormat" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setDueDateFormat</span><span
+            class="method-args">(dueDateFormat)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the due date format.</p>
+</li></ul>
+
+<h4 id="method-i-setDueDateFormat-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>dueDate
+<dd><ul><li>
+<p>Due date format for the bug.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setDueDateFormat-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 621</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setDueDateFormat</span>(<span class="ruby-identifier">dueDateFormat</span>)
+        <span class="ruby-ivar">@dueDateFormat</span> = <span class="ruby-identifier">dueDateFormat</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setDueDateFormat-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setDueDateFormat-method -->
+
+    
+      <div id="method-i-setDueDateLong" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setDueDateLong</span><span
+            class="method-args">(dueDateLong)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the due date long.</p>
+</li></ul>
+
+<h4 id="method-i-setDueDateLong-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>dueDateLong
+<dd><ul><li>
+<p>Due date for the bug.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setDueDateLong-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 641</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setDueDateLong</span>(<span class="ruby-identifier">dueDateLong</span>)
+        <span class="ruby-ivar">@dueDateLong</span> = <span class="ruby-identifier">dueDateLong</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setDueDateLong-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setDueDateLong-method -->
+
+    
+      <div id="method-i-setFlag" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setFlag</span><span
+            class="method-args">(flag)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the flag for the bug.</p>
+</li></ul>
+
+<h4 id="method-i-setFlag-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>flag
+<dd><ul><li>
+<p>Flag for the bug.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setFlag-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setFlag</span>(<span class="ruby-identifier">flag</span>)
+        <span class="ruby-ivar">@flag</span> = <span class="ruby-identifier">flag</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setFlag-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setFlag-method -->
+
+    
+      <div id="method-i-setId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setId</span><span
+            class="method-args">(id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the bug id.</p>
+</li></ul>
+
+<h4 id="method-i-setId-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>id
+<dd><ul><li>
+<p>ID of the bug.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setId-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setId</span>(<span class="ruby-identifier">id</span>)
+        <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setId-method -->
+
+    
+      <div id="method-i-setKey" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setKey</span><span
+            class="method-args">(key)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the key for the bug.</p>
+</li></ul>
+
+<h4 id="method-i-setKey-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>key
+<dd><ul><li>
+<p>Key for the bug.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setKey-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setKey</span>(<span class="ruby-identifier">key</span>)
+        <span class="ruby-ivar">@key</span> = <span class="ruby-identifier">key</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setKey-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setKey-method -->
+
+    
+      <div id="method-i-setMilestoneId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setMilestoneId</span><span
+            class="method-args">(milestoneId)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the milestone id.</p>
+</li></ul>
+
+<h4 id="method-i-setMilestoneId-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>milestoneId
+<dd><ul><li>
+<p>ID of the milestone.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setMilestoneId-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 580</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setMilestoneId</span>(<span class="ruby-identifier">milestoneId</span>)
+        <span class="ruby-ivar">@milestoneId</span> = <span class="ruby-identifier">milestoneId</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setMilestoneId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setMilestoneId-method -->
+
+    
+      <div id="method-i-setModuleId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setModuleId</span><span
+            class="method-args">(moduleId)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the module id.</p>
+</li></ul>
+
+<h4 id="method-i-setModuleId-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>moduleId
+<dd><ul><li>
+<p>ID of the module.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setModuleId-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 540</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setModuleId</span>(<span class="ruby-identifier">moduleId</span>)
+        <span class="ruby-ivar">@moduleId</span> = <span class="ruby-identifier">moduleId</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setModuleId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setModuleId-method -->
+
+    
+      <div id="method-i-setModuleName" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setModuleName</span><span
+            class="method-args">(moduleName)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the module name.</p>
+</li></ul>
+
+<h4 id="method-i-setModuleName-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>moduleName
+<dd><ul><li>
+<p>Name of the module.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setModuleName-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 560</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setModuleName</span>(<span class="ruby-identifier">moduleName</span>)
+        <span class="ruby-ivar">@moduleName</span> = <span class="ruby-identifier">moduleName</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setModuleName-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setModuleName-method -->
+
+    
+      <div id="method-i-setProjectId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setProjectId</span><span
+            class="method-args">(projectId)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the project id.</p>
+</li></ul>
+
+<h4 id="method-i-setProjectId-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>projectId
+<dd><ul><li>
+<p>ID of the project.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setProjectId-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setProjectId</span>(<span class="ruby-identifier">projectId</span>)
+        <span class="ruby-ivar">@projectId</span> = <span class="ruby-identifier">projectId</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setProjectId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setProjectId-method -->
+
+    
+      <div id="method-i-setReportedPerson" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setReportedPerson</span><span
+            class="method-args">(reportedPerson)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the reported person.</p>
+</li></ul>
+
+<h4 id="method-i-setReportedPerson-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>reportedPerson
+<dd><ul><li>
+<p>Person who is reporting the bug.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setReportedPerson-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 171</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setReportedPerson</span>(<span class="ruby-identifier">reportedPerson</span>)
+        <span class="ruby-ivar">@reportedPerson</span> = <span class="ruby-identifier">reportedPerson</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setReportedPerson-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setReportedPerson-method -->
+
+    
+      <div id="method-i-setReporterId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setReporterId</span><span
+            class="method-args">(reporterId)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the reporter id.</p>
+</li></ul>
+
+<h4 id="method-i-setReporterId-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>reporterId
+<dd><ul><li>
+<p>ID of the reporter.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setReporterId-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 149</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setReporterId</span>(<span class="ruby-identifier">reporterId</span>)
+        <span class="ruby-ivar">@reporterId</span> = <span class="ruby-identifier">reporterId</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setReporterId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setReporterId-method -->
+
+    
+      <div id="method-i-setReproducibleId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setReproducibleId</span><span
+            class="method-args">(reproducibleId)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the reproducible id.</p>
+</li></ul>
+
+<h4 id="method-i-setReproducibleId-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>reproducibleId
+<dd><ul><li>
+<p>Reproducible id of the bug.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setReproducibleId-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 497</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setReproducibleId</span>(<span class="ruby-identifier">reproducibleId</span>)
+        <span class="ruby-ivar">@reproducibleId</span> = <span class="ruby-identifier">reproducibleId</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setReproducibleId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setReproducibleId-method -->
+
+    
+      <div id="method-i-setReproducibleType" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setReproducibleType</span><span
+            class="method-args">(reproducibleType)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the reproducible type.</p>
+</li></ul>
+
+<h4 id="method-i-setReproducibleType-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>reproducibleType
+<dd><ul><li>
+<p>Reproducible type of the bug.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setReproducibleType-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 519</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setReproducibleType</span>(<span class="ruby-identifier">reproducibleType</span>)
+        <span class="ruby-ivar">@reproducibleType</span> = <span class="ruby-identifier">reproducibleType</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setReproducibleType-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setReproducibleType-method -->
+
+    
+      <div id="method-i-setSeverityId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setSeverityId</span><span
+            class="method-args">(severityId)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the severity id.</p>
+</li></ul>
+
+<h4 id="method-i-setSeverityId-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>severityId
+<dd><ul><li>
+<p>ID of the severity.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setSeverityId-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 410</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setSeverityId</span>(<span class="ruby-identifier">severityId</span>)
+        <span class="ruby-ivar">@severityId</span> = <span class="ruby-identifier">severityId</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setSeverityId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setSeverityId-method -->
+
+    
+      <div id="method-i-setSeverityType" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setSeverityType</span><span
+            class="method-args">(severityType)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the severity type.</p>
+</li></ul>
+
+<h4 id="method-i-setSeverityType-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>severityType
+<dd><ul><li>
+<p>Type of the severity.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setSeverityType-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 432</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setSeverityType</span>(<span class="ruby-identifier">severityType</span>)
+        <span class="ruby-ivar">@severityType</span> = <span class="ruby-identifier">severityType</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setSeverityType-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setSeverityType-method -->
+
+    
+      <div id="method-i-setStatusId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setStatusId</span><span
+            class="method-args">(statusId)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the status id.</p>
+</li></ul>
+
+<h4 id="method-i-setStatusId-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>statusId
+<dd><ul><li>
+<p>ID of the status.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setStatusId-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 454</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setStatusId</span>(<span class="ruby-identifier">statusId</span>)
+        <span class="ruby-ivar">@statusId</span> = <span class="ruby-identifier">statusId</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setStatusId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setStatusId-method -->
+
+    
+      <div id="method-i-setStatusType" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setStatusType</span><span
+            class="method-args">(statusType)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the status type.</p>
+</li></ul>
+
+<h4 id="method-i-setStatusType-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>statusType
+<dd><ul><li>
+<p>Type of the status.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setStatusType-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 475</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setStatusType</span>(<span class="ruby-identifier">statusType</span>)
+        <span class="ruby-ivar">@statusType</span> = <span class="ruby-identifier">statusType</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setStatusType-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setStatusType-method -->
+
+    
+      <div id="method-i-setTimesheetURL" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setTimesheetURL</span><span
+            class="method-args">(timesheetUrl)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the time sheet URL.</p>
+</li></ul>
+
+<h4 id="method-i-setTimesheetURL-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>timesheetUrl
+<dd><ul><li>
+<p>URL for the time sheet.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setTimesheetURL-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 346</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setTimesheetURL</span>(<span class="ruby-identifier">timesheetUrl</span>)
+        <span class="ruby-ivar">@timesheetUrl</span> = <span class="ruby-identifier">timesheetUrl</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setTimesheetURL-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setTimesheetURL-method -->
+
+    
+      <div id="method-i-setTitle" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setTitle</span><span
+            class="method-args">(title)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the bug title.</p>
+</li></ul>
+
+<h4 id="method-i-setTitle-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>title
+<dd><ul><li>
+<p>Title for the bug.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setTitle-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 105</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setTitle</span>(<span class="ruby-identifier">title</span>)
+        <span class="ruby-ivar">@title</span> = <span class="ruby-identifier">title</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setTitle-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setTitle-method -->
+
+    
+      <div id="method-i-setURL" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setURL</span><span
+            class="method-args">(url)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the bug URL.</p>
+</li></ul>
+
+<h4 id="method-i-setURL-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>url
+<dd><ul><li>
+<p>URL for the bug.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setURL-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 324</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setURL</span>(<span class="ruby-identifier">url</span>)
+        <span class="ruby-ivar">@url</span> = <span class="ruby-identifier">url</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setURL-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setURL-method -->
+
+    
+      <div id="method-i-toParamMAP" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">toParamMAP</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Convert the <a href="Bug.html">Bug</a> object into HashMap.</p>
+</li></ul>
+
+<h4 id="method-i-toParamMAP-label-Returns">Returns</h4>
+<ul><li>
+<p>HashMap object.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="toParamMAP-source">
+            <pre><span class="ruby-comment"># File projects/model/Bug.rb, line 661</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">toParamMAP</span>
+
+        <span class="ruby-identifier">requestBody</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>                     
+        
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">title</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;title&quot;</span>] = <span class="ruby-identifier">title</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">description</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;description&quot;</span>] = <span class="ruby-identifier">description</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">assigneeId</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;assignee&quot;</span>] = <span class="ruby-identifier">assigneeId</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">flag</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;flag&quot;</span>] = <span class="ruby-identifier">flag</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">classificationId</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">classificationId</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;classification_id&quot;</span>] = <span class="ruby-identifier">classificationId</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">milestoneId</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">milestoneId</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;milestone_id&quot;</span>] = <span class="ruby-identifier">milestoneId</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">dueDate</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;due_date&quot;</span>] = <span class="ruby-identifier">dueDate</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">moduleId</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">moduleId</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;module_id&quot;</span>] = <span class="ruby-identifier">moduleId</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">severityId</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">severityId</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;severity_id&quot;</span>] = <span class="ruby-identifier">severityId</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">reproducibleId</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">reproducibleId</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;reproducible_id&quot;</span>] = <span class="ruby-identifier">reproducibleId</span>
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">requestBody</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- toParamMAP-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- toParamMAP-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

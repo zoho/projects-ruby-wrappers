@@ -1,0 +1,2103 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=IBM437" http-equiv="Content-Type">
+
+<title>class Projects::Model::Task - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../../index.html">Home</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>projects/model/Task.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-getAssociateDocumentIds">#getAssociateDocumentIds</a>
+    
+    <li><a href="#method-i-getAssociateForumIds">#getAssociateForumIds</a>
+    
+    <li><a href="#method-i-getComments">#getComments</a>
+    
+    <li><a href="#method-i-getCreatedBy">#getCreatedBy</a>
+    
+    <li><a href="#method-i-getCreatedPerson">#getCreatedPerson</a>
+    
+    <li><a href="#method-i-getDuration">#getDuration</a>
+    
+    <li><a href="#method-i-getEndDate">#getEndDate</a>
+    
+    <li><a href="#method-i-getEndDateFormat">#getEndDateFormat</a>
+    
+    <li><a href="#method-i-getEndDateLong">#getEndDateLong</a>
+    
+    <li><a href="#method-i-getId">#getId</a>
+    
+    <li><a href="#method-i-getName">#getName</a>
+    
+    <li><a href="#method-i-getOwners">#getOwners</a>
+    
+    <li><a href="#method-i-getPercentComplete">#getPercentComplete</a>
+    
+    <li><a href="#method-i-getPriority">#getPriority</a>
+    
+    <li><a href="#method-i-getStartDate">#getStartDate</a>
+    
+    <li><a href="#method-i-getStartDateFormat">#getStartDateFormat</a>
+    
+    <li><a href="#method-i-getStartDateLong">#getStartDateLong</a>
+    
+    <li><a href="#method-i-getSubtasks">#getSubtasks</a>
+    
+    <li><a href="#method-i-getTasklist">#getTasklist</a>
+    
+    <li><a href="#method-i-getTimesheetURL">#getTimesheetURL</a>
+    
+    <li><a href="#method-i-getURL">#getURL</a>
+    
+    <li><a href="#method-i-isCompleted">#isCompleted</a>
+    
+    <li><a href="#method-i-setAssociateDocumentIds">#setAssociateDocumentIds</a>
+    
+    <li><a href="#method-i-setAssociateForumIds">#setAssociateForumIds</a>
+    
+    <li><a href="#method-i-setComments">#setComments</a>
+    
+    <li><a href="#method-i-setCompleted">#setCompleted</a>
+    
+    <li><a href="#method-i-setCreatedBy">#setCreatedBy</a>
+    
+    <li><a href="#method-i-setCreatedPerson">#setCreatedPerson</a>
+    
+    <li><a href="#method-i-setDuration">#setDuration</a>
+    
+    <li><a href="#method-i-setEndDate">#setEndDate</a>
+    
+    <li><a href="#method-i-setEndDateFormat">#setEndDateFormat</a>
+    
+    <li><a href="#method-i-setEndDateLong">#setEndDateLong</a>
+    
+    <li><a href="#method-i-setId">#setId</a>
+    
+    <li><a href="#method-i-setName">#setName</a>
+    
+    <li><a href="#method-i-setOwners">#setOwners</a>
+    
+    <li><a href="#method-i-setPercentComplete">#setPercentComplete</a>
+    
+    <li><a href="#method-i-setPriority">#setPriority</a>
+    
+    <li><a href="#method-i-setStartDate">#setStartDate</a>
+    
+    <li><a href="#method-i-setStartDateFormat">#setStartDateFormat</a>
+    
+    <li><a href="#method-i-setStartDateLong">#setStartDateLong</a>
+    
+    <li><a href="#method-i-setSubtasks">#setSubtasks</a>
+    
+    <li><a href="#method-i-setTasklist">#setTasklist</a>
+    
+    <li><a href="#method-i-setTimesheetURL">#setTimesheetURL</a>
+    
+    <li><a href="#method-i-setURL">#setURL</a>
+    
+    <li><a href="#method-i-toParamMAP">#toParamMAP</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../Projects.html">Projects</a>
+  
+    <li><a href="../../Projects/Api.html">Projects::Api</a>
+  
+    <li><a href="../../Projects/Api/API.html">Projects::Api::API</a>
+  
+    <li><a href="../../Projects/Api/BugsAPI.html">Projects::Api::BugsAPI</a>
+  
+    <li><a href="../../Projects/Api/DocumentsAPI.html">Projects::Api::DocumentsAPI</a>
+  
+    <li><a href="../../Projects/Api/EventsAPI.html">Projects::Api::EventsAPI</a>
+  
+    <li><a href="../../Projects/Api/FoldersAPI.html">Projects::Api::FoldersAPI</a>
+  
+    <li><a href="../../Projects/Api/ForumsAPI.html">Projects::Api::ForumsAPI</a>
+  
+    <li><a href="../../Projects/Api/MilestonesAPI.html">Projects::Api::MilestonesAPI</a>
+  
+    <li><a href="../../Projects/Api/PortalAPI.html">Projects::Api::PortalAPI</a>
+  
+    <li><a href="../../Projects/Api/ProjectsAPI.html">Projects::Api::ProjectsAPI</a>
+  
+    <li><a href="../../Projects/Api/TasklistsAPI.html">Projects::Api::TasklistsAPI</a>
+  
+    <li><a href="../../Projects/Api/TasksAPI.html">Projects::Api::TasksAPI</a>
+  
+    <li><a href="../../Projects/Api/TimesheetsAPI.html">Projects::Api::TimesheetsAPI</a>
+  
+    <li><a href="../../Projects/Api/UsersAPI.html">Projects::Api::UsersAPI</a>
+  
+    <li><a href="../../Projects/Model.html">Projects::Model</a>
+  
+    <li><a href="../../Projects/Model/Activity.html">Projects::Model::Activity</a>
+  
+    <li><a href="../../Projects/Model/Bug.html">Projects::Model::Bug</a>
+  
+    <li><a href="../../Projects/Model/Buglog.html">Projects::Model::Buglog</a>
+  
+    <li><a href="../../Projects/Model/Category.html">Projects::Model::Category</a>
+  
+    <li><a href="../../Projects/Model/Comment.html">Projects::Model::Comment</a>
+  
+    <li><a href="../../Projects/Model/Document.html">Projects::Model::Document</a>
+  
+    <li><a href="../../Projects/Model/Event.html">Projects::Model::Event</a>
+  
+    <li><a href="../../Projects/Model/Folder.html">Projects::Model::Folder</a>
+  
+    <li><a href="../../Projects/Model/Forum.html">Projects::Model::Forum</a>
+  
+    <li><a href="../../Projects/Model/Generallog.html">Projects::Model::Generallog</a>
+  
+    <li><a href="../../Projects/Model/Log.html">Projects::Model::Log</a>
+  
+    <li><a href="../../Projects/Model/Milestone.html">Projects::Model::Milestone</a>
+  
+    <li><a href="../../Projects/Model/Owner.html">Projects::Model::Owner</a>
+  
+    <li><a href="../../Projects/Model/Participant.html">Projects::Model::Participant</a>
+  
+    <li><a href="../../Projects/Model/Portal.html">Projects::Model::Portal</a>
+  
+    <li><a href="../../Projects/Model/Project.html">Projects::Model::Project</a>
+  
+    <li><a href="../../Projects/Model/Status.html">Projects::Model::Status</a>
+  
+    <li><a href="../../Projects/Model/Task.html">Projects::Model::Task</a>
+  
+    <li><a href="../../Projects/Model/Tasklist.html">Projects::Model::Tasklist</a>
+  
+    <li><a href="../../Projects/Model/Tasklog.html">Projects::Model::Tasklog</a>
+  
+    <li><a href="../../Projects/Model/Timelog.html">Projects::Model::Timelog</a>
+  
+    <li><a href="../../Projects/Model/TimelogList.html">Projects::Model::TimelogList</a>
+  
+    <li><a href="../../Projects/Model/User.html">Projects::Model::User</a>
+  
+    <li><a href="../../Projects/Model/Version.html">Projects::Model::Version</a>
+  
+    <li><a href="../../Projects/Parser.html">Projects::Parser</a>
+  
+    <li><a href="../../Projects/Parser/BugParser.html">Projects::Parser::BugParser</a>
+  
+    <li><a href="../../Projects/Parser/DocumentParser.html">Projects::Parser::DocumentParser</a>
+  
+    <li><a href="../../Projects/Parser/EventParser.html">Projects::Parser::EventParser</a>
+  
+    <li><a href="../../Projects/Parser/FolderParser.html">Projects::Parser::FolderParser</a>
+  
+    <li><a href="../../Projects/Parser/ForumParser.html">Projects::Parser::ForumParser</a>
+  
+    <li><a href="../../Projects/Parser/MilestonesParser.html">Projects::Parser::MilestonesParser</a>
+  
+    <li><a href="../../Projects/Parser/PortalParser.html">Projects::Parser::PortalParser</a>
+  
+    <li><a href="../../Projects/Parser/ProjectParser.html">Projects::Parser::ProjectParser</a>
+  
+    <li><a href="../../Projects/Parser/TaskParser.html">Projects::Parser::TaskParser</a>
+  
+    <li><a href="../../Projects/Parser/TasklistParser.html">Projects::Parser::TasklistParser</a>
+  
+    <li><a href="../../Projects/Parser/TimesheetParser.html">Projects::Parser::TimesheetParser</a>
+  
+    <li><a href="../../Projects/Parser/UserParser.html">Projects::Parser::UserParser</a>
+  
+    <li><a href="../../Projects/Pexception.html">Projects::Pexception</a>
+  
+    <li><a href="../../Projects/Pexception/ProjectsException.html">Projects::Pexception::ProjectsException</a>
+  
+    <li><a href="../../Projects/Service.html">Projects::Service</a>
+  
+    <li><a href="../../Projects/Service/ZohoProjects.html">Projects::Service::ZohoProjects</a>
+  
+    <li><a href="../../Projects/Util.html">Projects::Util</a>
+  
+    <li><a href="../../Projects/Util/ZohoHTTPClient.html">Projects::Util::ZohoHTTPClient</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Projects::Model::Task</h1>
+
+  <div id="description" class="description">
+    <ul><li>
+<p>This class is used to make an object for <a href="Task.html">Task</a>.</p>
+</li></ul>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-getAssociateDocumentIds" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getAssociateDocumentIds</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the associated document IDs of the task.</p>
+</li></ul>
+
+<h4 id="method-i-getAssociateDocumentIds-label-Returns">Returns</h4>
+<ul><li>
+<p>Array of document IDs.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getAssociateDocumentIds-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 388</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getAssociateDocumentIds</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@associateDocumentIds</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getAssociateDocumentIds-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getAssociateDocumentIds-method -->
+
+    
+      <div id="method-i-getAssociateForumIds" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getAssociateForumIds</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the associated forum IDs of the task.</p>
+</li></ul>
+
+<h4 id="method-i-getAssociateForumIds-label-Returns">Returns</h4>
+<ul><li>
+<p>Array of forum IDs.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getAssociateForumIds-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 408</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getAssociateForumIds</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@associateForumIds</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getAssociateForumIds-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getAssociateForumIds-method -->
+
+    
+      <div id="method-i-getComments" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getComments</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the comments of the task.</p>
+</li></ul>
+
+<h4 id="method-i-getComments-label-Returns">Returns</h4>
+<ul><li>
+<p>List of <a href="Comment.html">Comment</a> object.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getComments-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 368</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getComments</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@comments</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getComments-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getComments-method -->
+
+    
+      <div id="method-i-getCreatedBy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getCreatedBy</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the id of the user who created the task.</p>
+</li></ul>
+
+<h4 id="method-i-getCreatedBy-label-Returns">Returns</h4>
+<ul><li>
+<p>Id of the person who created the task.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getCreatedBy-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getCreatedBy</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@createdBy</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getCreatedBy-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getCreatedBy-method -->
+
+    
+      <div id="method-i-getCreatedPerson" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getCreatedPerson</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the name of the person who created the task.</p>
+</li></ul>
+
+<h4 id="method-i-getCreatedPerson-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Task.html">Task</a> created person name.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getCreatedPerson-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getCreatedPerson</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@createdPerson</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getCreatedPerson-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getCreatedPerson-method -->
+
+    
+      <div id="method-i-getDuration" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getDuration</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the task duration.</p>
+</li></ul>
+
+<h4 id="method-i-getDuration-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Task.html">Task</a> duration.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getDuration-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 288</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getDuration</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@duration</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getDuration-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getDuration-method -->
+
+    
+      <div id="method-i-getEndDate" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getEndDate</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the task end date.</p>
+</li></ul>
+
+<h4 id="method-i-getEndDate-label-Returns">Returns</h4>
+<ul><li>
+<p>task end date.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getEndDate-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 228</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getEndDate</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@endDate</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getEndDate-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getEndDate-method -->
+
+    
+      <div id="method-i-getEndDateFormat" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getEndDateFormat</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the task end date format.</p>
+</li></ul>
+
+<h4 id="method-i-getEndDateFormat-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Task.html">Task</a> end date format.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getEndDateFormat-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 248</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getEndDateFormat</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@endDateFormat</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getEndDateFormat-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getEndDateFormat-method -->
+
+    
+      <div id="method-i-getEndDateLong" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getEndDateLong</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the end date long.</p>
+</li></ul>
+
+<h4 id="method-i-getEndDateLong-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Task.html">Task</a> end date long.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getEndDateLong-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 268</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getEndDateLong</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@endDateLong</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getEndDateLong-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getEndDateLong-method -->
+
+    
+      <div id="method-i-getId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getId</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the task id.</p>
+</li></ul>
+
+<h4 id="method-i-getId-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Task.html">Task</a> id.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getId-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getId</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getId-method -->
+
+    
+      <div id="method-i-getName" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getName</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the task name.</p>
+</li></ul>
+
+<h4 id="method-i-getName-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Task.html">Task</a> name.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getName-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getName</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@name</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getName-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getName-method -->
+
+    
+      <div id="method-i-getOwners" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getOwners</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the owner of the task.</p>
+</li></ul>
+
+<h4 id="method-i-getOwners-label-Returns">Returns</h4>
+<ul><li>
+<p>List of <a href="Owner.html">Owner</a> object.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getOwners-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 348</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getOwners</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@owners</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getOwners-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getOwners-method -->
+
+    
+      <div id="method-i-getPercentComplete" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getPercentComplete</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the task completed percent.</p>
+</li></ul>
+
+<h4 id="method-i-getPercentComplete-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Task.html">Task</a> complete percent.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getPercentComplete-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 148</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getPercentComplete</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@percentComplete</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getPercentComplete-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getPercentComplete-method -->
+
+    
+      <div id="method-i-getPriority" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getPriority</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the priority of the task.</p>
+</li></ul>
+
+<h4 id="method-i-getPriority-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Task.html">Task</a> priority.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getPriority-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 128</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getPriority</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@priority</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getPriority-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getPriority-method -->
+
+    
+      <div id="method-i-getStartDate" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getStartDate</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the task start date.</p>
+</li></ul>
+
+<h4 id="method-i-getStartDate-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Task.html">Task</a> start date.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getStartDate-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 168</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getStartDate</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">startDate</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getStartDate-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getStartDate-method -->
+
+    
+      <div id="method-i-getStartDateFormat" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getStartDateFormat</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the task start date format.</p>
+</li></ul>
+
+<h4 id="method-i-getStartDateFormat-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Task.html">Task</a> start date format.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getStartDateFormat-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 188</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getStartDateFormat</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@startDateFormat</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getStartDateFormat-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getStartDateFormat-method -->
+
+    
+      <div id="method-i-getStartDateLong" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getStartDateLong</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the start date long.</p>
+</li></ul>
+
+<h4 id="method-i-getStartDateLong-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Task.html">Task</a> start date long.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getStartDateLong-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 208</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getStartDateLong</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@startDateLong</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getStartDateLong-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getStartDateLong-method -->
+
+    
+      <div id="method-i-getSubtasks" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getSubtasks</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the subtasks of the task.</p>
+</li></ul>
+
+<h4 id="method-i-getSubtasks-label-Returns">Returns</h4>
+<ul><li>
+<p>List of <a href="Task.html">Task</a> object.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getSubtasks-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 428</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getSubtasks</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@tasks</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getSubtasks-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getSubtasks-method -->
+
+    
+      <div id="method-i-getTasklist" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getTasklist</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the tasklist of the task.</p>
+</li></ul>
+
+<h4 id="method-i-getTasklist-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Tasklist.html">Tasklist</a> object.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getTasklist-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 448</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getTasklist</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@tasklist</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getTasklist-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getTasklist-method -->
+
+    
+      <div id="method-i-getTimesheetURL" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getTimesheetURL</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the time sheet URL.</p>
+</li></ul>
+
+<h4 id="method-i-getTimesheetURL-label-Returns">Returns</h4>
+<ul><li>
+<p>Time sheet URL.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getTimesheetURL-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 328</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getTimesheetURL</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@timesheetUrl</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getTimesheetURL-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getTimesheetURL-method -->
+
+    
+      <div id="method-i-getURL" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getURL</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the task URL.</p>
+</li></ul>
+
+<h4 id="method-i-getURL-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Task.html">Task</a> URL.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getURL-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 308</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getURL</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@url</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getURL-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getURL-method -->
+
+    
+      <div id="method-i-isCompleted" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">isCompleted</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get whether the task is completed or not.</p>
+</li></ul>
+
+<h4 id="method-i-isCompleted-label-Returns">Returns</h4>
+<ul><li>
+<p>true, if the task is completed else false.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="isCompleted-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">isCompleted</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@completed</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- isCompleted-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- isCompleted-method -->
+
+    
+      <div id="method-i-setAssociateDocumentIds" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setAssociateDocumentIds</span><span
+            class="method-args">(associateDocumentIds)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the associated document IDs of the task.</p>
+</li></ul>
+
+<h4 id="method-i-setAssociateDocumentIds-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>associateDocumentIds
+<dd><ul><li>
+<p><a href="Document.html">Document</a> IDs of the task.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setAssociateDocumentIds-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 378</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setAssociateDocumentIds</span>(<span class="ruby-identifier">associateDocumentIds</span>)
+        <span class="ruby-ivar">@associateDocumentIds</span> = <span class="ruby-identifier">associateDocumentIds</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setAssociateDocumentIds-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setAssociateDocumentIds-method -->
+
+    
+      <div id="method-i-setAssociateForumIds" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setAssociateForumIds</span><span
+            class="method-args">(associateForumIds)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the associated forum IDs.</p>
+</li></ul>
+
+<h4 id="method-i-setAssociateForumIds-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>associateForumIds
+<dd><ul><li>
+<p><a href="Forum.html">Forum</a> IDs of the task.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setAssociateForumIds-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 398</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setAssociateForumIds</span>(<span class="ruby-identifier">associateForumIds</span>)
+        <span class="ruby-ivar">@associateForumIds</span> = <span class="ruby-identifier">associateForumIds</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setAssociateForumIds-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setAssociateForumIds-method -->
+
+    
+      <div id="method-i-setComments" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setComments</span><span
+            class="method-args">(comments)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the comments of the task.</p>
+</li></ul>
+
+<h4 id="method-i-setComments-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>comments
+<dd><ul><li>
+<p>List of <a href="Comment.html">Comment</a> object.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setComments-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 358</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setComments</span>(<span class="ruby-identifier">comments</span>)
+        <span class="ruby-ivar">@comments</span> = <span class="ruby-identifier">comments</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setComments-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setComments-method -->
+
+    
+      <div id="method-i-setCompleted" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setCompleted</span><span
+            class="method-args">(completed)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set whether the task is completed or not.</p>
+</li></ul>
+
+<h4 id="method-i-setCompleted-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>completed
+<dd><ul><li>
+<p>Is task is completed or not.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setCompleted-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setCompleted</span>(<span class="ruby-identifier">completed</span>)
+        <span class="ruby-ivar">@completed</span> = <span class="ruby-identifier">completed</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setCompleted-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setCompleted-method -->
+
+    
+      <div id="method-i-setCreatedBy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setCreatedBy</span><span
+            class="method-args">(createdBy)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the id of the person who created the task.</p>
+</li></ul>
+
+<h4 id="method-i-setCreatedBy-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>createdBy
+<dd><ul><li>
+<p>Id of the user who created the task.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setCreatedBy-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setCreatedBy</span>(<span class="ruby-identifier">createdBy</span>)
+        <span class="ruby-ivar">@createdBy</span> = <span class="ruby-identifier">createdBy</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setCreatedBy-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setCreatedBy-method -->
+
+    
+      <div id="method-i-setCreatedPerson" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setCreatedPerson</span><span
+            class="method-args">(createdPerson)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the task created person name.</p>
+</li></ul>
+
+<h4 id="method-i-setCreatedPerson-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>createdPerson
+<dd><ul><li>
+<p>Name of the person who created the task.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setCreatedPerson-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 98</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setCreatedPerson</span>(<span class="ruby-identifier">createdPerson</span>)
+        <span class="ruby-ivar">@createdPerson</span> = <span class="ruby-identifier">createdPerson</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setCreatedPerson-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setCreatedPerson-method -->
+
+    
+      <div id="method-i-setDuration" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setDuration</span><span
+            class="method-args">(duration)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the task duration.</p>
+</li></ul>
+
+<h4 id="method-i-setDuration-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>duration
+<dd><ul><li>
+<p>Duration of the task.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setDuration-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 278</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setDuration</span>(<span class="ruby-identifier">duration</span>)
+        <span class="ruby-ivar">@duration</span> = <span class="ruby-identifier">duration</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setDuration-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setDuration-method -->
+
+    
+      <div id="method-i-setEndDate" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setEndDate</span><span
+            class="method-args">(endDate)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the task end date.</p>
+</li></ul>
+
+<h4 id="method-i-setEndDate-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>endDate
+<dd><ul><li>
+<p>End date of the task.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setEndDate-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 218</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setEndDate</span>(<span class="ruby-identifier">endDate</span>)
+        <span class="ruby-ivar">@endDate</span> = <span class="ruby-identifier">endDate</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setEndDate-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setEndDate-method -->
+
+    
+      <div id="method-i-setEndDateFormat" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setEndDateFormat</span><span
+            class="method-args">(endDateFormat)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the task end date format.</p>
+</li></ul>
+
+<h4 id="method-i-setEndDateFormat-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>endDate
+<dd><ul><li>
+<p>End date format of the task.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setEndDateFormat-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 238</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setEndDateFormat</span>(<span class="ruby-identifier">endDateFormat</span>)
+        <span class="ruby-ivar">@endDateFormat</span> = <span class="ruby-identifier">endDateFormat</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setEndDateFormat-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setEndDateFormat-method -->
+
+    
+      <div id="method-i-setEndDateLong" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setEndDateLong</span><span
+            class="method-args">(endDateLong)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the end date long.</p>
+</li></ul>
+
+<h4 id="method-i-setEndDateLong-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>endDateLong
+<dd><ul><li>
+<p>End date for the task.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setEndDateLong-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 258</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setEndDateLong</span>(<span class="ruby-identifier">endDateLong</span>)
+        <span class="ruby-ivar">@endDateLong</span> = <span class="ruby-identifier">endDateLong</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setEndDateLong-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setEndDateLong-method -->
+
+    
+      <div id="method-i-setId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setId</span><span
+            class="method-args">(id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the task id.</p>
+</li></ul>
+
+<h4 id="method-i-setId-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>id
+<dd><ul><li>
+<p>ID of the task.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setId-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setId</span>(<span class="ruby-identifier">id</span>)
+        <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setId-method -->
+
+    
+      <div id="method-i-setName" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setName</span><span
+            class="method-args">(name)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the task name.</p>
+</li></ul>
+
+<h4 id="method-i-setName-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>name
+<dd><ul><li>
+<p>Name of the task.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setName-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setName</span>(<span class="ruby-identifier">name</span>)
+        <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">name</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setName-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setName-method -->
+
+    
+      <div id="method-i-setOwners" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setOwners</span><span
+            class="method-args">(owners)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the owners of the task.</p>
+</li></ul>
+
+<h4 id="method-i-setOwners-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>owners
+<dd><ul><li>
+<p>List of <a href="Owner.html">Owner</a> object.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setOwners-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 338</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setOwners</span>(<span class="ruby-identifier">owners</span>)
+        <span class="ruby-ivar">@owners</span> = <span class="ruby-identifier">owners</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setOwners-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setOwners-method -->
+
+    
+      <div id="method-i-setPercentComplete" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setPercentComplete</span><span
+            class="method-args">(percentComplete)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the task completed percent.</p>
+</li></ul>
+
+<h4 id="method-i-setPercentComplete-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>percentComplete
+<dd><ul><li>
+<p><a href="Task.html">Task</a> completed percent.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setPercentComplete-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 138</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setPercentComplete</span>(<span class="ruby-identifier">percentComplete</span>)
+        <span class="ruby-ivar">@percentComplete</span> = <span class="ruby-identifier">percentComplete</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setPercentComplete-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setPercentComplete-method -->
+
+    
+      <div id="method-i-setPriority" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setPriority</span><span
+            class="method-args">(priority)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the priority of the task.</p>
+</li></ul>
+
+<h4 id="method-i-setPriority-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>priority
+<dd><ul><li>
+<p>Priority of the task.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setPriority-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 118</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setPriority</span>(<span class="ruby-identifier">priority</span>)
+        <span class="ruby-ivar">@priority</span> = <span class="ruby-identifier">priority</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setPriority-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setPriority-method -->
+
+    
+      <div id="method-i-setStartDate" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setStartDate</span><span
+            class="method-args">(startDate)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the task start date.</p>
+</li></ul>
+
+<h4 id="method-i-setStartDate-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>startDate
+<dd><ul><li>
+<p>Start date of the task.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setStartDate-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 158</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setStartDate</span>(<span class="ruby-identifier">startDate</span>)
+        <span class="ruby-ivar">@startDate</span> = <span class="ruby-identifier">startDate</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setStartDate-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setStartDate-method -->
+
+    
+      <div id="method-i-setStartDateFormat" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setStartDateFormat</span><span
+            class="method-args">(startDateFormat)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the task start date format.</p>
+</li></ul>
+
+<h4 id="method-i-setStartDateFormat-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>startDate
+<dd><ul><li>
+<p>Start date format of the task.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setStartDateFormat-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 178</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setStartDateFormat</span>(<span class="ruby-identifier">startDateFormat</span>)
+        <span class="ruby-ivar">@startDateFormat</span> = <span class="ruby-identifier">startDateFormat</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setStartDateFormat-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setStartDateFormat-method -->
+
+    
+      <div id="method-i-setStartDateLong" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setStartDateLong</span><span
+            class="method-args">(startDateLong)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the start date long.</p>
+</li></ul>
+
+<h4 id="method-i-setStartDateLong-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>startDateLong
+<dd><ul><li>
+<p>Start date long for the task.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setStartDateLong-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 198</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setStartDateLong</span>(<span class="ruby-identifier">startDateLong</span>)
+        <span class="ruby-ivar">@startDateLong</span> = <span class="ruby-identifier">startDateLong</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setStartDateLong-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setStartDateLong-method -->
+
+    
+      <div id="method-i-setSubtasks" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setSubtasks</span><span
+            class="method-args">(tasks)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the subtasks of the task.</p>
+</li></ul>
+
+<h4 id="method-i-setSubtasks-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>tasks
+<dd><ul><li>
+<p>List of <a href="Task.html">Task</a> object.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setSubtasks-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 418</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setSubtasks</span>(<span class="ruby-identifier">tasks</span>)
+        <span class="ruby-ivar">@tasks</span> = <span class="ruby-identifier">tasks</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setSubtasks-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setSubtasks-method -->
+
+    
+      <div id="method-i-setTasklist" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setTasklist</span><span
+            class="method-args">(tasklist)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the tasklist of the task.</p>
+</li></ul>
+
+<h4 id="method-i-setTasklist-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>tasklist
+<dd><ul><li>
+<p><a href="Tasklist.html">Tasklist</a> object.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setTasklist-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 438</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setTasklist</span>(<span class="ruby-identifier">tasklist</span>)
+        <span class="ruby-ivar">@tasklist</span> = <span class="ruby-identifier">tasklist</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setTasklist-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setTasklist-method -->
+
+    
+      <div id="method-i-setTimesheetURL" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setTimesheetURL</span><span
+            class="method-args">(timesheetUrl)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the time sheet URL.</p>
+</li></ul>
+
+<h4 id="method-i-setTimesheetURL-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>timesheetUrl
+<dd><ul><li>
+<p>URL for the time sheet.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setTimesheetURL-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 318</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setTimesheetURL</span>(<span class="ruby-identifier">timesheetUrl</span>)
+        <span class="ruby-ivar">@timesheetUrl</span> = <span class="ruby-identifier">timesheetUrl</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setTimesheetURL-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setTimesheetURL-method -->
+
+    
+      <div id="method-i-setURL" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setURL</span><span
+            class="method-args">(url)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the task URL.</p>
+</li></ul>
+
+<h4 id="method-i-setURL-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>url
+<dd><ul><li>
+<p>URL for the task.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setURL-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 298</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setURL</span>(<span class="ruby-identifier">url</span>)
+        <span class="ruby-ivar">@url</span> = <span class="ruby-identifier">url</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setURL-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setURL-method -->
+
+    
+      <div id="method-i-toParamMAP" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">toParamMAP</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Convert the <a href="Task.html">Task</a> object into HashMap.</p>
+</li></ul>
+
+<h4 id="method-i-toParamMAP-label-Returns">Returns</h4>
+<ul><li>
+<p>HashMap object.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="toParamMAP-source">
+            <pre><span class="ruby-comment"># File projects/model/Task.rb, line 458</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">toParamMAP</span>()
+        <span class="ruby-identifier">requestBody</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+        
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">owners</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                
+                <span class="ruby-identifier">personResponsible</span> = <span class="ruby-string">&quot;&quot;</span>;
+                
+                <span class="ruby-identifier">owners</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span><span class="ruby-operator">|</span><span class="ruby-identifier">owner</span><span class="ruby-operator">|</span>
+                        <span class="ruby-identifier">personResponsible</span> <span class="ruby-operator">+=</span> <span class="ruby-constant">String</span>(<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">getId</span>)<span class="ruby-operator">+</span><span class="ruby-string">&quot;,&quot;</span>
+                <span class="ruby-keyword">end</span>
+
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;person_responsible&quot;</span>] = <span class="ruby-identifier">personResponsible</span>
+        
+        <span class="ruby-keyword">end</span>
+
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;name&quot;</span>] = <span class="ruby-identifier">name</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">tasklist</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;tasklist_id&quot;</span>] = <span class="ruby-identifier">tasklist</span>.<span class="ruby-identifier">getId</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">startDate</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;start_date&quot;</span>] = <span class="ruby-identifier">startDate</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">endDate</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;end_date&quot;</span>] = <span class="ruby-identifier">endDate</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">duration</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;duration&quot;</span>] = <span class="ruby-identifier">duration</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">priority</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;priority&quot;</span>] = <span class="ruby-identifier">priority</span>
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">requestBody</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- toParamMAP-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- toParamMAP-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

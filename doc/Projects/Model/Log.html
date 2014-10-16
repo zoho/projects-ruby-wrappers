@@ -1,0 +1,1599 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=IBM437" http-equiv="Content-Type">
+
+<title>class Projects::Model::Log - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../../index.html">Home</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>projects/model/Log.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-getBillStatus">#getBillStatus</a>
+    
+    <li><a href="#method-i-getDate">#getDate</a>
+    
+    <li><a href="#method-i-getHours">#getHours</a>
+    
+    <li><a href="#method-i-getHoursDisplay">#getHoursDisplay</a>
+    
+    <li><a href="#method-i-getId">#getId</a>
+    
+    <li><a href="#method-i-getLogDate">#getLogDate</a>
+    
+    <li><a href="#method-i-getLogDateFormat">#getLogDateFormat</a>
+    
+    <li><a href="#method-i-getLogDateLong">#getLogDateLong</a>
+    
+    <li><a href="#method-i-getMinutes">#getMinutes</a>
+    
+    <li><a href="#method-i-getNotes">#getNotes</a>
+    
+    <li><a href="#method-i-getOwnerId">#getOwnerId</a>
+    
+    <li><a href="#method-i-getOwnerName">#getOwnerName</a>
+    
+    <li><a href="#method-i-getProjectId">#getProjectId</a>
+    
+    <li><a href="#method-i-getProjectName">#getProjectName</a>
+    
+    <li><a href="#method-i-getTotalMinutes">#getTotalMinutes</a>
+    
+    <li><a href="#method-i-getURL">#getURL</a>
+    
+    <li><a href="#method-i-setBillStatus">#setBillStatus</a>
+    
+    <li><a href="#method-i-setDate">#setDate</a>
+    
+    <li><a href="#method-i-setHours">#setHours</a>
+    
+    <li><a href="#method-i-setHoursDisplay">#setHoursDisplay</a>
+    
+    <li><a href="#method-i-setId">#setId</a>
+    
+    <li><a href="#method-i-setLogDate">#setLogDate</a>
+    
+    <li><a href="#method-i-setLogDateFormat">#setLogDateFormat</a>
+    
+    <li><a href="#method-i-setLogDateLong">#setLogDateLong</a>
+    
+    <li><a href="#method-i-setMinutes">#setMinutes</a>
+    
+    <li><a href="#method-i-setNotes">#setNotes</a>
+    
+    <li><a href="#method-i-setOwnerId">#setOwnerId</a>
+    
+    <li><a href="#method-i-setOwnerName">#setOwnerName</a>
+    
+    <li><a href="#method-i-setProjectId">#setProjectId</a>
+    
+    <li><a href="#method-i-setProjectName">#setProjectName</a>
+    
+    <li><a href="#method-i-setTotalMinutes">#setTotalMinutes</a>
+    
+    <li><a href="#method-i-setURL">#setURL</a>
+    
+    <li><a href="#method-i-toParamMAP">#toParamMAP</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../Projects.html">Projects</a>
+  
+    <li><a href="../../Projects/Api.html">Projects::Api</a>
+  
+    <li><a href="../../Projects/Api/API.html">Projects::Api::API</a>
+  
+    <li><a href="../../Projects/Api/BugsAPI.html">Projects::Api::BugsAPI</a>
+  
+    <li><a href="../../Projects/Api/DocumentsAPI.html">Projects::Api::DocumentsAPI</a>
+  
+    <li><a href="../../Projects/Api/EventsAPI.html">Projects::Api::EventsAPI</a>
+  
+    <li><a href="../../Projects/Api/FoldersAPI.html">Projects::Api::FoldersAPI</a>
+  
+    <li><a href="../../Projects/Api/ForumsAPI.html">Projects::Api::ForumsAPI</a>
+  
+    <li><a href="../../Projects/Api/MilestonesAPI.html">Projects::Api::MilestonesAPI</a>
+  
+    <li><a href="../../Projects/Api/PortalAPI.html">Projects::Api::PortalAPI</a>
+  
+    <li><a href="../../Projects/Api/ProjectsAPI.html">Projects::Api::ProjectsAPI</a>
+  
+    <li><a href="../../Projects/Api/TasklistsAPI.html">Projects::Api::TasklistsAPI</a>
+  
+    <li><a href="../../Projects/Api/TasksAPI.html">Projects::Api::TasksAPI</a>
+  
+    <li><a href="../../Projects/Api/TimesheetsAPI.html">Projects::Api::TimesheetsAPI</a>
+  
+    <li><a href="../../Projects/Api/UsersAPI.html">Projects::Api::UsersAPI</a>
+  
+    <li><a href="../../Projects/Model.html">Projects::Model</a>
+  
+    <li><a href="../../Projects/Model/Activity.html">Projects::Model::Activity</a>
+  
+    <li><a href="../../Projects/Model/Bug.html">Projects::Model::Bug</a>
+  
+    <li><a href="../../Projects/Model/Buglog.html">Projects::Model::Buglog</a>
+  
+    <li><a href="../../Projects/Model/Category.html">Projects::Model::Category</a>
+  
+    <li><a href="../../Projects/Model/Comment.html">Projects::Model::Comment</a>
+  
+    <li><a href="../../Projects/Model/Document.html">Projects::Model::Document</a>
+  
+    <li><a href="../../Projects/Model/Event.html">Projects::Model::Event</a>
+  
+    <li><a href="../../Projects/Model/Folder.html">Projects::Model::Folder</a>
+  
+    <li><a href="../../Projects/Model/Forum.html">Projects::Model::Forum</a>
+  
+    <li><a href="../../Projects/Model/Generallog.html">Projects::Model::Generallog</a>
+  
+    <li><a href="../../Projects/Model/Log.html">Projects::Model::Log</a>
+  
+    <li><a href="../../Projects/Model/Milestone.html">Projects::Model::Milestone</a>
+  
+    <li><a href="../../Projects/Model/Owner.html">Projects::Model::Owner</a>
+  
+    <li><a href="../../Projects/Model/Participant.html">Projects::Model::Participant</a>
+  
+    <li><a href="../../Projects/Model/Portal.html">Projects::Model::Portal</a>
+  
+    <li><a href="../../Projects/Model/Project.html">Projects::Model::Project</a>
+  
+    <li><a href="../../Projects/Model/Status.html">Projects::Model::Status</a>
+  
+    <li><a href="../../Projects/Model/Task.html">Projects::Model::Task</a>
+  
+    <li><a href="../../Projects/Model/Tasklist.html">Projects::Model::Tasklist</a>
+  
+    <li><a href="../../Projects/Model/Tasklog.html">Projects::Model::Tasklog</a>
+  
+    <li><a href="../../Projects/Model/Timelog.html">Projects::Model::Timelog</a>
+  
+    <li><a href="../../Projects/Model/TimelogList.html">Projects::Model::TimelogList</a>
+  
+    <li><a href="../../Projects/Model/User.html">Projects::Model::User</a>
+  
+    <li><a href="../../Projects/Model/Version.html">Projects::Model::Version</a>
+  
+    <li><a href="../../Projects/Parser.html">Projects::Parser</a>
+  
+    <li><a href="../../Projects/Parser/BugParser.html">Projects::Parser::BugParser</a>
+  
+    <li><a href="../../Projects/Parser/DocumentParser.html">Projects::Parser::DocumentParser</a>
+  
+    <li><a href="../../Projects/Parser/EventParser.html">Projects::Parser::EventParser</a>
+  
+    <li><a href="../../Projects/Parser/FolderParser.html">Projects::Parser::FolderParser</a>
+  
+    <li><a href="../../Projects/Parser/ForumParser.html">Projects::Parser::ForumParser</a>
+  
+    <li><a href="../../Projects/Parser/MilestonesParser.html">Projects::Parser::MilestonesParser</a>
+  
+    <li><a href="../../Projects/Parser/PortalParser.html">Projects::Parser::PortalParser</a>
+  
+    <li><a href="../../Projects/Parser/ProjectParser.html">Projects::Parser::ProjectParser</a>
+  
+    <li><a href="../../Projects/Parser/TaskParser.html">Projects::Parser::TaskParser</a>
+  
+    <li><a href="../../Projects/Parser/TasklistParser.html">Projects::Parser::TasklistParser</a>
+  
+    <li><a href="../../Projects/Parser/TimesheetParser.html">Projects::Parser::TimesheetParser</a>
+  
+    <li><a href="../../Projects/Parser/UserParser.html">Projects::Parser::UserParser</a>
+  
+    <li><a href="../../Projects/Pexception.html">Projects::Pexception</a>
+  
+    <li><a href="../../Projects/Pexception/ProjectsException.html">Projects::Pexception::ProjectsException</a>
+  
+    <li><a href="../../Projects/Service.html">Projects::Service</a>
+  
+    <li><a href="../../Projects/Service/ZohoProjects.html">Projects::Service::ZohoProjects</a>
+  
+    <li><a href="../../Projects/Util.html">Projects::Util</a>
+  
+    <li><a href="../../Projects/Util/ZohoHTTPClient.html">Projects::Util::ZohoHTTPClient</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Projects::Model::Log</h1>
+
+  <div id="description" class="description">
+    <ul><li>
+<p>This class is used to make an object for <a href="Log.html">Log</a>.</p>
+</li></ul>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-getBillStatus" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getBillStatus</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the bill status for the log.</p>
+</li></ul>
+
+<h4 id="method-i-getBillStatus-label-Returns">Returns</h4>
+<ul><li>
+<p>Bill status.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getBillStatus-source">
+            <pre><span class="ruby-comment"># File projects/model/Log.rb, line 188</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getBillStatus</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@billStatus</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getBillStatus-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getBillStatus-method -->
+
+    
+      <div id="method-i-getDate" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getDate</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the log date.</p>
+</li></ul>
+
+<h4 id="method-i-getDate-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Log.html">Log</a> date.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getDate-source">
+            <pre><span class="ruby-comment"># File projects/model/Log.rb, line 328</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getDate</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@logDate</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getDate-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getDate-method -->
+
+    
+      <div id="method-i-getHours" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getHours</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the hours for the log.</p>
+</li></ul>
+
+<h4 id="method-i-getHours-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Log.html">Log</a> hours.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getHours-source">
+            <pre><span class="ruby-comment"># File projects/model/Log.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getHours</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@hours</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getHours-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getHours-method -->
+
+    
+      <div id="method-i-getHoursDisplay" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getHoursDisplay</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the hour display format.</p>
+</li></ul>
+
+<h4 id="method-i-getHoursDisplay-label-Returns">Returns</h4>
+<ul><li>
+<p>Hour display format.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getHoursDisplay-source">
+            <pre><span class="ruby-comment"># File projects/model/Log.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getHoursDisplay</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@hoursDisplay</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getHoursDisplay-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getHoursDisplay-method -->
+
+    
+      <div id="method-i-getId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getId</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the log id.</p>
+</li></ul>
+
+<h4 id="method-i-getId-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Log.html">Log</a> id.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getId-source">
+            <pre><span class="ruby-comment"># File projects/model/Log.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getId</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getId-method -->
+
+    
+      <div id="method-i-getLogDate" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getLogDate</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the log date.</p>
+</li></ul>
+
+<h4 id="method-i-getLogDate-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Log.html">Log</a> date.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getLogDate-source">
+            <pre><span class="ruby-comment"># File projects/model/Log.rb, line 268</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getLogDate</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@logDate</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getLogDate-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getLogDate-method -->
+
+    
+      <div id="method-i-getLogDateFormat" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getLogDateFormat</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the log date format.</p>
+</li></ul>
+
+<h4 id="method-i-getLogDateFormat-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Log.html">Log</a> date format.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getLogDateFormat-source">
+            <pre><span class="ruby-comment"># File projects/model/Log.rb, line 288</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getLogDateFormat</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@logDateFormat</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getLogDateFormat-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getLogDateFormat-method -->
+
+    
+      <div id="method-i-getLogDateLong" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getLogDateLong</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the log date.</p>
+</li></ul>
+
+<h4 id="method-i-getLogDateLong-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Log.html">Log</a> date.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getLogDateLong-source">
+            <pre><span class="ruby-comment"># File projects/model/Log.rb, line 308</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getLogDateLong</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@logDateLong</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getLogDateLong-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getLogDateLong-method -->
+
+    
+      <div id="method-i-getMinutes" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getMinutes</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the minutes for the log.</p>
+</li></ul>
+
+<h4 id="method-i-getMinutes-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Log.html">Log</a> minutes.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getMinutes-source">
+            <pre><span class="ruby-comment"># File projects/model/Log.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getMinutes</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@minutes</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getMinutes-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getMinutes-method -->
+
+    
+      <div id="method-i-getNotes" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getNotes</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the log notes.</p>
+</li></ul>
+
+<h4 id="method-i-getNotes-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Log.html">Log</a> notes.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getNotes-source">
+            <pre><span class="ruby-comment"># File projects/model/Log.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getNotes</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@notes</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getNotes-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getNotes-method -->
+
+    
+      <div id="method-i-getOwnerId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getOwnerId</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the owner id.</p>
+</li></ul>
+
+<h4 id="method-i-getOwnerId-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Owner.html">Owner</a> id.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getOwnerId-source">
+            <pre><span class="ruby-comment"># File projects/model/Log.rb, line 148</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getOwnerId</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@ownerId</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getOwnerId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getOwnerId-method -->
+
+    
+      <div id="method-i-getOwnerName" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getOwnerName</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the owner name.</p>
+</li></ul>
+
+<h4 id="method-i-getOwnerName-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Owner.html">Owner</a> name.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getOwnerName-source">
+            <pre><span class="ruby-comment"># File projects/model/Log.rb, line 168</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getOwnerName</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@ownerName</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getOwnerName-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getOwnerName-method -->
+
+    
+      <div id="method-i-getProjectId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getProjectId</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the project id.</p>
+</li></ul>
+
+<h4 id="method-i-getProjectId-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Project.html">Project</a> id.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getProjectId-source">
+            <pre><span class="ruby-comment"># File projects/model/Log.rb, line 208</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getProjectId</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@projectId</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getProjectId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getProjectId-method -->
+
+    
+      <div id="method-i-getProjectName" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getProjectName</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the project name.</p>
+</li></ul>
+
+<h4 id="method-i-getProjectName-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Project.html">Project</a> name.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getProjectName-source">
+            <pre><span class="ruby-comment"># File projects/model/Log.rb, line 228</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getProjectName</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@projectName</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getProjectName-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getProjectName-method -->
+
+    
+      <div id="method-i-getTotalMinutes" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getTotalMinutes</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the total time in minutes for the log.</p>
+</li></ul>
+
+<h4 id="method-i-getTotalMinutes-label-Returns">Returns</h4>
+<ul><li>
+<p>Total time in minutes for the log.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getTotalMinutes-source">
+            <pre><span class="ruby-comment"># File projects/model/Log.rb, line 128</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getTotalMinutes</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@totalMinutes</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getTotalMinutes-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getTotalMinutes-method -->
+
+    
+      <div id="method-i-getURL" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getURL</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the URL.</p>
+</li></ul>
+
+<h4 id="method-i-getURL-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Log.html">Log</a> URL.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getURL-source">
+            <pre><span class="ruby-comment"># File projects/model/Log.rb, line 248</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getURL</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@url</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getURL-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getURL-method -->
+
+    
+      <div id="method-i-setBillStatus" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setBillStatus</span><span
+            class="method-args">(billStatus)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the bill status for the log.</p>
+</li></ul>
+
+<h4 id="method-i-setBillStatus-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>bill<a href="Status.html">Status</a>
+<dd><ul><li>
+<p>Bill status for the log.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setBillStatus-source">
+            <pre><span class="ruby-comment"># File projects/model/Log.rb, line 178</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setBillStatus</span>(<span class="ruby-identifier">billStatus</span>)
+        <span class="ruby-ivar">@billStatus</span> = <span class="ruby-identifier">billStatus</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setBillStatus-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setBillStatus-method -->
+
+    
+      <div id="method-i-setDate" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setDate</span><span
+            class="method-args">(date)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the log date.</p>
+</li></ul>
+
+<h4 id="method-i-setDate-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>date
+<dd><ul><li>
+<p>Date for the log.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setDate-source">
+            <pre><span class="ruby-comment"># File projects/model/Log.rb, line 318</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setDate</span>(<span class="ruby-identifier">date</span>)
+        <span class="ruby-ivar">@logDate</span> = <span class="ruby-identifier">date</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setDate-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setDate-method -->
+
+    
+      <div id="method-i-setHours" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setHours</span><span
+            class="method-args">(hours)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the hours for the log.</p>
+</li></ul>
+
+<h4 id="method-i-setHours-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>hours
+<dd><ul><li>
+<p>Hours for the log.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setHours-source">
+            <pre><span class="ruby-comment"># File projects/model/Log.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setHours</span>(<span class="ruby-identifier">hours</span>)
+        <span class="ruby-ivar">@hours</span> = <span class="ruby-identifier">hours</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setHours-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setHours-method -->
+
+    
+      <div id="method-i-setHoursDisplay" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setHoursDisplay</span><span
+            class="method-args">(hoursDisplay)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the hour display format.</p>
+</li></ul>
+
+<h4 id="method-i-setHoursDisplay-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>hourDisplay
+<dd><ul><li>
+<p>Hour display format.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setHoursDisplay-source">
+            <pre><span class="ruby-comment"># File projects/model/Log.rb, line 98</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setHoursDisplay</span>(<span class="ruby-identifier">hoursDisplay</span>)
+        <span class="ruby-ivar">@hoursDisplay</span> = <span class="ruby-identifier">hoursDisplay</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setHoursDisplay-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setHoursDisplay-method -->
+
+    
+      <div id="method-i-setId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setId</span><span
+            class="method-args">(id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the log id.</p>
+</li></ul>
+
+<h4 id="method-i-setId-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>id
+<dd><ul><li>
+<p>ID of the log.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setId-source">
+            <pre><span class="ruby-comment"># File projects/model/Log.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setId</span>(<span class="ruby-identifier">id</span>)
+        <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setId-method -->
+
+    
+      <div id="method-i-setLogDate" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setLogDate</span><span
+            class="method-args">(logDate)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the log date.</p>
+</li></ul>
+
+<h4 id="method-i-setLogDate-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>logDate
+<dd><ul><li>
+<p>Date of the log.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setLogDate-source">
+            <pre><span class="ruby-comment"># File projects/model/Log.rb, line 258</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setLogDate</span>(<span class="ruby-identifier">logDate</span>)
+        <span class="ruby-ivar">@logDate</span> = <span class="ruby-identifier">logDate</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setLogDate-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setLogDate-method -->
+
+    
+      <div id="method-i-setLogDateFormat" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setLogDateFormat</span><span
+            class="method-args">(logDateFormat)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the log date format.</p>
+</li></ul>
+
+<h4 id="method-i-setLogDateFormat-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>logDate
+<dd><ul><li>
+<p>Date format of the log.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setLogDateFormat-source">
+            <pre><span class="ruby-comment"># File projects/model/Log.rb, line 278</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setLogDateFormat</span>(<span class="ruby-identifier">logDateFormat</span>)
+        <span class="ruby-ivar">@logDateFormat</span> = <span class="ruby-identifier">logDateFormat</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setLogDateFormat-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setLogDateFormat-method -->
+
+    
+      <div id="method-i-setLogDateLong" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setLogDateLong</span><span
+            class="method-args">(logDateLong)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the log date.</p>
+</li></ul>
+
+<h4 id="method-i-setLogDateLong-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>logDateLong
+<dd><ul><li>
+<p>Date for the log.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setLogDateLong-source">
+            <pre><span class="ruby-comment"># File projects/model/Log.rb, line 298</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setLogDateLong</span>(<span class="ruby-identifier">logDateLong</span>)
+        <span class="ruby-ivar">@logDateLong</span> = <span class="ruby-identifier">logDateLong</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setLogDateLong-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setLogDateLong-method -->
+
+    
+      <div id="method-i-setMinutes" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setMinutes</span><span
+            class="method-args">(minutes)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the minutes for the log.</p>
+</li></ul>
+
+<h4 id="method-i-setMinutes-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>minutes
+<dd><ul><li>
+<p>Minutes for the log.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setMinutes-source">
+            <pre><span class="ruby-comment"># File projects/model/Log.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setMinutes</span>(<span class="ruby-identifier">minutes</span>)
+        <span class="ruby-ivar">@minutes</span> = <span class="ruby-identifier">minutes</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setMinutes-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setMinutes-method -->
+
+    
+      <div id="method-i-setNotes" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setNotes</span><span
+            class="method-args">(notes)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the notes for the log.</p>
+</li></ul>
+
+<h4 id="method-i-setNotes-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>notes
+<dd><ul><li>
+<p>Notes for the log.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setNotes-source">
+            <pre><span class="ruby-comment"># File projects/model/Log.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setNotes</span>(<span class="ruby-identifier">notes</span>)
+        <span class="ruby-ivar">@notes</span> = <span class="ruby-identifier">notes</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setNotes-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setNotes-method -->
+
+    
+      <div id="method-i-setOwnerId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setOwnerId</span><span
+            class="method-args">(ownerId)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the owner id.</p>
+</li></ul>
+
+<h4 id="method-i-setOwnerId-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>ownerId
+<dd><ul><li>
+<p>ID of the owner.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setOwnerId-source">
+            <pre><span class="ruby-comment"># File projects/model/Log.rb, line 138</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setOwnerId</span>(<span class="ruby-identifier">ownerId</span>)
+        <span class="ruby-ivar">@ownerId</span> = <span class="ruby-identifier">ownerId</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setOwnerId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setOwnerId-method -->
+
+    
+      <div id="method-i-setOwnerName" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setOwnerName</span><span
+            class="method-args">(ownerName)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the owner name.</p>
+</li></ul>
+
+<h4 id="method-i-setOwnerName-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>ownerName
+<dd><ul><li>
+<p>Name of the owner.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setOwnerName-source">
+            <pre><span class="ruby-comment"># File projects/model/Log.rb, line 158</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setOwnerName</span>(<span class="ruby-identifier">ownerName</span>)
+        <span class="ruby-ivar">@ownerName</span> = <span class="ruby-identifier">ownerName</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setOwnerName-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setOwnerName-method -->
+
+    
+      <div id="method-i-setProjectId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setProjectId</span><span
+            class="method-args">(projectId)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the project id.</p>
+</li></ul>
+
+<h4 id="method-i-setProjectId-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>projectId
+<dd><ul><li>
+<p>ID of the project.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setProjectId-source">
+            <pre><span class="ruby-comment"># File projects/model/Log.rb, line 198</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setProjectId</span>(<span class="ruby-identifier">projectId</span>)
+        <span class="ruby-ivar">@projectId</span> = <span class="ruby-identifier">projectId</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setProjectId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setProjectId-method -->
+
+    
+      <div id="method-i-setProjectName" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setProjectName</span><span
+            class="method-args">(projectName)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the project name.</p>
+</li></ul>
+
+<h4 id="method-i-setProjectName-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>projectName
+<dd><ul><li>
+<p>Name of the project.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setProjectName-source">
+            <pre><span class="ruby-comment"># File projects/model/Log.rb, line 218</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setProjectName</span>(<span class="ruby-identifier">projectName</span>)
+        <span class="ruby-ivar">@projectName</span> = <span class="ruby-identifier">projectName</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setProjectName-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setProjectName-method -->
+
+    
+      <div id="method-i-setTotalMinutes" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setTotalMinutes</span><span
+            class="method-args">(totalMinutes)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the total time in minutes for the log.</p>
+</li></ul>
+
+<h4 id="method-i-setTotalMinutes-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>totalMinutes
+<dd><ul><li>
+<p>Total time in minutes for the log.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setTotalMinutes-source">
+            <pre><span class="ruby-comment"># File projects/model/Log.rb, line 118</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setTotalMinutes</span>(<span class="ruby-identifier">totalMinutes</span>)
+        <span class="ruby-ivar">@totalMinutes</span> = <span class="ruby-identifier">totalMinutes</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setTotalMinutes-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setTotalMinutes-method -->
+
+    
+      <div id="method-i-setURL" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setURL</span><span
+            class="method-args">(url)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the URL for the log.</p>
+</li></ul>
+
+<h4 id="method-i-setURL-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>url
+<dd><ul><li>
+<p>URL for the log.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setURL-source">
+            <pre><span class="ruby-comment"># File projects/model/Log.rb, line 238</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setURL</span>(<span class="ruby-identifier">url</span>)
+        <span class="ruby-ivar">@url</span> = <span class="ruby-identifier">url</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setURL-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setURL-method -->
+
+    
+      <div id="method-i-toParamMAP" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">toParamMAP</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Convert the <a href="Log.html">Log</a> object into HashMap.</p>
+</li></ul>
+
+<h4 id="method-i-toParamMAP-label-Returns">Returns</h4>
+<ul><li>
+<p>HashMap object.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="toParamMAP-source">
+            <pre><span class="ruby-comment"># File projects/model/Log.rb, line 338</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">toParamMAP</span>
+        <span class="ruby-identifier">requestBody</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+        
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">logDate</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;date&quot;</span>] = <span class="ruby-identifier">logDate</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">billStatus</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;bill_status&quot;</span>] = <span class="ruby-identifier">billStatus</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">hours</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;hours&quot;</span>] = <span class="ruby-identifier">hours</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">notes</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;notes&quot;</span>] = <span class="ruby-identifier">notes</span>
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">requestBody</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- toParamMAP-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- toParamMAP-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=IBM437" http-equiv="Content-Type">
+
+<title>class Projects::Model::Forum - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../../index.html">Home</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>projects/model/Forum.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-getCategoryId">#getCategoryId</a>
+    
+    <li><a href="#method-i-getContent">#getContent</a>
+    
+    <li><a href="#method-i-getId">#getId</a>
+    
+    <li><a href="#method-i-getName">#getName</a>
+    
+    <li><a href="#method-i-getNotify">#getNotify</a>
+    
+    <li><a href="#method-i-getPostDate">#getPostDate</a>
+    
+    <li><a href="#method-i-getPostDateFormat">#getPostDateFormat</a>
+    
+    <li><a href="#method-i-getPostDateLong">#getPostDateLong</a>
+    
+    <li><a href="#method-i-getPostedBy">#getPostedBy</a>
+    
+    <li><a href="#method-i-getPostedPerson">#getPostedPerson</a>
+    
+    <li><a href="#method-i-getURL">#getURL</a>
+    
+    <li><a href="#method-i-getUploadfile">#getUploadfile</a>
+    
+    <li><a href="#method-i-setCategoryId">#setCategoryId</a>
+    
+    <li><a href="#method-i-setContent">#setContent</a>
+    
+    <li><a href="#method-i-setId">#setId</a>
+    
+    <li><a href="#method-i-setIsAnnouncementPost">#setIsAnnouncementPost</a>
+    
+    <li><a href="#method-i-setIsStickyPost">#setIsStickyPost</a>
+    
+    <li><a href="#method-i-setName">#setName</a>
+    
+    <li><a href="#method-i-setNotify">#setNotify</a>
+    
+    <li><a href="#method-i-setPostDate">#setPostDate</a>
+    
+    <li><a href="#method-i-setPostDateFormat">#setPostDateFormat</a>
+    
+    <li><a href="#method-i-setPostDateLong">#setPostDateLong</a>
+    
+    <li><a href="#method-i-setPostedBy">#setPostedBy</a>
+    
+    <li><a href="#method-i-setPostedPerson">#setPostedPerson</a>
+    
+    <li><a href="#method-i-setURL">#setURL</a>
+    
+    <li><a href="#method-i-setUploadfile">#setUploadfile</a>
+    
+    <li><a href="#method-i-toParamMAP">#toParamMAP</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../Projects.html">Projects</a>
+  
+    <li><a href="../../Projects/Api.html">Projects::Api</a>
+  
+    <li><a href="../../Projects/Api/API.html">Projects::Api::API</a>
+  
+    <li><a href="../../Projects/Api/BugsAPI.html">Projects::Api::BugsAPI</a>
+  
+    <li><a href="../../Projects/Api/DocumentsAPI.html">Projects::Api::DocumentsAPI</a>
+  
+    <li><a href="../../Projects/Api/EventsAPI.html">Projects::Api::EventsAPI</a>
+  
+    <li><a href="../../Projects/Api/FoldersAPI.html">Projects::Api::FoldersAPI</a>
+  
+    <li><a href="../../Projects/Api/ForumsAPI.html">Projects::Api::ForumsAPI</a>
+  
+    <li><a href="../../Projects/Api/MilestonesAPI.html">Projects::Api::MilestonesAPI</a>
+  
+    <li><a href="../../Projects/Api/PortalAPI.html">Projects::Api::PortalAPI</a>
+  
+    <li><a href="../../Projects/Api/ProjectsAPI.html">Projects::Api::ProjectsAPI</a>
+  
+    <li><a href="../../Projects/Api/TasklistsAPI.html">Projects::Api::TasklistsAPI</a>
+  
+    <li><a href="../../Projects/Api/TasksAPI.html">Projects::Api::TasksAPI</a>
+  
+    <li><a href="../../Projects/Api/TimesheetsAPI.html">Projects::Api::TimesheetsAPI</a>
+  
+    <li><a href="../../Projects/Api/UsersAPI.html">Projects::Api::UsersAPI</a>
+  
+    <li><a href="../../Projects/Model.html">Projects::Model</a>
+  
+    <li><a href="../../Projects/Model/Activity.html">Projects::Model::Activity</a>
+  
+    <li><a href="../../Projects/Model/Bug.html">Projects::Model::Bug</a>
+  
+    <li><a href="../../Projects/Model/Buglog.html">Projects::Model::Buglog</a>
+  
+    <li><a href="../../Projects/Model/Category.html">Projects::Model::Category</a>
+  
+    <li><a href="../../Projects/Model/Comment.html">Projects::Model::Comment</a>
+  
+    <li><a href="../../Projects/Model/Document.html">Projects::Model::Document</a>
+  
+    <li><a href="../../Projects/Model/Event.html">Projects::Model::Event</a>
+  
+    <li><a href="../../Projects/Model/Folder.html">Projects::Model::Folder</a>
+  
+    <li><a href="../../Projects/Model/Forum.html">Projects::Model::Forum</a>
+  
+    <li><a href="../../Projects/Model/Generallog.html">Projects::Model::Generallog</a>
+  
+    <li><a href="../../Projects/Model/Log.html">Projects::Model::Log</a>
+  
+    <li><a href="../../Projects/Model/Milestone.html">Projects::Model::Milestone</a>
+  
+    <li><a href="../../Projects/Model/Owner.html">Projects::Model::Owner</a>
+  
+    <li><a href="../../Projects/Model/Participant.html">Projects::Model::Participant</a>
+  
+    <li><a href="../../Projects/Model/Portal.html">Projects::Model::Portal</a>
+  
+    <li><a href="../../Projects/Model/Project.html">Projects::Model::Project</a>
+  
+    <li><a href="../../Projects/Model/Status.html">Projects::Model::Status</a>
+  
+    <li><a href="../../Projects/Model/Task.html">Projects::Model::Task</a>
+  
+    <li><a href="../../Projects/Model/Tasklist.html">Projects::Model::Tasklist</a>
+  
+    <li><a href="../../Projects/Model/Tasklog.html">Projects::Model::Tasklog</a>
+  
+    <li><a href="../../Projects/Model/Timelog.html">Projects::Model::Timelog</a>
+  
+    <li><a href="../../Projects/Model/TimelogList.html">Projects::Model::TimelogList</a>
+  
+    <li><a href="../../Projects/Model/User.html">Projects::Model::User</a>
+  
+    <li><a href="../../Projects/Model/Version.html">Projects::Model::Version</a>
+  
+    <li><a href="../../Projects/Parser.html">Projects::Parser</a>
+  
+    <li><a href="../../Projects/Parser/BugParser.html">Projects::Parser::BugParser</a>
+  
+    <li><a href="../../Projects/Parser/DocumentParser.html">Projects::Parser::DocumentParser</a>
+  
+    <li><a href="../../Projects/Parser/EventParser.html">Projects::Parser::EventParser</a>
+  
+    <li><a href="../../Projects/Parser/FolderParser.html">Projects::Parser::FolderParser</a>
+  
+    <li><a href="../../Projects/Parser/ForumParser.html">Projects::Parser::ForumParser</a>
+  
+    <li><a href="../../Projects/Parser/MilestonesParser.html">Projects::Parser::MilestonesParser</a>
+  
+    <li><a href="../../Projects/Parser/PortalParser.html">Projects::Parser::PortalParser</a>
+  
+    <li><a href="../../Projects/Parser/ProjectParser.html">Projects::Parser::ProjectParser</a>
+  
+    <li><a href="../../Projects/Parser/TaskParser.html">Projects::Parser::TaskParser</a>
+  
+    <li><a href="../../Projects/Parser/TasklistParser.html">Projects::Parser::TasklistParser</a>
+  
+    <li><a href="../../Projects/Parser/TimesheetParser.html">Projects::Parser::TimesheetParser</a>
+  
+    <li><a href="../../Projects/Parser/UserParser.html">Projects::Parser::UserParser</a>
+  
+    <li><a href="../../Projects/Pexception.html">Projects::Pexception</a>
+  
+    <li><a href="../../Projects/Pexception/ProjectsException.html">Projects::Pexception::ProjectsException</a>
+  
+    <li><a href="../../Projects/Service.html">Projects::Service</a>
+  
+    <li><a href="../../Projects/Service/ZohoProjects.html">Projects::Service::ZohoProjects</a>
+  
+    <li><a href="../../Projects/Util.html">Projects::Util</a>
+  
+    <li><a href="../../Projects/Util/ZohoHTTPClient.html">Projects::Util::ZohoHTTPClient</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Projects::Model::Forum</h1>
+
+  <div id="description" class="description">
+    <ul><li>
+<p>This class is used to make an object for <a href="Forum.html">Forum</a>.</p>
+</li></ul>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-getCategoryId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getCategoryId</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the category id of the project.</p>
+</li></ul>
+
+<h4 id="method-i-getCategoryId-label-Returns">Returns</h4>
+<ul><li>
+<p>project category id.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getCategoryId-source">
+            <pre><span class="ruby-comment"># File projects/model/Forum.rb, line 248</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getCategoryId</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@categoryId</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getCategoryId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getCategoryId-method -->
+
+    
+      <div id="method-i-getContent" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getContent</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the content of the forum.</p>
+</li></ul>
+
+<h4 id="method-i-getContent-label-Returns">Returns</h4>
+<ul><li>
+<p>Content of the forum.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getContent-source">
+            <pre><span class="ruby-comment"># File projects/model/Forum.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getContent</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@content</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getContent-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getContent-method -->
+
+    
+      <div id="method-i-getId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getId</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the forum id.</p>
+</li></ul>
+
+<h4 id="method-i-getId-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Forum.html">Forum</a> id.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getId-source">
+            <pre><span class="ruby-comment"># File projects/model/Forum.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getId</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getId-method -->
+
+    
+      <div id="method-i-getName" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getName</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the forum name.</p>
+</li></ul>
+
+<h4 id="method-i-getName-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Forum.html">Forum</a> name.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getName-source">
+            <pre><span class="ruby-comment"># File projects/model/Forum.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getName</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@name</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getName-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getName-method -->
+
+    
+      <div id="method-i-getNotify" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getNotify</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the notify of the forum.</p>
+</li></ul>
+
+<h4 id="method-i-getNotify-label-Returns">Returns</h4>
+<ul><li>
+<p>notify of the forum.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getNotify-source">
+            <pre><span class="ruby-comment"># File projects/model/Forum.rb, line 268</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getNotify</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@notify</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getNotify-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getNotify-method -->
+
+    
+      <div id="method-i-getPostDate" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getPostDate</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the post date of the forum.</p>
+</li></ul>
+
+<h4 id="method-i-getPostDate-label-Returns">Returns</h4>
+<ul><li>
+<p>Post date in the forum.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getPostDate-source">
+            <pre><span class="ruby-comment"># File projects/model/Forum.rb, line 168</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getPostDate</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@postDate</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getPostDate-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getPostDate-method -->
+
+    
+      <div id="method-i-getPostDateFormat" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getPostDateFormat</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the date format of the post in the forum.</p>
+</li></ul>
+
+<h4 id="method-i-getPostDateFormat-label-Returns">Returns</h4>
+<ul><li>
+<p>Date format of the post in the forum.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getPostDateFormat-source">
+            <pre><span class="ruby-comment"># File projects/model/Forum.rb, line 188</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getPostDateFormat</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@postDateFormat</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getPostDateFormat-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getPostDateFormat-method -->
+
+    
+      <div id="method-i-getPostDateLong" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getPostDateLong</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the date of the post in forum.</p>
+</li></ul>
+
+<h4 id="method-i-getPostDateLong-label-Returns">Returns</h4>
+<ul><li>
+<p>Date of the post in the forum.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getPostDateLong-source">
+            <pre><span class="ruby-comment"># File projects/model/Forum.rb, line 208</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getPostDateLong</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@postDateLong</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getPostDateLong-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getPostDateLong-method -->
+
+    
+      <div id="method-i-getPostedBy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getPostedBy</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the id of the posted <a href="User.html">User</a>.</p>
+</li></ul>
+
+<h4 id="method-i-getPostedBy-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="User.html">User</a> id.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getPostedBy-source">
+            <pre><span class="ruby-comment"># File projects/model/Forum.rb, line 128</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getPostedBy</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@postedBy</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getPostedBy-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getPostedBy-method -->
+
+    
+      <div id="method-i-getPostedPerson" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getPostedPerson</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the posted <a href="User.html">User</a> name.</p>
+</li></ul>
+
+<h4 id="method-i-getPostedPerson-label-Returns">Returns</h4>
+<ul><li>
+<p>posted <a href="User.html">User</a> name.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getPostedPerson-source">
+            <pre><span class="ruby-comment"># File projects/model/Forum.rb, line 148</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getPostedPerson</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@postedPerson</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getPostedPerson-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getPostedPerson-method -->
+
+    
+      <div id="method-i-getURL" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getURL</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the forum URL.</p>
+</li></ul>
+
+<h4 id="method-i-getURL-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Forum.html">Forum</a> URL.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getURL-source">
+            <pre><span class="ruby-comment"># File projects/model/Forum.rb, line 228</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getURL</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@url</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getURL-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getURL-method -->
+
+    
+      <div id="method-i-getUploadfile" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getUploadfile</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the uploaded file list.</p>
+</li></ul>
+
+<h4 id="method-i-getUploadfile-label-Returns">Returns</h4>
+<ul><li>
+<p>ArrayList of uploaded file for the post in the forum.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getUploadfile-source">
+            <pre><span class="ruby-comment"># File projects/model/Forum.rb, line 288</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getUploadfile</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@uploadfile</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getUploadfile-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getUploadfile-method -->
+
+    
+      <div id="method-i-setCategoryId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setCategoryId</span><span
+            class="method-args">(categoryId)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the category id of the project.</p>
+</li></ul>
+
+<h4 id="method-i-setCategoryId-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>categoryId
+<dd><ul><li>
+<p>ID of the project category.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setCategoryId-source">
+            <pre><span class="ruby-comment"># File projects/model/Forum.rb, line 238</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setCategoryId</span>(<span class="ruby-identifier">categoryId</span>)
+        <span class="ruby-ivar">@categoryId</span> = <span class="ruby-identifier">categoryId</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setCategoryId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setCategoryId-method -->
+
+    
+      <div id="method-i-setContent" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setContent</span><span
+            class="method-args">(content)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the content of the forum.</p>
+</li></ul>
+
+<h4 id="method-i-setContent-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>content
+<dd><ul><li>
+<p>Content of the forum.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setContent-source">
+            <pre><span class="ruby-comment"># File projects/model/Forum.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setContent</span>(<span class="ruby-identifier">content</span>)
+        <span class="ruby-ivar">@content</span> = <span class="ruby-identifier">content</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setContent-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setContent-method -->
+
+    
+      <div id="method-i-setId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setId</span><span
+            class="method-args">(id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the forum id.</p>
+</li></ul>
+
+<h4 id="method-i-setId-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>id
+<dd><ul><li>
+<p>ID of the forum.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setId-source">
+            <pre><span class="ruby-comment"># File projects/model/Forum.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setId</span>(<span class="ruby-identifier">id</span>)
+        <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setId-method -->
+
+    
+      <div id="method-i-setIsAnnouncementPost" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setIsAnnouncementPost</span><span
+            class="method-args">(isAnnouncementPost)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set is announcement post or not.</p>
+</li></ul>
+
+<h4 id="method-i-setIsAnnouncementPost-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>isAnnouncementPost
+<dd><ul><li>
+<p>is the post announcement or not.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setIsAnnouncementPost-source">
+            <pre><span class="ruby-comment"># File projects/model/Forum.rb, line 98</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setIsAnnouncementPost</span>(<span class="ruby-identifier">isAnnouncementPost</span>)
+        <span class="ruby-ivar">@isAnnouncementPost</span> = <span class="ruby-identifier">isAnnouncementPost</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setIsAnnouncementPost-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setIsAnnouncementPost-method -->
+
+    
+      <div id="method-i-setIsStickyPost" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setIsStickyPost</span><span
+            class="method-args">(isStickyPost)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the forum is a sticky post or not.</p>
+</li></ul>
+
+<h4 id="method-i-setIsStickyPost-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>isStickyPost
+<dd><ul><li>
+<p>Is the forum in a sticky post or not.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setIsStickyPost-source">
+            <pre><span class="ruby-comment"># File projects/model/Forum.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setIsStickyPost</span>(<span class="ruby-identifier">isStickyPost</span>)
+        <span class="ruby-ivar">@isStickyPost</span> = <span class="ruby-identifier">isStickyPost</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setIsStickyPost-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setIsStickyPost-method -->
+
+    
+      <div id="method-i-setName" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setName</span><span
+            class="method-args">(name)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the forum name.</p>
+</li></ul>
+
+<h4 id="method-i-setName-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>name
+<dd><ul><li>
+<p>Name of the forum.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setName-source">
+            <pre><span class="ruby-comment"># File projects/model/Forum.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setName</span>(<span class="ruby-identifier">name</span>)
+        <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">name</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setName-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setName-method -->
+
+    
+      <div id="method-i-setNotify" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setNotify</span><span
+            class="method-args">(notify)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the notify in the forum.</p>
+</li></ul>
+
+<h4 id="method-i-setNotify-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>notify
+<dd><ul><li>
+<p>Notify in the forum.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setNotify-source">
+            <pre><span class="ruby-comment"># File projects/model/Forum.rb, line 258</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setNotify</span>(<span class="ruby-identifier">notify</span>)
+        <span class="ruby-ivar">@notify</span> = <span class="ruby-identifier">notify</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setNotify-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setNotify-method -->
+
+    
+      <div id="method-i-setPostDate" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setPostDate</span><span
+            class="method-args">(postDate)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the post date of the forum.</p>
+</li></ul>
+
+<h4 id="method-i-setPostDate-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>postDate
+<dd><ul><li>
+<p>Date of the post in the forum.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setPostDate-source">
+            <pre><span class="ruby-comment"># File projects/model/Forum.rb, line 158</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setPostDate</span>(<span class="ruby-identifier">postDate</span>)
+        <span class="ruby-ivar">@postDate</span> = <span class="ruby-identifier">postDate</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setPostDate-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setPostDate-method -->
+
+    
+      <div id="method-i-setPostDateFormat" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setPostDateFormat</span><span
+            class="method-args">(postDateFormat)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the date format of the post in the forum.</p>
+</li></ul>
+
+<h4 id="method-i-setPostDateFormat-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>postDate
+<dd><ul><li>
+<p>Date format of the post in the forum.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setPostDateFormat-source">
+            <pre><span class="ruby-comment"># File projects/model/Forum.rb, line 178</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setPostDateFormat</span>(<span class="ruby-identifier">postDateFormat</span>)
+        <span class="ruby-ivar">@postDateFormat</span> = <span class="ruby-identifier">postDateFormat</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setPostDateFormat-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setPostDateFormat-method -->
+
+    
+      <div id="method-i-setPostDateLong" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setPostDateLong</span><span
+            class="method-args">(postDateLong)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the date of the post the forum.</p>
+</li></ul>
+
+<h4 id="method-i-setPostDateLong-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>postDateLong
+<dd><ul><li>
+<p>Date of the post in the forum.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setPostDateLong-source">
+            <pre><span class="ruby-comment"># File projects/model/Forum.rb, line 198</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setPostDateLong</span>(<span class="ruby-identifier">postDateLong</span>)
+        <span class="ruby-ivar">@postDateLong</span> = <span class="ruby-identifier">postDateLong</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setPostDateLong-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setPostDateLong-method -->
+
+    
+      <div id="method-i-setPostedBy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setPostedBy</span><span
+            class="method-args">(postedBy)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the id of the posted <a href="User.html">User</a>.</p>
+</li></ul>
+
+<h4 id="method-i-setPostedBy-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>postedBy
+<dd><ul><li>
+<p>Id of the <a href="User.html">User</a> who posted the post.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setPostedBy-source">
+            <pre><span class="ruby-comment"># File projects/model/Forum.rb, line 118</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setPostedBy</span>(<span class="ruby-identifier">postedBy</span>)
+        <span class="ruby-ivar">@postedBy</span> = <span class="ruby-identifier">postedBy</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setPostedBy-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setPostedBy-method -->
+
+    
+      <div id="method-i-setPostedPerson" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setPostedPerson</span><span
+            class="method-args">(postedPerson)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the posted <a href="User.html">User</a> name.</p>
+</li></ul>
+
+<h4 id="method-i-setPostedPerson-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>postedPerson
+<dd><ul><li>
+<p>Posted <a href="User.html">User</a> name.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setPostedPerson-source">
+            <pre><span class="ruby-comment"># File projects/model/Forum.rb, line 138</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setPostedPerson</span>(<span class="ruby-identifier">postedPerson</span>)
+        <span class="ruby-ivar">@postedPerson</span> = <span class="ruby-identifier">postedPerson</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setPostedPerson-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setPostedPerson-method -->
+
+    
+      <div id="method-i-setURL" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setURL</span><span
+            class="method-args">(url)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the forum URL.</p>
+</li></ul>
+
+<h4 id="method-i-setURL-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>url
+<dd><ul><li>
+<p>URL for the forum.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setURL-source">
+            <pre><span class="ruby-comment"># File projects/model/Forum.rb, line 218</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setURL</span>(<span class="ruby-identifier">url</span>)
+        <span class="ruby-ivar">@url</span> = <span class="ruby-identifier">url</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setURL-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setURL-method -->
+
+    
+      <div id="method-i-setUploadfile" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setUploadfile</span><span
+            class="method-args">(uploadfile)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the upload file list.</p>
+</li></ul>
+
+<h4 id="method-i-setUploadfile-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>uploadfile
+<dd><ul><li>
+<p>ArrayList of Uploading file in the forum.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setUploadfile-source">
+            <pre><span class="ruby-comment"># File projects/model/Forum.rb, line 278</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setUploadfile</span>(<span class="ruby-identifier">uploadfile</span>)
+        <span class="ruby-ivar">@uploadfile</span> = <span class="ruby-identifier">uploadfile</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setUploadfile-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setUploadfile-method -->
+
+    
+      <div id="method-i-toParamMAP" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">toParamMAP</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Convert the <a href="Forum.html">Forum</a> object into HashMap.</p>
+</li></ul>
+
+<h4 id="method-i-toParamMAP-label-Returns">Returns</h4>
+<ul><li>
+<p>HashMap object.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="toParamMAP-source">
+            <pre><span class="ruby-comment"># File projects/model/Forum.rb, line 298</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">toParamMAP</span>
+        <span class="ruby-identifier">requestBody</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+        
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;name&quot;</span>] = <span class="ruby-identifier">name</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">content</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;content&quot;</span>] = <span class="ruby-identifier">content</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">categoryId</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">categoryId</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;category_id&quot;</span>] = <span class="ruby-identifier">categoryId</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">notify</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;notify&quot;</span>] = <span class="ruby-identifier">notify</span>
+        <span class="ruby-keyword">end</span>
+        
+        
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">requestBody</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- toParamMAP-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- toParamMAP-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

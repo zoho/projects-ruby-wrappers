@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=IBM437" http-equiv="Content-Type">
+
+<title>class Projects::Model::Milestone - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../../index.html">Home</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>projects/model/Milestone.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-getEndDate">#getEndDate</a>
+    
+    <li><a href="#method-i-getEndDateFormat">#getEndDateFormat</a>
+    
+    <li><a href="#method-i-getEndDateLong">#getEndDateLong</a>
+    
+    <li><a href="#method-i-getFlag">#getFlag</a>
+    
+    <li><a href="#method-i-getId">#getId</a>
+    
+    <li><a href="#method-i-getName">#getName</a>
+    
+    <li><a href="#method-i-getOwnerId">#getOwnerId</a>
+    
+    <li><a href="#method-i-getOwnerName">#getOwnerName</a>
+    
+    <li><a href="#method-i-getStartDate">#getStartDate</a>
+    
+    <li><a href="#method-i-getStartDateFormat">#getStartDateFormat</a>
+    
+    <li><a href="#method-i-getStartDateLong">#getStartDateLong</a>
+    
+    <li><a href="#method-i-getStatus">#getStatus</a>
+    
+    <li><a href="#method-i-getStatusURL">#getStatusURL</a>
+    
+    <li><a href="#method-i-getURL">#getURL</a>
+    
+    <li><a href="#method-i-setEndDate">#setEndDate</a>
+    
+    <li><a href="#method-i-setEndDateFormat">#setEndDateFormat</a>
+    
+    <li><a href="#method-i-setEndDateLong">#setEndDateLong</a>
+    
+    <li><a href="#method-i-setFlag">#setFlag</a>
+    
+    <li><a href="#method-i-setId">#setId</a>
+    
+    <li><a href="#method-i-setName">#setName</a>
+    
+    <li><a href="#method-i-setOwnerId">#setOwnerId</a>
+    
+    <li><a href="#method-i-setOwnerName">#setOwnerName</a>
+    
+    <li><a href="#method-i-setStartDate">#setStartDate</a>
+    
+    <li><a href="#method-i-setStartDateFormat">#setStartDateFormat</a>
+    
+    <li><a href="#method-i-setStartDateLong">#setStartDateLong</a>
+    
+    <li><a href="#method-i-setStatus">#setStatus</a>
+    
+    <li><a href="#method-i-setStatusURL">#setStatusURL</a>
+    
+    <li><a href="#method-i-setURL">#setURL</a>
+    
+    <li><a href="#method-i-toParamMAP">#toParamMAP</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../Projects.html">Projects</a>
+  
+    <li><a href="../../Projects/Api.html">Projects::Api</a>
+  
+    <li><a href="../../Projects/Api/API.html">Projects::Api::API</a>
+  
+    <li><a href="../../Projects/Api/BugsAPI.html">Projects::Api::BugsAPI</a>
+  
+    <li><a href="../../Projects/Api/DocumentsAPI.html">Projects::Api::DocumentsAPI</a>
+  
+    <li><a href="../../Projects/Api/EventsAPI.html">Projects::Api::EventsAPI</a>
+  
+    <li><a href="../../Projects/Api/FoldersAPI.html">Projects::Api::FoldersAPI</a>
+  
+    <li><a href="../../Projects/Api/ForumsAPI.html">Projects::Api::ForumsAPI</a>
+  
+    <li><a href="../../Projects/Api/MilestonesAPI.html">Projects::Api::MilestonesAPI</a>
+  
+    <li><a href="../../Projects/Api/PortalAPI.html">Projects::Api::PortalAPI</a>
+  
+    <li><a href="../../Projects/Api/ProjectsAPI.html">Projects::Api::ProjectsAPI</a>
+  
+    <li><a href="../../Projects/Api/TasklistsAPI.html">Projects::Api::TasklistsAPI</a>
+  
+    <li><a href="../../Projects/Api/TasksAPI.html">Projects::Api::TasksAPI</a>
+  
+    <li><a href="../../Projects/Api/TimesheetsAPI.html">Projects::Api::TimesheetsAPI</a>
+  
+    <li><a href="../../Projects/Api/UsersAPI.html">Projects::Api::UsersAPI</a>
+  
+    <li><a href="../../Projects/Model.html">Projects::Model</a>
+  
+    <li><a href="../../Projects/Model/Activity.html">Projects::Model::Activity</a>
+  
+    <li><a href="../../Projects/Model/Bug.html">Projects::Model::Bug</a>
+  
+    <li><a href="../../Projects/Model/Buglog.html">Projects::Model::Buglog</a>
+  
+    <li><a href="../../Projects/Model/Category.html">Projects::Model::Category</a>
+  
+    <li><a href="../../Projects/Model/Comment.html">Projects::Model::Comment</a>
+  
+    <li><a href="../../Projects/Model/Document.html">Projects::Model::Document</a>
+  
+    <li><a href="../../Projects/Model/Event.html">Projects::Model::Event</a>
+  
+    <li><a href="../../Projects/Model/Folder.html">Projects::Model::Folder</a>
+  
+    <li><a href="../../Projects/Model/Forum.html">Projects::Model::Forum</a>
+  
+    <li><a href="../../Projects/Model/Generallog.html">Projects::Model::Generallog</a>
+  
+    <li><a href="../../Projects/Model/Log.html">Projects::Model::Log</a>
+  
+    <li><a href="../../Projects/Model/Milestone.html">Projects::Model::Milestone</a>
+  
+    <li><a href="../../Projects/Model/Owner.html">Projects::Model::Owner</a>
+  
+    <li><a href="../../Projects/Model/Participant.html">Projects::Model::Participant</a>
+  
+    <li><a href="../../Projects/Model/Portal.html">Projects::Model::Portal</a>
+  
+    <li><a href="../../Projects/Model/Project.html">Projects::Model::Project</a>
+  
+    <li><a href="../../Projects/Model/Status.html">Projects::Model::Status</a>
+  
+    <li><a href="../../Projects/Model/Task.html">Projects::Model::Task</a>
+  
+    <li><a href="../../Projects/Model/Tasklist.html">Projects::Model::Tasklist</a>
+  
+    <li><a href="../../Projects/Model/Tasklog.html">Projects::Model::Tasklog</a>
+  
+    <li><a href="../../Projects/Model/Timelog.html">Projects::Model::Timelog</a>
+  
+    <li><a href="../../Projects/Model/TimelogList.html">Projects::Model::TimelogList</a>
+  
+    <li><a href="../../Projects/Model/User.html">Projects::Model::User</a>
+  
+    <li><a href="../../Projects/Model/Version.html">Projects::Model::Version</a>
+  
+    <li><a href="../../Projects/Parser.html">Projects::Parser</a>
+  
+    <li><a href="../../Projects/Parser/BugParser.html">Projects::Parser::BugParser</a>
+  
+    <li><a href="../../Projects/Parser/DocumentParser.html">Projects::Parser::DocumentParser</a>
+  
+    <li><a href="../../Projects/Parser/EventParser.html">Projects::Parser::EventParser</a>
+  
+    <li><a href="../../Projects/Parser/FolderParser.html">Projects::Parser::FolderParser</a>
+  
+    <li><a href="../../Projects/Parser/ForumParser.html">Projects::Parser::ForumParser</a>
+  
+    <li><a href="../../Projects/Parser/MilestonesParser.html">Projects::Parser::MilestonesParser</a>
+  
+    <li><a href="../../Projects/Parser/PortalParser.html">Projects::Parser::PortalParser</a>
+  
+    <li><a href="../../Projects/Parser/ProjectParser.html">Projects::Parser::ProjectParser</a>
+  
+    <li><a href="../../Projects/Parser/TaskParser.html">Projects::Parser::TaskParser</a>
+  
+    <li><a href="../../Projects/Parser/TasklistParser.html">Projects::Parser::TasklistParser</a>
+  
+    <li><a href="../../Projects/Parser/TimesheetParser.html">Projects::Parser::TimesheetParser</a>
+  
+    <li><a href="../../Projects/Parser/UserParser.html">Projects::Parser::UserParser</a>
+  
+    <li><a href="../../Projects/Pexception.html">Projects::Pexception</a>
+  
+    <li><a href="../../Projects/Pexception/ProjectsException.html">Projects::Pexception::ProjectsException</a>
+  
+    <li><a href="../../Projects/Service.html">Projects::Service</a>
+  
+    <li><a href="../../Projects/Service/ZohoProjects.html">Projects::Service::ZohoProjects</a>
+  
+    <li><a href="../../Projects/Util.html">Projects::Util</a>
+  
+    <li><a href="../../Projects/Util/ZohoHTTPClient.html">Projects::Util::ZohoHTTPClient</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Projects::Model::Milestone</h1>
+
+  <div id="description" class="description">
+    <ul><li>
+<p>This class is used to make an object for <a
+href="Milestone.html">Milestone</a>.</p>
+</li></ul>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-getEndDate" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getEndDate</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the end date of the milestone.</p>
+</li></ul>
+
+<h4 id="method-i-getEndDate-label-Returns">Returns</h4>
+<ul><li>
+<p>End date of the milestone.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getEndDate-source">
+            <pre><span class="ruby-comment"># File projects/model/Milestone.rb, line 130</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getEndDate</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@endDate</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getEndDate-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getEndDate-method -->
+
+    
+      <div id="method-i-getEndDateFormat" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getEndDateFormat</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the end date format.</p>
+</li></ul>
+
+<h4 id="method-i-getEndDateFormat-label-Returns">Returns</h4>
+<ul><li>
+<p>End date format.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getEndDateFormat-source">
+            <pre><span class="ruby-comment"># File projects/model/Milestone.rb, line 150</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getEndDateFormat</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@endDateFormat</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getEndDateFormat-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getEndDateFormat-method -->
+
+    
+      <div id="method-i-getEndDateLong" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getEndDateLong</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the end date.</p>
+</li></ul>
+
+<h4 id="method-i-getEndDateLong-label-Returns">Returns</h4>
+<ul><li>
+<p>End date.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getEndDateLong-source">
+            <pre><span class="ruby-comment"># File projects/model/Milestone.rb, line 170</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getEndDateLong</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@endDateLong</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getEndDateLong-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getEndDateLong-method -->
+
+    
+      <div id="method-i-getFlag" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getFlag</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the flag for the milestone.</p>
+</li></ul>
+
+<h4 id="method-i-getFlag-label-Returns">Returns</h4>
+<ul><li>
+<p>Flag for the milestone.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getFlag-source">
+            <pre><span class="ruby-comment"># File projects/model/Milestone.rb, line 250</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getFlag</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@flag</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getFlag-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getFlag-method -->
+
+    
+      <div id="method-i-getId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getId</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the milestone id.</p>
+</li></ul>
+
+<h4 id="method-i-getId-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Milestone.html">Milestone</a> id.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getId-source">
+            <pre><span class="ruby-comment"># File projects/model/Milestone.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getId</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getId-method -->
+
+    
+      <div id="method-i-getName" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getName</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the milestone name.</p>
+</li></ul>
+
+<h4 id="method-i-getName-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Milestone.html">Milestone</a> name.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getName-source">
+            <pre><span class="ruby-comment"># File projects/model/Milestone.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getName</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">name</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getName-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getName-method -->
+
+    
+      <div id="method-i-getOwnerId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getOwnerId</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the owner id.</p>
+</li></ul>
+
+<h4 id="method-i-getOwnerId-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Owner.html">Owner</a> id.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getOwnerId-source">
+            <pre><span class="ruby-comment"># File projects/model/Milestone.rb, line 210</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getOwnerId</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@ownerId</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getOwnerId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getOwnerId-method -->
+
+    
+      <div id="method-i-getOwnerName" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getOwnerName</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the owner name.</p>
+</li></ul>
+
+<h4 id="method-i-getOwnerName-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Owner.html">Owner</a> name.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getOwnerName-source">
+            <pre><span class="ruby-comment"># File projects/model/Milestone.rb, line 230</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getOwnerName</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@ownerName</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getOwnerName-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getOwnerName-method -->
+
+    
+      <div id="method-i-getStartDate" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getStartDate</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the start date of the milestone.</p>
+</li></ul>
+
+<h4 id="method-i-getStartDate-label-Returns">Returns</h4>
+<ul><li>
+<p>Start date of the milestone.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getStartDate-source">
+            <pre><span class="ruby-comment"># File projects/model/Milestone.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getStartDate</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@startDate</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getStartDate-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getStartDate-method -->
+
+    
+      <div id="method-i-getStartDateFormat" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getStartDateFormat</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the start date format.</p>
+</li></ul>
+
+<h4 id="method-i-getStartDateFormat-label-Returns">Returns</h4>
+<ul><li>
+<p>Start date format.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getStartDateFormat-source">
+            <pre><span class="ruby-comment"># File projects/model/Milestone.rb, line 90</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getStartDateFormat</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@startDateFormat</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getStartDateFormat-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getStartDateFormat-method -->
+
+    
+      <div id="method-i-getStartDateLong" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getStartDateLong</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the start date.</p>
+</li></ul>
+
+<h4 id="method-i-getStartDateLong-label-Returns">Returns</h4>
+<ul><li>
+<p>Start date.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getStartDateLong-source">
+            <pre><span class="ruby-comment"># File projects/model/Milestone.rb, line 110</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getStartDateLong</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@startDateLong</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getStartDateLong-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getStartDateLong-method -->
+
+    
+      <div id="method-i-getStatus" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getStatus</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the status of the milestone.</p>
+</li></ul>
+
+<h4 id="method-i-getStatus-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Milestone.html">Milestone</a> status.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getStatus-source">
+            <pre><span class="ruby-comment"># File projects/model/Milestone.rb, line 190</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getStatus</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@status</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getStatus-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getStatus-method -->
+
+    
+      <div id="method-i-getStatusURL" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getStatusURL</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the status URL.</p>
+</li><li>
+<p>status URL for the milestone.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getStatusURL-source">
+            <pre><span class="ruby-comment"># File projects/model/Milestone.rb, line 288</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getStatusURL</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">statusUrl</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getStatusURL-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getStatusURL-method -->
+
+    
+      <div id="method-i-getURL" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getURL</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Get the milestone URL.</p>
+</li></ul>
+
+<h4 id="method-i-getURL-label-Returns">Returns</h4>
+<ul><li>
+<p><a href="Milestone.html">Milestone</a> URL.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getURL-source">
+            <pre><span class="ruby-comment"># File projects/model/Milestone.rb, line 270</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getURL</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@url</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getURL-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getURL-method -->
+
+    
+      <div id="method-i-setEndDate" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setEndDate</span><span
+            class="method-args">(endDate)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the end date of the milestone.</p>
+</li></ul>
+
+<h4 id="method-i-setEndDate-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>endDate
+<dd><ul><li>
+<p>End date of the milestone.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setEndDate-source">
+            <pre><span class="ruby-comment"># File projects/model/Milestone.rb, line 120</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setEndDate</span>(<span class="ruby-identifier">endDate</span>)
+        <span class="ruby-ivar">@endDate</span> = <span class="ruby-identifier">endDate</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setEndDate-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setEndDate-method -->
+
+    
+      <div id="method-i-setEndDateFormat" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setEndDateFormat</span><span
+            class="method-args">(endDateFormat)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the end date format.</p>
+</li></ul>
+
+<h4 id="method-i-setEndDateFormat-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>endDateLong
+<dd><ul><li>
+<p>End date format of the milestone.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setEndDateFormat-source">
+            <pre><span class="ruby-comment"># File projects/model/Milestone.rb, line 140</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setEndDateFormat</span>(<span class="ruby-identifier">endDateFormat</span>)
+        <span class="ruby-ivar">@endDateFormat</span> = <span class="ruby-identifier">endDateFormat</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setEndDateFormat-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setEndDateFormat-method -->
+
+    
+      <div id="method-i-setEndDateLong" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setEndDateLong</span><span
+            class="method-args">(endDateLong)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the end date long.</p>
+</li></ul>
+
+<h4 id="method-i-setEndDateLong-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>endDateLong
+<dd><ul><li>
+<p>End date long of the milestone.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setEndDateLong-source">
+            <pre><span class="ruby-comment"># File projects/model/Milestone.rb, line 160</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setEndDateLong</span>(<span class="ruby-identifier">endDateLong</span>)
+        <span class="ruby-ivar">@endDateLong</span> = <span class="ruby-identifier">endDateLong</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setEndDateLong-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setEndDateLong-method -->
+
+    
+      <div id="method-i-setFlag" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setFlag</span><span
+            class="method-args">(flag)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the flag for the milestone.</p>
+</li></ul>
+
+<h4 id="method-i-setFlag-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>flag
+<dd><ul><li>
+<p>Flag for the milestone.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setFlag-source">
+            <pre><span class="ruby-comment"># File projects/model/Milestone.rb, line 240</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setFlag</span>(<span class="ruby-identifier">flag</span>)
+        <span class="ruby-ivar">@flag</span> = <span class="ruby-identifier">flag</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setFlag-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setFlag-method -->
+
+    
+      <div id="method-i-setId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setId</span><span
+            class="method-args">(id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the milestone id.</p>
+</li></ul>
+
+<h4 id="method-i-setId-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>id
+<dd><ul><li>
+<p>ID of the milestone.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setId-source">
+            <pre><span class="ruby-comment"># File projects/model/Milestone.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setId</span>(<span class="ruby-identifier">id</span>)
+        <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setId-method -->
+
+    
+      <div id="method-i-setName" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setName</span><span
+            class="method-args">(name)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the milestone name.</p>
+</li></ul>
+
+<h4 id="method-i-setName-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>name
+<dd><ul><li>
+<p>Name of the milestone.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setName-source">
+            <pre><span class="ruby-comment"># File projects/model/Milestone.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setName</span>(<span class="ruby-identifier">name</span>)
+        <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">name</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setName-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setName-method -->
+
+    
+      <div id="method-i-setOwnerId" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setOwnerId</span><span
+            class="method-args">(ownerId)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the owner id.</p>
+</li></ul>
+
+<h4 id="method-i-setOwnerId-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>ownerId
+<dd><ul><li>
+<p>ID of the owner.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setOwnerId-source">
+            <pre><span class="ruby-comment"># File projects/model/Milestone.rb, line 200</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setOwnerId</span>(<span class="ruby-identifier">ownerId</span>)
+        <span class="ruby-ivar">@ownerId</span> = <span class="ruby-identifier">ownerId</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setOwnerId-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setOwnerId-method -->
+
+    
+      <div id="method-i-setOwnerName" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setOwnerName</span><span
+            class="method-args">(ownerName)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the owner name.</p>
+</li></ul>
+
+<h4 id="method-i-setOwnerName-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>ownerName
+<dd><ul><li>
+<p>Name of the owner.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setOwnerName-source">
+            <pre><span class="ruby-comment"># File projects/model/Milestone.rb, line 220</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setOwnerName</span>(<span class="ruby-identifier">ownerName</span>)
+        <span class="ruby-ivar">@ownerName</span> = <span class="ruby-identifier">ownerName</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setOwnerName-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setOwnerName-method -->
+
+    
+      <div id="method-i-setStartDate" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setStartDate</span><span
+            class="method-args">(startDate)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the start date of the milestone.</p>
+</li></ul>
+
+<h4 id="method-i-setStartDate-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>startDate
+<dd><ul><li>
+<p>Start date of the milestone.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setStartDate-source">
+            <pre><span class="ruby-comment"># File projects/model/Milestone.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setStartDate</span>(<span class="ruby-identifier">startDate</span>)
+        <span class="ruby-ivar">@startDate</span> = <span class="ruby-identifier">startDate</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setStartDate-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setStartDate-method -->
+
+    
+      <div id="method-i-setStartDateFormat" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setStartDateFormat</span><span
+            class="method-args">(startDateFormat)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the start date format of the milestone.</p>
+</li></ul>
+
+<h4 id="method-i-setStartDateFormat-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>startDateLong
+<dd><ul><li>
+<p>Start date format of the milestone.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setStartDateFormat-source">
+            <pre><span class="ruby-comment"># File projects/model/Milestone.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setStartDateFormat</span>(<span class="ruby-identifier">startDateFormat</span>)
+        <span class="ruby-ivar">@startDateFormat</span> = <span class="ruby-identifier">startDateFormat</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setStartDateFormat-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setStartDateFormat-method -->
+
+    
+      <div id="method-i-setStartDateLong" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setStartDateLong</span><span
+            class="method-args">(startDateLong)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the start date long of the milestone.</p>
+</li></ul>
+
+<h4 id="method-i-setStartDateLong-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>startDateLong
+<dd><ul><li>
+<p>Start date long of the milestone.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setStartDateLong-source">
+            <pre><span class="ruby-comment"># File projects/model/Milestone.rb, line 100</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setStartDateLong</span>(<span class="ruby-identifier">startDateLong</span>)
+        <span class="ruby-ivar">@startDateLong</span> = <span class="ruby-identifier">startDateLong</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setStartDateLong-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setStartDateLong-method -->
+
+    
+      <div id="method-i-setStatus" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setStatus</span><span
+            class="method-args">(status)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the status of the milestone.</p>
+</li></ul>
+
+<h4 id="method-i-setStatus-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>status
+<dd><ul><li>
+<p><a href="Status.html">Status</a> of the milestone.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setStatus-source">
+            <pre><span class="ruby-comment"># File projects/model/Milestone.rb, line 180</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setStatus</span>(<span class="ruby-identifier">status</span>)
+        <span class="ruby-ivar">@status</span> = <span class="ruby-identifier">status</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setStatus-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setStatus-method -->
+
+    
+      <div id="method-i-setStatusURL" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setStatusURL</span><span
+            class="method-args">(statusUrl)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the status URL.</p>
+</li></ul>
+
+<h4 id="method-i-setStatusURL-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>statusUrl
+<dd><ul><li>
+<p><a href="Status.html">Status</a> URL for the milestone.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setStatusURL-source">
+            <pre><span class="ruby-comment"># File projects/model/Milestone.rb, line 280</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setStatusURL</span>(<span class="ruby-identifier">statusUrl</span>)
+        <span class="ruby-ivar">@statusUrl</span> = <span class="ruby-identifier">statusUrl</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setStatusURL-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setStatusURL-method -->
+
+    
+      <div id="method-i-setURL" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setURL</span><span
+            class="method-args">(url)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Set the milestone URL.</p>
+</li></ul>
+
+<h4 id="method-i-setURL-label-Parameters">Parameters</h4>
+<ul><li><dl class="rdoc-list note-list"><dt>url
+<dd><ul><li>
+<p>URL for the milestone.</p>
+</li></ul>
+</dd></dl>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="setURL-source">
+            <pre><span class="ruby-comment"># File projects/model/Milestone.rb, line 260</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setURL</span>(<span class="ruby-identifier">url</span>)
+        <span class="ruby-ivar">@url</span> = <span class="ruby-identifier">url</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setURL-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setURL-method -->
+
+    
+      <div id="method-i-toParamMAP" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">toParamMAP</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <ul><li>
+<p>Convert the <a href="Milestone.html">Milestone</a> object into HashMap.</p>
+</li></ul>
+
+<h4 id="method-i-toParamMAP-label-Returns">Returns</h4>
+<ul><li>
+<p>HashMap object.</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="toParamMAP-source">
+            <pre><span class="ruby-comment"># File projects/model/Milestone.rb, line 298</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">toParamMAP</span>
+        <span class="ruby-identifier">requestBody</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;name&quot;</span>] = <span class="ruby-identifier">name</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">startDate</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;start_date&quot;</span>] = <span class="ruby-identifier">startDate</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">endDate</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;end_date&quot;</span>] = <span class="ruby-identifier">endDate</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">ownerId</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;owner&quot;</span>] = <span class="ruby-identifier">ownerId</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">flag</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                <span class="ruby-identifier">requestBody</span>[<span class="ruby-string">&quot;flag&quot;</span>] = <span class="ruby-identifier">flag</span>
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">requestBody</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- toParamMAP-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- toParamMAP-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

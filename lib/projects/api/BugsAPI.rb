@@ -130,6 +130,51 @@ module Projects
 				response = ZohoHTTPClient.delete(url, getQueryMap)		
 				return $bugParser.getResult(response)
 			end
+			
+			
+			# * Get all the default fields in the given project.
+			#
+			# ==== Parameters
+			#
+			# * projectId:: - ID of the project.
+			#
+			# ==== Returns
+			#
+			# * Returns the Defaultfield object.
+			
+			
+			def getDefaultfields(projectId)
+			
+				url = getBaseURL+"projects/"+String(projectId)+"/defaultfields/"
+				
+				response = ZohoHTTPClient.get(url, getQueryMap)
+				
+				return @bugParser.getDefaultfields(response)
+				
+			end
+			
+			
+			
+			# * Get all the custom fields in the given project.
+			#
+			# ==== Parameters
+			#
+			# * projectId:: - ID of the project.
+			#
+			# ==== Returns
+			# 
+			# * Returns list of Customfield object.
+			
+			def getCustomfields(projectId)
+			
+				url = getBaseURL+"projects/"+String(projectId)+"/customfields/"
+				
+				response = ZohoHTTPClient.get(url, getQueryMap)
+				
+				return @bugParser.getCustomfields(response)
+				
+			end
+			
 		end
 	end
 end

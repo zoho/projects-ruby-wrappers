@@ -150,6 +150,14 @@ begin
 	
 	updateTask = tasksAPI.update(project_id, task)
 	
+	subtasks = tasksAPI.getSubtasks(project_id, taskId, nil)
+	
+	taskComments = tasksAPI.getComments(project_id, taskId, nil)
+	
+	addTaskComment = tasksAPI.addComment(project_id, taskId, "Test Comment")
+	
+	deleteTaskComment = tasksAPI.deleteComment(project_id, taskId, taskComments[0].getId)
+	
 	deleteTask = tasksAPI.delete(project_id, String(task.getId))
 
 	queryMap = Hash.new
@@ -211,6 +219,10 @@ begin
 	createBug = bugsAPI.create(project_id, getBug)
 					
 	updateBug = bugsAPI.update(project_id, getBug)
+	
+	defaultFields = bugsAPI.getDefaultfields(project_id)
+	
+	customFields = bugsAPI.getCustomfields(project_id)
 					
 	deleteBug = bugsAPI.delete(project_id, bugId)
 

@@ -6,7 +6,7 @@ module Projects
 		class Bug 
 
 			private 
-				attr_accessor :id, :key, :projectId, :flag, :title, :description, :reporterId, :reportedPerson, :createdTime, :createdTimeFormat, :createdTimeLong, :assigneeId, :assigneeName, :closed, :url, :timesheetUrl, :classificationId, :classificationType, :severityId, :severityType, :statusId, :statusType, :reproducibleId, :reproducibleType, :moduleId, :moduleName, :milestoneId, :dueDate, :dueDateFormat, :dueDateLong;
+						attr_accessor :id, :key, :projectId, :flag, :title, :description, :reporterId, :reportedPerson, :createdTime, :createdTimeFormat, :createdTimeLong, :assigneeId, :assigneeName, :closed, :url, :timesheetUrl, :classificationId, :classificationType, :severityId, :severityType, :statusId, :statusType, :reproducibleId, :reproducibleType, :moduleId, :moduleName, :milestoneId, :dueDate, :dueDateFormat, :dueDateLong;
 			
 			public
 

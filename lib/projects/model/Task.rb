@@ -6,7 +6,7 @@ module Projects
 		class Task
 
 			private
-				attr_accessor :id, :name, :completed, :createdBy, :createdPerson, :priority, :percentComplete, :startDate, :startDateFormat, :startDateLong, :endDate, :endDateFormat, :endDateLong, :duration, :url, :timesheetUrl, :owners, :comments, :associateDocumentIds, :associateForumIds, :asks, :tasklist
+				attr_accessor :id, :name, :completed, :createdBy, :createdPerson, :priority, :percentComplete, :startDate, :startDateFormat, :startDateLong, :endDate, :endDateFormat, :endDateLong, :duration, :url, :subtaskUrl, :timesheetUrl, :owners, :comments, :associateDocumentIds, :associateForumIds, :tasks, :tasklist
 			
 			public
 
@@ -309,6 +309,33 @@ module Projects
 				def getURL
 					return @url
 				end
+				
+				# * Set the subtask URL.
+				#
+				# ==== Parameters
+				#
+				# * subtaskUrl:: - URL for the subtask.
+				
+				
+				def setSubtaskUrl(subtaskUrl)
+				
+					@subtaskUrl = subtaskUrl
+					
+				end
+				
+				# * Get the subtask URL.
+				#
+				# ==== Returns
+				#
+				# * Returns the subtask URL.
+				
+				
+				def getSubtaskUrl
+				
+					return @subtaskUrl
+				
+				end
+				
 
 				# * Set the time sheet URL.
 				# 
@@ -414,7 +441,7 @@ module Projects
 				# 
 				# ==== Parameters
 				#  
-				# * tasks:: - List of Task object.
+				# * tasks:: - True or false.
 				
 				def setSubtasks(tasks)
 					@tasks = tasks
@@ -424,7 +451,7 @@ module Projects
 				#
 				# ==== Returns
 				#   
-				# * List of Task object.
+				# * Returns true if the task has subtasks else returns false.
 				
 				def getSubtasks
 					return @tasks

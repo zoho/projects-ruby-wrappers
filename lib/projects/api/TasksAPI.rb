@@ -148,6 +148,106 @@ module Projects
 				response = ZohoHTTPClient.delete(url, getQueryMap)
 				return $taskParser.getResult(response)
 			end
+			
+			
+			# * Get all the subtasks of the given task.
+			#
+			# ==== Parameters
+			#  
+			# * projectId:: - ID of the project.
+			#  
+			# * taskId:: - ID of the task.
+			#  
+			# ==== Returns
+			#
+			# * List of Task object.
+			
+			
+			def getSubtasks(projectId, taskId, queryMap)
+			
+				url = getBaseURL+"projects/"+String(projectId)+"/tasks/"+String(taskId)+"/subtasks/"
+				
+				response = ZohoHTTPClient.get(url, getQueryMap(queryMap))
+				
+				return @taskParser.getTasks(response)
+			end
+			
+			
+			# * Get all the task comment.
+			#
+			# ==== Parameters
+			#
+			# * projectId:: - ID of the project.
+			#  
+			# * taskId:: - ID of the task.
+			#  
+			# ==== Returns
+			#
+			# * List of Comment object.
+			
+			def getComments(projectId, taskId, queryMap)
+			
+				url = getBaseURL+"projects/"+String(projectId)+"/tasks/"+String(taskId)+"/comments/"
+				
+				response = ZohoHTTPClient.get(url, getQueryMap(queryMap))
+				
+				return @taskParser.getComments(response)
+				
+			end
+			
+			# * Add the task comment.
+			#
+			# ==== Parameters
+			#
+			# * projectId:: - ID of the project.
+			#  
+			# * taskId:: - ID of the task.
+			#
+			# * content:: - Comment of the task
+			#
+			# ==== Returns
+			#
+			# * Returns the Comment object.
+			
+			def addComment(projectId, taskId, content)
+			
+				url = getBaseURL+"projects/"+String(projectId)+"/tasks/"+String(taskId)+"/comments/"
+				
+				paramMap = Hash.new
+				paramMap["content"] = content
+				
+				response = ZohoHTTPClient.post(url, getQueryMap, paramMap)
+				
+				return @taskParser.getComment(response)
+				
+			end
+			
+			
+			# * Delete an existing task comment.
+			#
+			# ==== Parameters
+			#
+			# * projectId:: - ID of the project.
+			#  
+			# * taskId:: - ID of the task.
+			#
+			# * commentId:: - ID of the task Comment.
+			#
+			# ==== Returns
+			#
+			# * Returns the success message(Comment Deleted Successfully).
+			
+			def deleteComment(projectId, taskId, commentId)
+			
+				url = getBaseURL+"projects/"+String(projectId)+"/tasks/"+String(taskId)+"/comments/"+String(commentId)+"/"
+				
+				response = ZohoHTTPClient.delete(url, getQueryMap)
+				
+				return @taskParser.getResult(response)
+				
+			end
+			
+						
 		end
 	end
 end

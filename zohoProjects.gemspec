@@ -17,7 +17,7 @@ Gem::Specification.new do |spec|
   spec.files         = %w[
                             Gemfile
                             Gemfile.lock
-                            LICENSE.txt
+                            LICENSE
                             Rakefile
                             README.md
                             zohoProjects.gemspec
@@ -41,6 +41,8 @@ Gem::Specification.new do |spec|
                             lib/projects/model/Buglog.rb
                             lib/projects/model/Category.rb
                             lib/projects/model/Comment.rb
+                            lib/projects/model/Customfield.rb
+                            lib/projects/model/Defaultfield.rb
                             lib/projects/model/Document.rb
                             lib/projects/model/Event.rb
                             lib/projects/model/Folder.rb

@@ -161,22 +161,28 @@ module Projects
 					if link.has_key?("self")
 						task.setURL(link["self"]["url"])
 					end
+					
+					if link.has_key?("subtask")
+						task.setSubtaskUrl(link["subtask"]["url"])
+					end
+					
 					if link.has_key?("timesheet")
 						task.setTimesheetURL(link["timesheet"]["url"])
 					end
 				end
 				
 				if jsonObject.has_key?("subtasks")
-					subtasks = jsonObject["subtasks"]
 					
-					tasks = Array.new
+					#subtasks = jsonObject["subtasks"]
+					
+					#tasks = Array.new
 
-					for k in 0...subtasks.length
-						taskObj = subtasks[k]
-						tasks.push(jsonToTask(taskObj))
-					end
+					#for k in 0...subtasks.length
+					#	taskObj = subtasks[k]
+					#	tasks.push(jsonToTask(taskObj))
+					#end
 					
-					task.setSubtasks(tasks)
+					task.setSubtasks(jsonObject["subtasks"])
 				end
 				
 				if jsonObject.has_key?("tasklist")
@@ -209,6 +215,61 @@ module Projects
 				end
 				return owner
 			end
+			
+			# * Parse the JSON response and make it into list of Comment object.
+			#
+			# ==== Parameters
+			#
+			# * response:: - JSON response contains the details of the task comments.
+			#
+			# ==== Returns
+			#
+			# * Returns List of Comment object.
+			
+			def getComments(response)
+			
+				jsonObject = JSON.parse response
+				
+				commentsList = Array.new
+				
+				if jsonObject.has_key?("comments")
+				
+					comments = jsonObject["comments"]
+					
+					for i in 0...comments.length
+						
+						commentsList.push(jsonToComment(comments[i]))
+						
+					end
+					
+				end
+				
+				return commentsList
+			end
+			
+			
+			# * Parse the JSON response and make it into Comment object.
+			#
+			# ==== Parameters
+			#
+			# * response:: - JSON response contains the details of a comment.
+			#
+			# ==== Returns
+			#
+			# * Returns the Comment object.
+			
+			
+			def getComment(response)
+			
+				jsonObject = JSON.parse response
+				
+				comments = jsonObject["comments"]
+					
+				return jsonToComment(comments[0])
+			
+			end
+				
+						
 			
 			# * Parse the JSONObject into Comment object.
 			#

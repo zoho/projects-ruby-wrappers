@@ -77,7 +77,6 @@ Gem::Specification.new do |spec|
                             lib/projects/util/ZohoHTTPClient.rb
                             lib/projects/exception/ProjectsException.rb
                             lib/projects/service/ZohoProject.rb
-                            lib/test/ProjectsTest.rb
                           ]
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})

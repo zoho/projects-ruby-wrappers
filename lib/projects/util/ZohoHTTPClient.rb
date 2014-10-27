@@ -77,7 +77,7 @@ module Projects
 				header["Accept"] = "application/json"
 				header["Content-Type"] = "application/x-www-form-urlencoded"
 				header["Accept-Charset"] = "UTF-8"
-				header["User-Agent"] = "ZohoProjects-Ruby-Wrappers/0.0.4"
+				header["User-Agent"] = "ZohoProjects-Ruby-Wrappers/0.0.5"
 				return header
 			end
 

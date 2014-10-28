@@ -5,8 +5,8 @@ module Projects
 
 		class Project
 			private
-			attr_accessor :id, :name, :status, :createdDate, :createdDateFormat, :createdDateLong, :description, :ownerName, :ownerId, :openTaskCount, :closedTaskCount, :openMilestoneCount, :closedMilestoneCount, :openBugCount, :closedBugCount, :URL, :activityURL, :milestoneURL, :tasklistURL, :taskURL, :bugURL, :timesheetURL, :statusURL, :eventURL, :documentURL, :folderURL, :forumURL, :userURL 
-
+			attr_accessor :id, :name, :templateId, :status, :createdDate, :createdDateFormat, :createdDateLong, :description, :ownerName, :ownerId, :openTaskCount, :closedTaskCount, :openMilestoneCount, :closedMilestoneCount, :openBugCount, :closedBugCount, :URL, :activityURL, :milestoneURL, :tasklistURL, :taskURL, :bugURL, :timesheetURL, :statusURL, :eventURL, :documentURL, :folderURL, :forumURL, :userURL;
+			
 			public
 
 				# * Set the project id.
@@ -47,6 +47,30 @@ module Projects
 				
 				def getName
 					return @name
+				end
+				
+				# * Set the template id of the project.
+				#
+				# ==== Parameters
+				#
+				# * templateId:: - ID of the template.
+				
+				def setTemplateId(templateId)
+				
+					@templateId = templateId
+				
+				end
+				
+				# * Get the template id of the project.
+				#
+				# ==== Returns
+				#
+				# * Returns the template id.
+				
+				def getTemplateId
+				
+					return @templateId
+					
 				end
 
 				# * Set the status of the project.
@@ -585,6 +609,9 @@ module Projects
 					end
 					if status != nil
 						requestBody["status"] = status
+					end
+					if templateId != nil
+						requestBody["template_id"] = templateId
 					end
 					return requestBody
 				end

@@ -7,9 +7,9 @@ Gem::Specification.new do |spec|
   spec.name          = "zohoProjects"
   spec.version       = ZohoProjects::VERSION
   spec.authors       = ["Zoho Corp."]
-  spec.email         = ["arivezhilmarban@gmail.com"]
+  spec.email         = ["sahaya.ramesh@zohocorp.com"]
   spec.summary       = %q{Wrapper for Zoho Projects.}
-  spec.description   = %q{Zoho Projects API lets, users/developers extend their web applications to push or pull data into or from Zoho Projects for application mashups. - See more at: http://cms.zohocorp.com/export/zoho/projects/help/rest-api/zohoprojectsapi.html}
+  spec.description   = %q{Zoho Projects API lets, users/developers extend their web applications to push or pull data into or from Zoho Projects for application mashups. - See more at: https://www.zoho.com/projects/help/rest-api/zohoprojectsapi.html}
   spec.homepage      = ""
   spec.license       = "MIT"
 

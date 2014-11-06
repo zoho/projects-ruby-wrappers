@@ -44,6 +44,9 @@ module Projects
 				if jsonObject.has_key?("id")
 					portal.setId(jsonObject["id"])
 				end
+				if jsonObject.has_key?("id_string")
+					portal.setIdString(jsonObject["id_string"])
+				end
 				if jsonObject.has_key?("name")
 					portal.setName(jsonObject["name"])
 				end

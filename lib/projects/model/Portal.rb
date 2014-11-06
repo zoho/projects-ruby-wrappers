@@ -5,7 +5,7 @@ module Projects
 
 		class Portal
 			private
-			attr_accessor :id, :name, :default, :gmtTimeZone, :role, :companyName, :websiteURL, :timeZone, :dateFormat, :code, :language, :country, :projectURL
+			attr_accessor :id, :idString, :name, :default, :gmtTimeZone, :role, :companyName, :websiteURL, :timeZone, :dateFormat, :code, :language, :country, :projectURL
 
 			public
 
@@ -27,6 +27,29 @@ module Projects
 			
 				def getId
 					return @id
+				end
+					
+				# * Set the portal id string.
+				#
+				# ==== Parameters
+				#
+				# * idString:: - Portal id string.
+					
+				def setIdString(idString)
+					@idString = idString
+					
+				end
+				
+				# * Get the portal id string.
+				#
+				# ==== Returns
+				#
+				# * Returns the portal id string.
+				
+				def getIdString
+				
+					return @idString
+				
 				end
 
 				# * Set the portal name.

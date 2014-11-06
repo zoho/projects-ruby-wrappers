@@ -64,6 +64,9 @@ module Projects
 				if jsonObject.has_key?("id")
 					task.setId(jsonObject["id"])
 				end
+				if jsonObject.has_key?("id_string")
+					task.setIdString(jsonObject["id_string"])
+				end
 				if jsonObject.has_key?("name")
 					task.setName(jsonObject["name"])
 				end

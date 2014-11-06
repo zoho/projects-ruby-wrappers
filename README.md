@@ -168,7 +168,7 @@ If there is any error encountered while calling the Ruby Wrappers of Zoho Projec
            end
  
  
-For a full set of examples, click [here](../../tree/master/test).
+For a full set of examples, click [here](https://github.com/zoho/projects-ruby-wrappers/tree/master/test).
 
 ## Contributing
 

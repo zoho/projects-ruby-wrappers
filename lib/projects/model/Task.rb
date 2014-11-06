@@ -6,7 +6,7 @@ module Projects
 		class Task
 
 			private
-				attr_accessor :id, :name, :completed, :createdBy, :createdPerson, :priority, :percentComplete, :startDate, :startDateFormat, :startDateLong, :endDate, :endDateFormat, :endDateLong, :duration, :url, :subtaskUrl, :timesheetUrl, :owners, :comments, :associateDocumentIds, :associateForumIds, :tasks, :tasklist
+				attr_accessor :id, :idString :name, :completed, :createdBy, :createdPerson, :priority, :percentComplete, :startDate, :startDateFormat, :startDateLong, :endDate, :endDateFormat, :endDateLong, :duration, :url, :subtaskUrl, :timesheetUrl, :owners, :comments, :associateDocumentIds, :associateForumIds, :tasks, :tasklist
 			
 			public
 
@@ -28,6 +28,30 @@ module Projects
 				
 				def getId
 					return @id
+				end
+				
+				# * Set the task id string.
+				#
+				# ==== Parameters
+				#
+				# * idString:: - Task id string.
+				
+				def setIdString(idString)
+				
+					@idString = idString
+					
+				end
+				
+				# * Get the task id string.
+				#
+				# ==== Returns
+				#
+				# * Returns the task id string.
+				
+				def getIdString
+				
+					return @idString
+					
 				end
 
 				# * Set the task name.

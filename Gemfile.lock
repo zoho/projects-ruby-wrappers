@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    zohoProjects (0.0.1)
+    zohoProjects (0.0.7)
 
 GEM
   remote: https://rubygems.org/

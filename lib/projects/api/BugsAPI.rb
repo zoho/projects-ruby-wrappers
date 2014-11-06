@@ -145,7 +145,7 @@ module Projects
 			
 			def getDefaultfields(projectId)
 			
-				url = getBaseURL+"projects/"+String(projectId)+"/defaultfields/"
+				url = getBaseURL+"projects/"+String(projectId)+"/bugs/defaultfields/"
 				
 				response = ZohoHTTPClient.get(url, getQueryMap)
 				
@@ -167,7 +167,7 @@ module Projects
 			
 			def getCustomfields(projectId)
 			
-				url = getBaseURL+"projects/"+String(projectId)+"/customfields/"
+				url = getBaseURL+"projects/"+String(projectId)+"/bugs/customfields/"
 				
 				response = ZohoHTTPClient.get(url, getQueryMap)
 				

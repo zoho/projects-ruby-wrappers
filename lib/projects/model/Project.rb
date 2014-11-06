@@ -5,28 +5,53 @@ module Projects
 
 		class Project
 			private
-			attr_accessor :id, :name, :templateId, :status, :createdDate, :createdDateFormat, :createdDateLong, :description, :ownerName, :ownerId, :openTaskCount, :closedTaskCount, :openMilestoneCount, :closedMilestoneCount, :openBugCount, :closedBugCount, :URL, :activityURL, :milestoneURL, :tasklistURL, :taskURL, :bugURL, :timesheetURL, :statusURL, :eventURL, :documentURL, :folderURL, :forumURL, :userURL;
+			attr_accessor :id, :idString, :name, :templateId, :status, :createdDate, :createdDateFormat, :createdDateLong, :description, :ownerName, :ownerId, :openTaskCount, :closedTaskCount, :openMilestoneCount, :closedMilestoneCount, :openBugCount, :closedBugCount, :URL, :activityURL, :milestoneURL, :tasklistURL, :taskURL, :bugURL, :timesheetURL, :statusURL, :eventURL, :documentURL, :folderURL, :forumURL, :userURL;
 			
 			public
-
+				
+				
 				# * Set the project id.
 				# 
 				# ==== Parameters
 				#  
 				# * id:: - ID of the project.
 
-				def getId
-					return @id
+				def setId(id)
+					@id = id
 				end
-
+				
 				# * Get the project id.
 				#
 				# ==== Returns
 				# 
 				# * Project id.
 
-				def setId(id)
-					@id = id
+				def getId
+					return @id
+				end
+
+				# * Set the project id string.
+				#
+				# ==== Parameters
+				#
+				# * idString:: - Project id string.
+				
+				def setIdString(idString)
+					
+					@idString = idString
+					
+				end
+				
+				# * Get the project id string.
+				#
+				# ==== Returns
+				#
+				# * Returns the project id string.
+				
+				def getIdString
+				
+					return @idString = idString
+					
 				end
 
 				# * Set the project name.

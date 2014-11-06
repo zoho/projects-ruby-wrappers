@@ -6,7 +6,7 @@ module Projects
 		class Tasklist
 
 			private
-				attr_accessor :id, :name, :completed, :createdTime, :createdTimeFormat, :createdTimeLong, :rolled, :sequence, :url, :taskUrl, :flag, :status, :milestone
+				attr_accessor :id, :idString, :name, :completed, :createdTime, :createdTimeFormat, :createdTimeLong, :rolled, :sequence, :url, :taskUrl, :flag, :status, :milestone
 			
 			public
 
@@ -28,6 +28,30 @@ module Projects
 				
 				def getId
 					return @id
+				end
+				
+				# * Set the tasklist id string.
+				#
+				# ==== Parameters
+				#
+				# * idString::- Tasklist id string.
+				
+				def setIdString(idString)
+					
+					@idString = idString
+				
+				end
+				
+				# * Get the tasklist id string.
+				#
+				# ==== Returns
+				#
+				# * Returns the tasklist id string.
+				
+				def getIdString
+				
+					return @idString
+					
 				end
 
 				# * Set the task list name.

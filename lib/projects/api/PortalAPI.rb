@@ -19,8 +19,8 @@ module Projects
 			#
 			# * authToken:: - User's authToken.
 
-			def initialize(authToken)
-				super(authToken,"")
+			def initialize(authToken, apiKey=nil)
+				super(authToken,"",apiKey)
 			end
 
 			# * Parse the JSON response into respective objects.

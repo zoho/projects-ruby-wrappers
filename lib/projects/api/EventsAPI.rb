@@ -33,8 +33,8 @@ module Projects
 			# 
 			# * portalId:: - User's portalId.
 
-			def initialize(authToken,portalId)
-				super(authToken,portalId)
+			def initialize(authToken,portalId,apiKey=nil)
+				super(authToken,portalId,apiKey)
 			end
 			
 			# * Get list of events for the project.

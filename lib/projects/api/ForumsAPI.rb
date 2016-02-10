@@ -39,9 +39,9 @@ module Projects
 			#
 			# * portalId:: - User's prtalId.
 
-			def initialize(authToken,portalId)
-				super(authToken,portalId)
-			end	
+			def initialize(authToken,portalId,apiKey=nil)
+				super(authToken,portalId,apiKey)
+			end
 
 			# * Get list of forum for the project.
 			# 

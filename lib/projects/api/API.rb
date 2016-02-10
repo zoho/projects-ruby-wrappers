@@ -8,7 +8,7 @@ module Projects
 			public
 			@@baseURL = "https://projectsapi.zoho.com/restapi/";
 			protected
-			  	attr_accessor :authToken, :portalId
+			  	attr_accessor :authToken, :portalId, :apiKey
 			  	
 			public
 
@@ -20,9 +20,11 @@ module Projects
 				#
 				# * portalId:: - User's portalId.
 
-			  	def initialize(authToken, portalId)
+			  	def initialize(authToken, portalId, apiKey=nil)
+			    	raise ArgumentError, 'authToken is required' if authToken.to_s.empty?
 			    	@authToken = authToken
 			    	@portalId = portalId
+			    	@apiKey = apiKey
 			  	end
 			
 			public
@@ -34,6 +36,7 @@ module Projects
 				# * Base URL.
 
 			 	def getBaseURL
+		  			raise ArgumentError, 'portalId is required' if portalId.to_s.empty?
 		  			return @@baseURL+"portal/"+String(portalId)+"/";
 		  		end
 
@@ -49,6 +52,9 @@ module Projects
 			  		else
 			  			queryMap1 = Hash.new
 		  				queryMap1["authtoken"] = authToken
+			  		end
+		  			if apiKey != nil
+		  				queryMap1["apikey"] = apiKey
 			  		end
 		  		return queryMap1
 		  		end

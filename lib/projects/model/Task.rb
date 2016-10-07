@@ -6,7 +6,7 @@ module Projects
 		class Task
 
 			private
-				attr_accessor :id, :idString :name, :completed, :createdBy, :createdPerson, :priority, :percentComplete, :startDate, :startDateFormat, :startDateLong, :endDate, :endDateFormat, :endDateLong, :duration, :url, :subtaskUrl, :timesheetUrl, :owners, :comments, :associateDocumentIds, :associateForumIds, :tasks, :tasklist
+				attr_accessor :id, :idString, :name, :completed, :createdBy, :createdPerson, :priority, :percentComplete, :startDate, :startDateFormat, :startDateLong, :endDate, :endDateFormat, :endDateLong, :duration, :url, :subtaskUrl, :timesheetUrl, :owners, :comments, :associateDocumentIds, :associateForumIds, :tasks, :tasklist
 			
 			public
 
